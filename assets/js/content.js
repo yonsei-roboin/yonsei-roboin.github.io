@@ -147,66 +147,10 @@ export const CONTENT_DATA = {
     showcaseAwardsTitle: "로보인의 수상 및 대회 기록",
     showcaseAwardsDescription:
       "대표 수상 실적을 우선 공개하고 있으며, 향후 시즌별 기록을 지속적으로 확장할 예정입니다.",
-    showcaseAwardsAccordion1Title: "2024 한국대학 자율주행 로봇대회 대상",
-    showcaseAwardsAccordion1Body:
-      "SLAM 기반 자율주행 로봇으로 결선에서 최고 점수를 기록했습니다.",
-    showcaseAwardsAccordion1Caption: "대회장 시상식에서 팀 Roboin이 트로피를 수령하는 모습.",
-    showcaseAwardsAccordion2Title: "2024 메이커톤 커뮤니티 협업상",
-    showcaseAwardsAccordion2Body:
-      "지역 청소년과 공동 제작한 휴머노이드 키트가 사회공헌 부문 1위를 차지했습니다.",
-    showcaseAwardsAccordion2Caption: "메이커톤 부스에서 프로젝트를 설명하는 장면.",
-    showcaseAwardsAccordion3Title: "2023 휴머노이드 퍼포먼스 최우수상",
-    showcaseAwardsAccordion3Body:
-      "휴먼-로봇 동작 시연으로 창의 설계 평가에서 최우수상을 받았습니다.",
-    showcaseAwardsAccordion3Caption: "캠퍼스 시연회에서 휴머노이드가 관객에게 인사합니다.",
-    showcaseAwardsAccordion4Title: "2023 로봇 제어 알고리즘 경진대회 금상",
-    showcaseAwardsAccordion4Body:
-      "강화학습 제어기를 적용한 다관절 로봇팔이 금상을 수상했습니다.",
-    showcaseAwardsAccordion4Caption: "심사위원 앞에서 제어 알고리즘을 설명하는 팀.",
-    showcaseAwardsAccordion5Title: "2022 K-로보틱스 창의설계 은상",
-    showcaseAwardsAccordion5Body:
-      "모듈형 서비스 로봇 설계로 은상을 기록했습니다.",
-    showcaseAwardsAccordion5Caption: "프로토타입 구조를 공개하며 질의를 받는 장면.",
-    showcaseAwardsAccordion6Title: "2022 연세공학 캡스톤 페어 우수상",
-    showcaseAwardsAccordion6Body:
-      "자율주행 카트 프로젝트가 학내 캡스톤 경진대회 우수상을 차지했습니다.",
-    showcaseAwardsAccordion6Caption: "캡스톤 페어 부스에 전시된 완성품.",
-    showcaseAwardsAccordion7Title: "2021 스마트팩토리 로봇 챌린지 장려상",
-    showcaseAwardsAccordion7Body:
-      "공정 자동화 시뮬레이터를 구현해 장려상을 받았습니다.",
-    showcaseAwardsAccordion7Caption: "스마트팩토리 시연 라인을 점검하는 팀원.",
-    showcaseAwardsAccordion8Title: "2021 청소년 메이커 멘토링 공로패",
-    showcaseAwardsAccordion8Body:
-      "지속적인 멘토링 활동으로 교육청으로부터 감사패를 수상했습니다.",
-    showcaseAwardsAccordion8Caption: "멘토링 참가 학생들과 함께한 단체 사진.",
-    showcaseAwardsAccordion9Title: "2020 전국 로봇 소프트웨어 콘테스트 최우수상",
-    showcaseAwardsAccordion9Body:
-      "SLAM 기반 소프트웨어 스택으로 최우수상을 수상했습니다.",
-    showcaseAwardsAccordion9Caption: "시상식에서 상장을 수여받는 모습.",
-    showcaseAwardsAccordion10Title: "2020 국제 협업로봇 포럼 데모 어워드",
-    showcaseAwardsAccordion10Body:
-      "협업 로봇 데모가 혁신성을 인정받아 데모 어워드를 수상했습니다.",
-    showcaseAwardsAccordion10Caption: "포럼 무대에서 협업 로봇을 시연하는 장면.",
-    showcaseAwardsAccordion11Title: "2019 자율주행 모듈 오픈소스 공모전 우수상",
-    showcaseAwardsAccordion11Body:
-      "오픈소스 자율주행 모듈 패키지로 우수상을 받았습니다.",
-    showcaseAwardsAccordion11Caption: "코드 리포지터리를 소개하는 발표 현장.",
     showcaseEventsEyebrow: "Events",
     showcaseEventsTitle: "활동 현장 & 미디어 아카이브",
     showcaseEventsDescription:
       "대표 사진 두 장을 먼저 공개하고 있으며, 향후 수십 개의 현장 이미지를 갤러리로 확장할 계획입니다.",
-    showcaseEventsCaption1: "YouTube 채널에서 프로젝트 하이라이트 영상을 상시 공개합니다.",
-    showcaseEventsCaption2: "공학원 A524 메이커 스페이스에서 팀별로 로봇을 제작합니다.",
-    showcaseEventsCaption3: "신입 부원 웰컴 세션에서 팀 소개를 진행합니다.",
-    showcaseEventsCaption4: "로봇팔 튜닝 워크숍 장면입니다.",
-    showcaseEventsCaption5: "휴머노이드 시연 전 장비를 점검하는 모습입니다.",
-    showcaseEventsCaption6: "대회 출전을 앞두고 회의 중인 팀원들.",
-    showcaseEventsCaption7: "메이커 교육 참가자와 함께한 단체 사진.",
-    showcaseEventsCaption8: "산학 협력 미팅에서 프로젝트를 설명하는 장면.",
-    showcaseEventsCaption9: "캠퍼스 로봇 투어를 준비하는 자율주행 팀.",
-    showcaseEventsCaption10: "임베디드 세미나에서 실습을 진행하는 모습.",
-    showcaseEventsCaption11: "커뮤니티 네트워킹 데이 현장입니다.",
-    showcaseEventsCaption12: "연말 데모데이에서 로봇을 전시하는 장면.",
     showcaseEventsPrev: "이전",
     showcaseEventsNext: "다음",
     showcaseEventsNote: "※ 향후 시즌별 이벤트가 확정되면 갤러리에 순차적으로 추가됩니다.",
@@ -625,4 +569,291 @@ export const CONTENT_DATA = {
     footerRights: "© 2025 Roboin. All rights reserved."
   }
 };
+
+// 대회 수상 내역 - 여기에 새로운 수상 내역을 추가하세요
+// 같은 대회의 한국어와 영어 정보를 한 곳에서 관리할 수 있습니다
+// 이미지 경로는 assets/images/ 폴더에 사진을 추가한 후 경로를 지정하세요
+export const AWARDS_DATA = [
+  {
+    ko: {
+      title: "2025 스팀컵 IRC 터틀봇3 오토레이스 장려상",
+      body: "텍스트",
+      caption: "로보인팀이 대회장에서 촬영한 기념사진."
+    },
+    en: {
+      title: "2025 Steam Cup IRC TurtleBot3 Auto Race Merit",
+      body: "Text",
+      caption: "Roboin team at the competition venue."
+    },
+    image: "assets/images/awards/011_2025 오토레이스 참가.jpg"
+  },
+  {
+    ko: {
+      title: "2025 제 9회 GIST AI 창의융합경진대회 대상",
+      body: "탁구로봇 콘테스트",
+      caption: "상장 사진입니다."
+    },
+    en: {
+      title: "2025 9th GIST AI Innovation Contest Grand Prize",
+      body: "Text",
+      caption: "Certificate photo."
+    },
+    image: "assets/images/awards/010_GIST 탁구로봇 대상.png"
+  },
+  {
+    ko: {
+      title: "2024 연세대학교 학생창업경진대회 왕중왕전 대상",
+      body: "텍스트",
+      caption: "상장 사진입니다."
+    },
+    en: {
+      title: "2024 Yonsei University Student Entrepreneurship Competition Grand Prize",
+      body: "Text",
+      caption: "Certificate photo."
+    },
+    image: "assets/images/awards/009_2024 학생창업경진대회 대상.jpg"
+  },
+  {
+    ko: {
+      title: "2024 ICT 스마트디바이스 전국 공모전 대상",
+      body: "텍스트",
+      caption: "상장 사진입니다."
+    },
+    en: {
+      title: "2024 ICT Smart Device National Competition Grand Prize",
+      body: "Text",
+      caption: "Certificate photo."
+    },
+    image: "assets/images/awards/008_ ICT스마트디바이스 대상.jpg"
+  },
+  {
+    ko: {
+      title: "꿈의 도서관: 메타버스 콘텐츠 제작 공모전 우수상",
+      body: "텍스트",
+      caption: "상장 사진입니다."
+    },
+    en: {
+      title: "Dream Library: Metaverse Content Creation Competition Merit",
+      body: "Text",
+      caption: "Certificate photo."
+    },
+    image: "assets/images/awards/007_메타버스 콘텐츠 우수상.jpg"
+  },
+  {
+    ko: {
+      title: "2020 KU 메디컬 해커톤 우수상",
+      body: "텍스트",
+      caption: "상장 사진입니다."
+    },
+    en: {
+      title: "2020 KU Medical Hackathon Merit",
+      body: "Text",
+      caption: "Certificate photo."
+    },
+    image: "assets/images/awards/006_2020 KU 메디컬 해커톤 우수.jpg"
+  },
+  {
+    ko: {
+      title: "ICRA 2019 RoboMaster AI Challenge 3rd Prize",
+      body: "Text",
+      caption: "Certificate photo."
+    },
+    en: {
+      title: "ICRA 2019 RoboMaster AI Challenge 3rd Prize",
+      body: "Text",
+      caption: "Certificate photo."
+    },
+    image: "assets/images/awards/005_ICRA 2019 RoboMaster AI Challenge.jpg"
+  },
+  {
+    ko: {
+      title: "제 8회 EDISON SW 활용 경진대회 대상상",
+      body: "텍스트",
+      caption: "상장 사진입니다."
+    },
+    en: {
+      title: "8th EDISON SW Utilization Competition Grand Prize",
+      body: "Text",
+      caption: "Certificate photo."
+    },
+    image: "assets/images/awards/004_8회 EDISON 대상.jpg"
+  },
+  {
+    ko: {
+      title: "제 8회 EDISON SW 활용 경진대회 최우수상",
+      body: "텍스트",
+      caption: "상장 사진입니다."
+    },
+    en: {
+      title: "8th EDISON SW Utilization Competition Grand Prize",
+      body: "Text",
+      caption: "Certificate photo."
+    },
+    image: "assets/images/awards/003_8회 EDISON 최우수.jpg"
+  },
+  {
+    ko: {
+      title: "제 7회 EDISON SW 활용 경진대회 최우수상",
+      body: "텍스트",
+      caption: "상장 사진입니다."
+    },
+    en: {
+      title: "7th EDISON SW Utilization Competition Grand Prize",
+      body: "Text",
+      caption: "Certificate photo."
+    },
+    image: "assets/images/awards/002_7회 EDISON 최우수.jpg"
+  },
+  {
+    ko: {
+      title: "제 7회 EDISON SW 활용 경진대회 우수상",
+      body: "텍스트트",
+      caption: "상장 사진입니다."
+    },
+    en: {
+      title: "7th EDISON SW Utilization Competition Merit",
+      body: "Text",
+      caption: "Certificate photo."
+    },
+    image: "assets/images/awards/001_7회 EDISON 우수.jpg"
+  }
+];
+
+// 이벤트 및 활동 사진 - 여기에 새로운 이벤트 사진을 추가하세요
+// 같은 이벤트의 한국어와 영어 정보를 한 곳에서 관리할 수 있습니다
+// 이미지 경로는 assets/images/ 폴더에 사진을 추가한 후 경로를 지정하세요
+export const EVENTS_DATA = [
+  {
+    ko: {
+      caption: "YouTube 채널에서 프로젝트 하이라이트 영상을 상시 공개합니다.",
+      alt: "로보인 유튜브 채널 활동 이미지"
+    },
+    en: {
+      caption: "Project highlight videos premiere on our YouTube channel.",
+      alt: "Roboin YouTube channel activity"
+    },
+    image: "assets/images/events-1.jpg"
+  },
+  {
+    ko: {
+      caption: "공학원 A524 메이커 스페이스에서 팀별로 로봇을 제작합니다.",
+      alt: "연세대학교 공학원 A524 작업 공간"
+    },
+    en: {
+      caption: "Engineering Hall A524 makerspace is where every build happens.",
+      alt: "Yonsei University Engineering Hall A524 workspace"
+    },
+    image: "assets/images/events-2.gif"
+  },
+  {
+    ko: {
+      caption: "신입 부원 웰컴 세션에서 팀 소개를 진행합니다.",
+      alt: "로보인 활동 사진 3"
+    },
+    en: {
+      caption: "New member welcome session where teams introduce themselves.",
+      alt: "Roboin activity photo 3"
+    },
+    image: "assets/images/events-1.jpg"
+  },
+  {
+    ko: {
+      caption: "로봇팔 튜닝 워크숍 장면입니다.",
+      alt: "로보인 활동 사진 4"
+    },
+    en: {
+      caption: "Robot arm tuning workshop in action.",
+      alt: "Roboin activity photo 4"
+    },
+    image: "assets/images/events-2.gif"
+  },
+  {
+    ko: {
+      caption: "휴머노이드 시연 전 장비를 점검하는 모습입니다.",
+      alt: "로보인 활동 사진 5"
+    },
+    en: {
+      caption: "Final checks before the humanoid demo.",
+      alt: "Roboin activity photo 5"
+    },
+    image: "assets/images/events-1.jpg"
+  },
+  {
+    ko: {
+      caption: "대회 출전을 앞두고 회의 중인 팀원들.",
+      alt: "로보인 활동 사진 6"
+    },
+    en: {
+      caption: "Strategy meeting right before competition day.",
+      alt: "Roboin activity photo 6"
+    },
+    image: "assets/images/events-2.gif"
+  },
+  {
+    ko: {
+      caption: "메이커 교육 참가자와 함께한 단체 사진.",
+      alt: "로보인 활동 사진 7"
+    },
+    en: {
+      caption: "Group photo with participants from the maker education program.",
+      alt: "Roboin activity photo 7"
+    },
+    image: "assets/images/events-1.jpg"
+  },
+  {
+    ko: {
+      caption: "산학 협력 미팅에서 프로젝트를 설명하는 장면.",
+      alt: "로보인 활동 사진 8"
+    },
+    en: {
+      caption: "Explaining our project during an industry meeting.",
+      alt: "Roboin activity photo 8"
+    },
+    image: "assets/images/events-2.gif"
+  },
+  {
+    ko: {
+      caption: "캠퍼스 로봇 투어를 준비하는 자율주행 팀.",
+      alt: "로보인 활동 사진 9"
+    },
+    en: {
+      caption: "Autonomous driving team preparing for the campus tour.",
+      alt: "Roboin activity photo 9"
+    },
+    image: "assets/images/events-1.jpg"
+  },
+  {
+    ko: {
+      caption: "임베디드 세미나에서 실습을 진행하는 모습.",
+      alt: "로보인 활동 사진 10"
+    },
+    en: {
+      caption: "Hands-on embedded seminar session.",
+      alt: "Roboin activity photo 10"
+    },
+    image: "assets/images/events-2.gif"
+  },
+  {
+    ko: {
+      caption: "커뮤니티 네트워킹 데이 현장입니다.",
+      alt: "로보인 활동 사진 11"
+    },
+    en: {
+      caption: "Community networking day snapshot.",
+      alt: "Roboin activity photo 11"
+    },
+    image: "assets/images/events-1.jpg"
+  },
+  {
+    ko: {
+      caption: "연말 데모데이에서 로봇을 전시하는 장면.",
+      alt: "로보인 활동 사진 12"
+    },
+    en: {
+      caption: "Year-end demo day display area.",
+      alt: "Roboin activity photo 12"
+    },
+    image: "assets/images/events-2.gif"
+  }
+];
 

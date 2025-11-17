@@ -1,4 +1,4 @@
-import { CONTENT_DATA } from "./content.js";
+import { CONTENT_DATA, AWARDS_DATA, EVENTS_DATA } from "./content.js";
 
 const STORAGE_KEY = "roboin-lang";
 const DEFAULT_LANG = "ko";
@@ -60,12 +60,33 @@ const updateContent = (lang) => {
   });
 
   updateLangToggleA11y(lang);
+  renderAwards(lang);
+  renderEvents(lang);
+  
+  // Award 모달도 언어 업데이트
+  const awardModal = document.getElementById("award-modal");
+  if (awardModal && !awardModal.classList.contains("hidden")) {
+    const index = parseInt(awardModal.getAttribute("data-current-award"));
+    if (!isNaN(index)) {
+      const award = AWARDS_DATA[index];
+      if (award) {
+        const content = award[lang] || award.ko;
+        const titleEl = awardModal.querySelector("#award-modal-title");
+        const bodyEl = awardModal.querySelector("#award-modal-body");
+        const captionEl = awardModal.querySelector("#award-modal-caption");
+        if (titleEl) titleEl.textContent = content.title;
+        if (bodyEl) bodyEl.textContent = content.body;
+        if (captionEl) captionEl.textContent = content.caption;
+      }
+    }
+  }
 };
 
 const handleLanguageToggle = () => {
   currentLang = currentLang === "ko" ? "en" : "ko";
   persistLanguage(currentLang);
   updateContent(currentLang);
+  // updateContent에서 이미 renderAwards와 renderEvents를 호출하므로 여기서는 불필요
 };
 
 const toggleMobileMenu = () => {
@@ -132,10 +153,86 @@ const setupEventListeners = () => {
   initMediaModal();
 };
 
+const renderAwards = (lang) => {
+  const awardsContainer = document.querySelector(".award-list");
+  if (!awardsContainer || !AWARDS_DATA) return;
+
+  awardsContainer.innerHTML = AWARDS_DATA.map((award, index) => {
+    const isOpen = index === 0 ? "open" : "";
+    const content = award[lang] || award.ko; // 언어별 데이터 가져오기
+    return `
+      <details class="award-entry" ${isOpen} data-award-index="${index}">
+        <summary>${content.title}</summary>
+        <div class="award-entry-body">
+          <p>${content.body}</p>
+          <figure class="award-entry-figure" data-award-trigger="${index}">
+            <img
+              src="${award.image}"
+              alt="${content.title}"
+              loading="lazy"
+            />
+            <figcaption>${content.caption}</figcaption>
+          </figure>
+        </div>
+      </details>
+    `;
+  }).join("");
+
+  // Award 클릭 이벤트 설정
+  initAwardModals(lang);
+};
+
+const renderEvents = (lang) => {
+  const eventsTrack = document.querySelector(".event-slider-track");
+  if (!eventsTrack || !EVENTS_DATA) return;
+
+  eventsTrack.innerHTML = EVENTS_DATA.map((event) => {
+    const content = event[lang] || event.ko; // 언어별 데이터 가져오기
+    return `
+      <figure
+        class="event-card"
+        data-slider-item
+        data-media-trigger
+        data-media-src="${event.image}"
+        data-media-caption-key=""
+        role="button"
+        tabindex="0"
+      >
+        <img
+          src="${event.image}"
+          alt="${content.alt}"
+          loading="lazy"
+        />
+        <figcaption class="event-caption">${content.caption}</figcaption>
+      </figure>
+    `;
+  }).join("");
+
+  // 이벤트 리스너 재설정
+  initMediaModal();
+  initSliders();
+};
+
 const init = () => {
   currentLang = getStoredLanguage();
   updateContent(currentLang);
   setupEventListeners();
+  setupAwardModalClose();
+  setupImageZoomClose();
+};
+
+const setupAwardModalClose = () => {
+  const closeTargets = document.querySelectorAll("[data-award-close]");
+  closeTargets.forEach((target) => {
+    target.addEventListener("click", closeAwardModal);
+  });
+};
+
+const setupImageZoomClose = () => {
+  const closeTargets = document.querySelectorAll("[data-image-zoom-close]");
+  closeTargets.forEach((target) => {
+    target.addEventListener("click", closeImageZoom);
+  });
 };
 
 const initSliders = () => {
@@ -178,6 +275,79 @@ const initSliders = () => {
     window.addEventListener("resize", () => window.requestAnimationFrame(updateButtons));
     updateButtons();
   });
+};
+
+const initAwardModals = (lang) => {
+  const awardTriggers = document.querySelectorAll("[data-award-trigger]");
+  
+  awardTriggers.forEach((trigger) => {
+    // 기존 이벤트 리스너 제거를 위해 클론
+    const newTrigger = trigger.cloneNode(true);
+    trigger.parentNode.replaceChild(newTrigger, trigger);
+    
+    newTrigger.addEventListener("click", (e) => {
+      e.stopPropagation(); // details 토글 방지
+      const index = parseInt(newTrigger.getAttribute("data-award-trigger"));
+      const award = AWARDS_DATA[index];
+      if (!award) return;
+      
+      const content = award[lang] || award.ko;
+      openAwardModal(award.image, content.title, content.body, content.caption);
+    });
+  });
+};
+
+const openAwardModal = (imageSrc, title, body, caption) => {
+  const modal = document.getElementById("award-modal");
+  if (!modal) return;
+
+  const img = modal.querySelector("#award-modal-img");
+  const titleEl = modal.querySelector("#award-modal-title");
+  const bodyEl = modal.querySelector("#award-modal-body");
+  const captionEl = modal.querySelector("#award-modal-caption");
+
+  img.src = imageSrc;
+  titleEl.textContent = title || "";
+  bodyEl.textContent = body || "";
+  captionEl.textContent = caption || "";
+
+  // 현재 award 인덱스 저장 (언어 변경 시 업데이트용)
+  const awardIndex = AWARDS_DATA.findIndex(a => a.image === imageSrc);
+  if (awardIndex !== -1) {
+    modal.setAttribute("data-current-award", awardIndex);
+  }
+
+  modal.classList.remove("hidden");
+  modal.setAttribute("aria-hidden", "false");
+  
+  // 이미지 클릭 시 추가 확대
+  img.onclick = () => {
+    openImageZoom(imageSrc);
+  };
+};
+
+const openImageZoom = (imageSrc) => {
+  const zoomModal = document.getElementById("image-zoom-modal");
+  if (!zoomModal) return;
+
+  const img = zoomModal.querySelector("#image-zoom-img");
+  img.src = imageSrc;
+  zoomModal.classList.remove("hidden");
+  zoomModal.setAttribute("aria-hidden", "false");
+};
+
+const closeAwardModal = () => {
+  const modal = document.getElementById("award-modal");
+  if (!modal) return;
+  modal.classList.add("hidden");
+  modal.setAttribute("aria-hidden", "true");
+};
+
+const closeImageZoom = () => {
+  const zoomModal = document.getElementById("image-zoom-modal");
+  if (!zoomModal) return;
+  zoomModal.classList.add("hidden");
+  zoomModal.setAttribute("aria-hidden", "true");
 };
 
 const initMediaModal = () => {
@@ -230,8 +400,18 @@ const initMediaModal = () => {
   });
 
   document.addEventListener("keydown", (event) => {
-    if (event.key === "Escape" && !modal.classList.contains("hidden")) {
-      closeModal();
+    if (event.key === "Escape") {
+      if (!modal.classList.contains("hidden")) {
+        closeModal();
+      }
+      const awardModal = document.getElementById("award-modal");
+      if (awardModal && !awardModal.classList.contains("hidden")) {
+        closeAwardModal();
+      }
+      const zoomModal = document.getElementById("image-zoom-modal");
+      if (zoomModal && !zoomModal.classList.contains("hidden")) {
+        closeImageZoom();
+      }
     }
   });
 };

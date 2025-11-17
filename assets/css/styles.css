@@ -808,9 +808,208 @@ body {
   color: #0f172a;
 }
 
+/* Award 모달 스타일 */
+.award-modal {
+  position: fixed;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+
+.award-modal.hidden {
+  pointer-events: none;
+  visibility: hidden;
+}
+
+.award-modal-backdrop {
+  position: absolute;
+  inset: 0;
+  background: rgba(15, 23, 42, 0.7);
+  backdrop-filter: blur(4px);
+}
+
+.award-modal-content {
+  position: relative;
+  background: #ffffff;
+  border-radius: 1.5rem;
+  padding: 2rem;
+  max-width: min(90vw, 800px);
+  max-height: 90vh;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  z-index: 1;
+  box-shadow: 0 30px 80px rgba(15, 23, 42, 0.4);
+}
+
+.award-modal-close {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  border: none;
+  background: rgba(15, 23, 42, 0.1);
+  color: #0f172a;
+  font-size: 1.5rem;
+  font-weight: 600;
+  width: 2.5rem;
+  height: 2.5rem;
+  border-radius: 999px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 150ms ease;
+}
+
+.award-modal-close:hover {
+  background: rgba(15, 23, 42, 0.2);
+}
+
+.award-modal-title {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #0f172a;
+  margin: 0;
+}
+
+.award-modal-body {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: #475569;
+  margin: 0;
+}
+
+.award-modal-figure {
+  margin: 0;
+}
+
+.award-modal-img {
+  width: 100%;
+  height: auto;
+  border-radius: 1rem;
+  cursor: zoom-in;
+  transition: transform 200ms ease;
+}
+
+.award-modal-img:hover {
+  transform: scale(1.02);
+}
+
+.award-modal-caption {
+  margin-top: 0.75rem;
+  font-size: 0.9rem;
+  color: #64748b;
+  text-align: center;
+  font-style: italic;
+}
+
+/* 이미지 확대 모달 스타일 */
+.image-zoom-modal {
+  position: fixed;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 2000;
+}
+
+.image-zoom-modal.hidden {
+  pointer-events: none;
+  visibility: hidden;
+}
+
+.image-zoom-backdrop {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.95);
+  backdrop-filter: blur(8px);
+}
+
+.image-zoom-content {
+  position: relative;
+  max-width: 95vw;
+  max-height: 95vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1;
+}
+
+.image-zoom-close {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  border: none;
+  background: rgba(255, 255, 255, 0.2);
+  color: #ffffff;
+  font-size: 1.5rem;
+  font-weight: 600;
+  width: 3rem;
+  height: 3rem;
+  border-radius: 999px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 150ms ease;
+  z-index: 2;
+}
+
+.image-zoom-close:hover {
+  background: rgba(255, 255, 255, 0.3);
+}
+
+.image-zoom-img {
+  max-width: 100%;
+  max-height: 95vh;
+  object-fit: contain;
+  border-radius: 0.5rem;
+}
+
+/* Award 항목 클릭 가능 표시 */
+.award-entry-figure {
+  position: relative;
+  cursor: pointer;
+  transition: transform 200ms ease;
+}
+
+.award-entry-figure:hover {
+  transform: scale(1.02);
+}
+
+.award-entry-figure::before {
+  content: "🔍";
+  position: absolute;
+  top: 0.5rem;
+  right: 0.5rem;
+  background: rgba(255, 255, 255, 0.9);
+  padding: 0.5rem;
+  border-radius: 999px;
+  font-size: 1.2rem;
+  opacity: 0;
+  transition: opacity 200ms ease;
+  z-index: 1;
+}
+
+.award-entry-figure:hover::before {
+  opacity: 1;
+}
+
 @media (max-width: 768px) {
   .hero-gradient {
     padding-top: 5rem;
+  }
+  
+  .award-modal-content {
+    padding: 1.5rem;
+    max-width: 95vw;
+  }
+  
+  .award-modal-title {
+    font-size: 1.25rem;
   }
 }
 

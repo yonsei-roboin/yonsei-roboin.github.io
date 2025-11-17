@@ -1,0 +1,822 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0"
+    />
+    <title data-key="pageTitle">연세대학교 로봇동아리 Roboin</title>
+    <link
+      rel="preconnect"
+      href="https://fonts.googleapis.com"
+    />
+    <link
+      rel="preconnect"
+      href="https://fonts.gstatic.com"
+      crossorigin
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link
+      rel="stylesheet"
+      href="assets/css/styles.css"
+    />
+  </head>
+  <body class="font-sans text-slate-900 bg-slate-50">
+    <a
+      href="#main"
+      class="skip-link"
+      data-key="skipLink"
+      >본문으로 건너뛰기</a
+    >
+    <header class="sticky top-0 z-50 bg-slate-50/90 backdrop-blur border-b border-slate-200">
+      <div class="max-w-6xl mx-auto flex items-center justify-between px-4 py-4">
+        <a
+          href="index.html#hero"
+          class="flex items-center gap-2 text-xl font-semibold tracking-tight text-slate-900"
+        >
+          <span
+            class="inline-flex h-10 w-10 items-center justify-center rounded-full bg-blue-600 text-white font-bold"
+            >R</span
+          >
+          <span data-key="brandTitle">Roboin</span>
+        </a>
+        <nav class="hidden md:flex items-center gap-8 text-sm font-medium">
+          <a
+            href="index.html#hero"
+            class="nav-link"
+            data-key="navHome"
+            >홈</a
+          >
+          <a
+            href="index.html#about"
+            class="nav-link"
+            data-key="navAbout"
+            >소개</a
+          >
+          <a
+            href="index.html#activities"
+            class="nav-link"
+            data-key="navActivities"
+            >활동</a
+          >
+          <a
+            href="index.html#recruitment"
+            class="nav-link"
+            data-key="navRecruitment"
+            >모집</a
+          >
+          <a
+            href="index.html#contact"
+            class="nav-link"
+            data-key="navContact"
+            >문의</a
+          >
+          <a
+            href="showcase.html"
+            class="nav-link active"
+            data-key="navShowcase"
+            >쇼케이스</a
+          >
+        </nav>
+        <div class="flex items-center gap-3">
+          <button
+            id="lang-toggle"
+            class="btn btn-secondary text-sm font-semibold"
+            type="button"
+            data-key="langToggleLabel"
+          >
+            English
+          </button>
+          <button
+            id="mobile-menu-toggle"
+            class="md:hidden inline-flex items-center justify-center rounded-full border border-slate-300 p-2 text-slate-700"
+            type="button"
+            aria-label="Menu"
+            aria-expanded="false"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              class="h-5 w-5"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="1.8"
+                d="M4 6h16M4 12h16M4 18h16"
+              />
+            </svg>
+          </button>
+        </div>
+      </div>
+      <nav
+        id="primary-nav"
+        class="md:hidden hidden border-t border-slate-200 bg-white"
+      >
+        <a
+          href="index.html#hero"
+          class="mobile-nav-link"
+          data-key="navHome"
+          >홈</a
+        >
+        <a
+          href="index.html#about"
+          class="mobile-nav-link"
+          data-key="navAbout"
+          >소개</a
+        >
+        <a
+          href="index.html#activities"
+          class="mobile-nav-link"
+          data-key="navActivities"
+          >활동</a
+        >
+        <a
+          href="index.html#recruitment"
+          class="mobile-nav-link"
+          data-key="navRecruitment"
+          >모집</a
+        >
+        <a
+          href="index.html#contact"
+          class="mobile-nav-link"
+          data-key="navContact"
+          >문의</a
+        >
+        <a
+          href="showcase.html"
+          class="mobile-nav-link"
+          data-key="navShowcase"
+          >쇼케이스</a
+        >
+      </nav>
+    </header>
+
+    <main id="main" class="relative">
+      <section class="showcase-hero">
+        <div class="max-w-4xl mx-auto px-4 py-20 text-center space-y-6">
+          <p class="section-eyebrow mx-auto" data-key="showcaseHeroEyebrow">Showcase</p>
+          <h1 class="text-4xl sm:text-5xl font-bold text-slate-900" data-key="showcaseHeroTitle">
+            로보인의 모든 하이라이트를 한 곳에서
+          </h1>
+          <p class="text-lg text-slate-600" data-key="showcaseHeroSubtitle">
+            수상 실적, 대회/행사 기록, 우수 프로젝트와 커리큘럼, 명예 회원 이야기까지 로보인의 성장 연대를 담았습니다.
+          </p>
+          <a
+            href="index.html#activities"
+            class="btn btn-primary"
+            data-key="showcaseHeroCTA"
+          >
+            메인 페이지로 돌아가기
+          </a>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="section-header">
+          <p class="section-eyebrow" data-key="showcaseAwardsEyebrow">Awards</p>
+          <h2 class="section-title" data-key="showcaseAwardsTitle">
+            로보인의 수상 및 대회 기록
+          </h2>
+          <p class="section-description" data-key="showcaseAwardsDescription">
+            대표 수상 실적을 우선 공개하고 있으며, 향후 시즌별 기록을 지속적으로 확장할 예정입니다.
+          </p>
+        </div>
+        <div class="award-list">
+          <details class="award-entry" open>
+            <summary data-key="showcaseAwardsAccordion1Title"></summary>
+            <div class="award-entry-body">
+              <p data-key="showcaseAwardsAccordion1Body"></p>
+              <figure class="award-entry-figure">
+                <img
+                  src="assets/images/events-1.jpg"
+                  alt=""
+                  loading="lazy"
+                />
+                <figcaption data-key="showcaseAwardsAccordion1Caption"></figcaption>
+              </figure>
+            </div>
+          </details>
+          <details class="award-entry">
+            <summary data-key="showcaseAwardsAccordion2Title"></summary>
+            <div class="award-entry-body">
+              <p data-key="showcaseAwardsAccordion2Body"></p>
+              <figure class="award-entry-figure">
+                <img
+                  src="assets/images/events-2.gif"
+                  alt=""
+                  loading="lazy"
+                />
+                <figcaption data-key="showcaseAwardsAccordion2Caption"></figcaption>
+              </figure>
+            </div>
+          </details>
+          <details class="award-entry">
+            <summary data-key="showcaseAwardsAccordion3Title"></summary>
+            <div class="award-entry-body">
+              <p data-key="showcaseAwardsAccordion3Body"></p>
+              <figure class="award-entry-figure">
+                <img
+                  src="assets/images/events-1.jpg"
+                  alt=""
+                  loading="lazy"
+                />
+                <figcaption data-key="showcaseAwardsAccordion3Caption"></figcaption>
+              </figure>
+            </div>
+          </details>
+          <details class="award-entry">
+            <summary data-key="showcaseAwardsAccordion4Title"></summary>
+            <div class="award-entry-body">
+              <p data-key="showcaseAwardsAccordion4Body"></p>
+              <figure class="award-entry-figure">
+                <img
+                  src="assets/images/events-2.gif"
+                  alt=""
+                  loading="lazy"
+                />
+                <figcaption data-key="showcaseAwardsAccordion4Caption"></figcaption>
+              </figure>
+            </div>
+          </details>
+          <details class="award-entry">
+            <summary data-key="showcaseAwardsAccordion5Title"></summary>
+            <div class="award-entry-body">
+              <p data-key="showcaseAwardsAccordion5Body"></p>
+              <figure class="award-entry-figure">
+                <img
+                  src="assets/images/events-1.jpg"
+                  alt=""
+                  loading="lazy"
+                />
+                <figcaption data-key="showcaseAwardsAccordion5Caption"></figcaption>
+              </figure>
+            </div>
+          </details>
+          <details class="award-entry">
+            <summary data-key="showcaseAwardsAccordion6Title"></summary>
+            <div class="award-entry-body">
+              <p data-key="showcaseAwardsAccordion6Body"></p>
+              <figure class="award-entry-figure">
+                <img
+                  src="assets/images/events-2.gif"
+                  alt=""
+                  loading="lazy"
+                />
+                <figcaption data-key="showcaseAwardsAccordion6Caption"></figcaption>
+              </figure>
+            </div>
+          </details>
+          <details class="award-entry">
+            <summary data-key="showcaseAwardsAccordion7Title"></summary>
+            <div class="award-entry-body">
+              <p data-key="showcaseAwardsAccordion7Body"></p>
+              <figure class="award-entry-figure">
+                <img
+                  src="assets/images/events-1.jpg"
+                  alt=""
+                  loading="lazy"
+                />
+                <figcaption data-key="showcaseAwardsAccordion7Caption"></figcaption>
+              </figure>
+            </div>
+          </details>
+          <details class="award-entry">
+            <summary data-key="showcaseAwardsAccordion8Title"></summary>
+            <div class="award-entry-body">
+              <p data-key="showcaseAwardsAccordion8Body"></p>
+              <figure class="award-entry-figure">
+                <img
+                  src="assets/images/events-2.gif"
+                  alt=""
+                  loading="lazy"
+                />
+                <figcaption data-key="showcaseAwardsAccordion8Caption"></figcaption>
+              </figure>
+            </div>
+          </details>
+          <details class="award-entry">
+            <summary data-key="showcaseAwardsAccordion9Title"></summary>
+            <div class="award-entry-body">
+              <p data-key="showcaseAwardsAccordion9Body"></p>
+              <figure class="award-entry-figure">
+                <img
+                  src="assets/images/events-1.jpg"
+                  alt=""
+                  loading="lazy"
+                />
+                <figcaption data-key="showcaseAwardsAccordion9Caption"></figcaption>
+              </figure>
+            </div>
+          </details>
+          <details class="award-entry">
+            <summary data-key="showcaseAwardsAccordion10Title"></summary>
+            <div class="award-entry-body">
+              <p data-key="showcaseAwardsAccordion10Body"></p>
+              <figure class="award-entry-figure">
+                <img
+                  src="assets/images/events-2.gif"
+                  alt=""
+                  loading="lazy"
+                />
+                <figcaption data-key="showcaseAwardsAccordion10Caption"></figcaption>
+              </figure>
+            </div>
+          </details>
+          <details class="award-entry">
+            <summary data-key="showcaseAwardsAccordion11Title"></summary>
+            <div class="award-entry-body">
+              <p data-key="showcaseAwardsAccordion11Body"></p>
+              <figure class="award-entry-figure">
+                <img
+                  src="assets/images/events-1.jpg"
+                  alt=""
+                  loading="lazy"
+                />
+                <figcaption data-key="showcaseAwardsAccordion11Caption"></figcaption>
+              </figure>
+            </div>
+          </details>
+        </div>
+      </section>
+
+      <section class="section bg-white">
+        <div class="section-header">
+          <p class="section-eyebrow" data-key="showcaseEventsEyebrow">Events</p>
+          <h2 class="section-title" data-key="showcaseEventsTitle">
+            활동 현장 & 미디어 아카이브
+          </h2>
+          <p class="section-description" data-key="showcaseEventsDescription">
+            대표 사진 두 장을 먼저 공개하고 있으며, 향후 수십 개의 현장 이미지를 갤러리로 확장할 계획입니다.
+          </p>
+        </div>
+        <div class="event-slider" data-slider>
+          <button
+            class="slider-button"
+            type="button"
+            data-slider-prev
+            aria-label="previous events"
+            data-key="showcaseEventsPrev"
+          >
+            ‹
+          </button>
+          <div class="event-slider-window">
+            <div class="event-slider-track" data-slider-track>
+            <figure
+              class="event-card"
+              data-slider-item
+              data-media-trigger
+              data-media-src="assets/images/events-1.jpg"
+              data-media-caption-key="showcaseEventsCaption1"
+              role="button"
+              tabindex="0"
+            >
+              <img
+                src="assets/images/events-1.jpg"
+                alt="로보인 유튜브 채널 활동 이미지"
+                loading="lazy"
+              />
+              <figcaption class="event-caption" data-key="showcaseEventsCaption1">
+                YouTube 채널에서 프로젝트 하이라이트 영상을 상시 공개합니다.
+              </figcaption>
+            </figure>
+            <figure
+              class="event-card"
+              data-slider-item
+              data-media-trigger
+              data-media-src="assets/images/events-2.gif"
+              data-media-caption-key="showcaseEventsCaption2"
+              role="button"
+              tabindex="0"
+            >
+              <img
+                src="assets/images/events-2.gif"
+                alt="연세대학교 공학원 A524 작업 공간"
+                loading="lazy"
+              />
+              <figcaption class="event-caption" data-key="showcaseEventsCaption2">
+                공학원 A524 메이커 스페이스에서 팀별로 로봇을 제작합니다.
+              </figcaption>
+            </figure>
+            <figure
+              class="event-card"
+              data-slider-item
+              data-media-trigger
+              data-media-src="assets/images/events-1.jpg"
+              data-media-caption-key="showcaseEventsCaption3"
+              role="button"
+              tabindex="0"
+            >
+              <img
+                src="assets/images/events-1.jpg"
+                alt="로보인 활동 사진 3"
+                loading="lazy"
+              />
+              <figcaption class="event-caption" data-key="showcaseEventsCaption3"></figcaption>
+            </figure>
+            <figure
+              class="event-card"
+              data-slider-item
+              data-media-trigger
+              data-media-src="assets/images/events-2.gif"
+              data-media-caption-key="showcaseEventsCaption4"
+              role="button"
+              tabindex="0"
+            >
+              <img
+                src="assets/images/events-2.gif"
+                alt="로보인 활동 사진 4"
+                loading="lazy"
+              />
+              <figcaption class="event-caption" data-key="showcaseEventsCaption4"></figcaption>
+            </figure>
+            <figure
+              class="event-card"
+              data-slider-item
+              data-media-trigger
+              data-media-src="assets/images/events-1.jpg"
+              data-media-caption-key="showcaseEventsCaption5"
+              role="button"
+              tabindex="0"
+            >
+              <img
+                src="assets/images/events-1.jpg"
+                alt="로보인 활동 사진 5"
+                loading="lazy"
+              />
+              <figcaption class="event-caption" data-key="showcaseEventsCaption5"></figcaption>
+            </figure>
+            <figure
+              class="event-card"
+              data-slider-item
+              data-media-trigger
+              data-media-src="assets/images/events-2.gif"
+              data-media-caption-key="showcaseEventsCaption6"
+              role="button"
+              tabindex="0"
+            >
+              <img
+                src="assets/images/events-2.gif"
+                alt="로보인 활동 사진 6"
+                loading="lazy"
+              />
+              <figcaption class="event-caption" data-key="showcaseEventsCaption6"></figcaption>
+            </figure>
+            <figure
+              class="event-card"
+              data-slider-item
+              data-media-trigger
+              data-media-src="assets/images/events-1.jpg"
+              data-media-caption-key="showcaseEventsCaption7"
+              role="button"
+              tabindex="0"
+            >
+              <img
+                src="assets/images/events-1.jpg"
+                alt="로보인 활동 사진 7"
+                loading="lazy"
+              />
+              <figcaption class="event-caption" data-key="showcaseEventsCaption7"></figcaption>
+            </figure>
+            <figure
+              class="event-card"
+              data-slider-item
+              data-media-trigger
+              data-media-src="assets/images/events-2.gif"
+              data-media-caption-key="showcaseEventsCaption8"
+              role="button"
+              tabindex="0"
+            >
+              <img
+                src="assets/images/events-2.gif"
+                alt="로보인 활동 사진 8"
+                loading="lazy"
+              />
+              <figcaption class="event-caption" data-key="showcaseEventsCaption8"></figcaption>
+            </figure>
+            <figure
+              class="event-card"
+              data-slider-item
+              data-media-trigger
+              data-media-src="assets/images/events-1.jpg"
+              data-media-caption-key="showcaseEventsCaption9"
+              role="button"
+              tabindex="0"
+            >
+              <img
+                src="assets/images/events-1.jpg"
+                alt="로보인 활동 사진 9"
+                loading="lazy"
+              />
+              <figcaption class="event-caption" data-key="showcaseEventsCaption9"></figcaption>
+            </figure>
+            <figure
+              class="event-card"
+              data-slider-item
+              data-media-trigger
+              data-media-src="assets/images/events-2.gif"
+              data-media-caption-key="showcaseEventsCaption10"
+              role="button"
+              tabindex="0"
+            >
+              <img
+                src="assets/images/events-2.gif"
+                alt="로보인 활동 사진 10"
+                loading="lazy"
+              />
+              <figcaption class="event-caption" data-key="showcaseEventsCaption10"></figcaption>
+            </figure>
+            <figure
+              class="event-card"
+              data-slider-item
+              data-media-trigger
+              data-media-src="assets/images/events-1.jpg"
+              data-media-caption-key="showcaseEventsCaption11"
+              role="button"
+              tabindex="0"
+            >
+              <img
+                src="assets/images/events-1.jpg"
+                alt="로보인 활동 사진 11"
+                loading="lazy"
+              />
+              <figcaption class="event-caption" data-key="showcaseEventsCaption11"></figcaption>
+            </figure>
+            <figure
+              class="event-card"
+              data-slider-item
+              data-media-trigger
+              data-media-src="assets/images/events-2.gif"
+              data-media-caption-key="showcaseEventsCaption12"
+              role="button"
+              tabindex="0"
+            >
+              <img
+                src="assets/images/events-2.gif"
+                alt="로보인 활동 사진 12"
+                loading="lazy"
+              />
+              <figcaption class="event-caption" data-key="showcaseEventsCaption12"></figcaption>
+            </figure>
+            </div>
+          </div>
+          <button
+            class="slider-button"
+            type="button"
+            data-slider-next
+            aria-label="next events"
+            data-key="showcaseEventsNext"
+          >
+            ›
+          </button>
+        </div>
+        <p class="event-note" data-key="showcaseEventsNote">
+          ※ 향후 시즌별 이벤트가 확정되면 갤러리에 순차적으로 추가됩니다.
+        </p>
+      </section>
+
+      <section class="section">
+        <div class="section-header">
+          <p class="section-eyebrow" data-key="showcaseProjectsDetailEyebrow">Projects</p>
+          <h2 class="section-title" data-key="showcaseProjectsDetailTitle">
+            우수 프로젝트 포트폴리오
+          </h2>
+          <p class="section-description" data-key="showcaseProjectsDetailDescription">
+            캡스톤형 프로젝트와 대회용 프로젝트를 분류해 정리했습니다.
+          </p>
+        </div>
+        <div class="grid gap-6 lg:grid-cols-3">
+          <article class="stack-card">
+            <p class="badge" data-key="showcaseProjectsDetailBadge1">Capstone</p>
+            <h3 class="stack-card-title" data-key="showcaseProjectsDetailItem1Title">자율주행 서비스 로봇</h3>
+            <p class="stack-card-note" data-key="showcaseProjectsDetailItem1Body">
+              SLAM, 센서 융합, 모듈형 메카니즘을 활용해 캠퍼스 안내로봇을 제작합니다.
+            </p>
+          </article>
+          <article class="stack-card">
+            <p class="badge" data-key="showcaseProjectsDetailBadge2">Research</p>
+            <h3 class="stack-card-title" data-key="showcaseProjectsDetailItem2Title">휴머노이드 모션 랩</h3>
+            <p class="stack-card-note" data-key="showcaseProjectsDetailItem2Body">
+              강화학습·제어기를 결합해 사람과 함께 일하는 휴머노이드 동작을 실험합니다.
+            </p>
+          </article>
+          <article class="stack-card">
+            <p class="badge" data-key="showcaseProjectsDetailBadge3">Community</p>
+            <h3 class="stack-card-title" data-key="showcaseProjectsDetailItem3Title">메이커 커뮤니티 협업</h3>
+            <p class="stack-card-note" data-key="showcaseProjectsDetailItem3Body">
+              지역 청소년을 대상으로 로봇 제작 워크숍과 멘토링을 운영합니다.
+            </p>
+          </article>
+        </div>
+      </section>
+
+      <section class="section bg-white">
+        <div class="section-header">
+          <p class="section-eyebrow" data-key="showcaseCurriculumDetailEyebrow">Curriculum</p>
+          <h2 class="section-title" data-key="showcaseCurriculumDetailTitle">
+            체계적인 3단계 커리큘럼
+          </h2>
+          <p class="section-description" data-key="showcaseCurriculumDetailDescription">
+            각 레벨별 학습 목표와 결과물을 살펴볼 수 있습니다.
+          </p>
+        </div>
+        <div class="curriculum-list">
+          <details class="curriculum-entry" open>
+            <summary>
+              <span data-key="showcaseCurriculumDetailItem1Title">LEVEL 1 · Starter</span>
+              <small data-key="showcaseCurriculumDetailItem1Body"></small>
+            </summary>
+            <div class="curriculum-entry-body">
+              <article class="curriculum-subcard">
+                <h4 data-key="showcaseCurriculumDetailLevel1Item1Title"></h4>
+                <p data-key="showcaseCurriculumDetailLevel1Item1Body"></p>
+              </article>
+              <article class="curriculum-subcard">
+                <h4 data-key="showcaseCurriculumDetailLevel1Item2Title"></h4>
+                <p data-key="showcaseCurriculumDetailLevel1Item2Body"></p>
+              </article>
+              <article class="curriculum-subcard">
+                <h4 data-key="showcaseCurriculumDetailLevel1Item3Title"></h4>
+                <p data-key="showcaseCurriculumDetailLevel1Item3Body"></p>
+              </article>
+            </div>
+          </details>
+          <details class="curriculum-entry">
+            <summary>
+              <span data-key="showcaseCurriculumDetailItem2Title">LEVEL 2 · Builder</span>
+              <small data-key="showcaseCurriculumDetailItem2Body"></small>
+            </summary>
+            <div class="curriculum-entry-body">
+              <article class="curriculum-subcard">
+                <h4 data-key="showcaseCurriculumDetailLevel2Item1Title"></h4>
+                <p data-key="showcaseCurriculumDetailLevel2Item1Body"></p>
+              </article>
+              <article class="curriculum-subcard">
+                <h4 data-key="showcaseCurriculumDetailLevel2Item2Title"></h4>
+                <p data-key="showcaseCurriculumDetailLevel2Item2Body"></p>
+              </article>
+              <article class="curriculum-subcard">
+                <h4 data-key="showcaseCurriculumDetailLevel2Item3Title"></h4>
+                <p data-key="showcaseCurriculumDetailLevel2Item3Body"></p>
+              </article>
+            </div>
+          </details>
+          <details class="curriculum-entry">
+            <summary>
+              <span data-key="showcaseCurriculumDetailItem3Title">LEVEL 3 · Explorer</span>
+              <small data-key="showcaseCurriculumDetailItem3Body"></small>
+            </summary>
+            <div class="curriculum-entry-body">
+              <article class="curriculum-subcard">
+                <h4 data-key="showcaseCurriculumDetailLevel3Item1Title"></h4>
+                <p data-key="showcaseCurriculumDetailLevel3Item1Body"></p>
+              </article>
+              <article class="curriculum-subcard">
+                <h4 data-key="showcaseCurriculumDetailLevel3Item2Title"></h4>
+                <p data-key="showcaseCurriculumDetailLevel3Item2Body"></p>
+              </article>
+              <article class="curriculum-subcard">
+                <h4 data-key="showcaseCurriculumDetailLevel3Item3Title"></h4>
+                <p data-key="showcaseCurriculumDetailLevel3Item3Body"></p>
+              </article>
+            </div>
+          </details>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="section-header">
+          <p class="section-eyebrow" data-key="showcaseHonorarySectionEyebrow">Community</p>
+          <h2 class="section-title" data-key="showcaseHonorarySectionTitle">
+            명예 회원 & 현재 임원진
+          </h2>
+          <p class="section-description" data-key="showcaseHonorarySectionDescription">
+            졸업자 네트워크와 현재 운영진의 역할을 소개합니다.
+          </p>
+        </div>
+        <div class="grid gap-6 lg:grid-cols-2">
+          <article class="stack-card">
+            <h3 class="stack-card-title" data-key="showcaseHonoraryCardTitle">명예 회원</h3>
+            <ul class="stack-card-list">
+              <li>
+                <p class="stack-card-label" data-key="showcaseHonoraryCardItem1Title">해외 대학 연구자</p>
+                <p class="stack-card-note" data-key="showcaseHonoraryCardItem1Body">
+                  Georgia Tech, UC Berkeley 대학원에 진학한 동문이 로보인 명예 회원으로 멘토링합니다.
+                </p>
+              </li>
+              <li>
+                <p class="stack-card-label" data-key="showcaseHonoraryCardItem2Title">산업계 전문가</p>
+                <p class="stack-card-note" data-key="showcaseHonoraryCardItem2Body">
+                  국내외 로봇 기업에 진출한 졸업생이 프로젝트 심사와 커리어 상담을 지원합니다.
+                </p>
+              </li>
+              <li>
+                <p class="stack-card-label" data-key="showcaseHonoraryCardItem3Title">커뮤니티 앰배서더</p>
+                <p class="stack-card-note" data-key="showcaseHonoraryCardItem3Body">
+                  메이커 커뮤니티와 협력을 이끄는 동문이 사회공헌 프로젝트를 함께 만듭니다.
+                </p>
+              </li>
+            </ul>
+          </article>
+          <article class="stack-card">
+            <h3 class="stack-card-title" data-key="showcaseOfficersSectionTitle">현재 임원진</h3>
+            <div class="officer-grid">
+              <div>
+                <p class="stack-card-label" data-key="showcaseOfficersSectionPresidentLabel">회장</p>
+                <p class="stack-card-note" data-key="showcaseOfficersSectionPresidentBody">
+                  김민건 · 동아리 비전, 외부 협력 총괄
+                </p>
+              </div>
+              <div>
+                <p class="stack-card-label" data-key="showcaseOfficersSectionViceLabel">부회장</p>
+                <p class="stack-card-note" data-key="showcaseOfficersSectionViceBody">
+                  (모집 중) · 커리큘럼/세미나 운영 리드
+                </p>
+              </div>
+              <div>
+                <p class="stack-card-label" data-key="showcaseOfficersSectionProjectLabel">프로젝트 리드</p>
+                <p class="stack-card-note" data-key="showcaseOfficersSectionProjectBody">
+                  팀장단 · 기술 멘토링, 대회 준비 지원
+                </p>
+              </div>
+              <div>
+                <p class="stack-card-label" data-key="showcaseOfficersSectionCommunityLabel">커뮤니티 리드</p>
+                <p class="stack-card-note" data-key="showcaseOfficersSectionCommunityBody">
+                  명예 회원 및 동문 네트워크 관리
+                </p>
+              </div>
+              <div>
+                <p class="stack-card-label" data-key="showcaseOfficersSectionEducationLabel">교육 리드</p>
+                <p class="stack-card-note" data-key="showcaseOfficersSectionEducationBody">
+                  스터디 커리큘럼 개발 및 신입 온보딩 담당
+                </p>
+              </div>
+              <div>
+                <p class="stack-card-label" data-key="showcaseOfficersSectionMediaLabel">홍보 리드</p>
+                <p class="stack-card-note" data-key="showcaseOfficersSectionMediaBody">
+                  SNS/미디어 콘텐츠 기획과 이벤트 기록
+                </p>
+              </div>
+              <div>
+                <p class="stack-card-label" data-key="showcaseOfficersSectionFinanceLabel">운영 리드</p>
+                <p class="stack-card-note" data-key="showcaseOfficersSectionFinanceBody">
+                  예산·자원 관리 및 장비 지원 조율
+                </p>
+              </div>
+            </div>
+          </article>
+        </div>
+      </section>
+    </main>
+
+    <footer class="border-t border-slate-200 bg-slate-50">
+      <div class="max-w-6xl mx-auto px-4 py-8 flex flex-col gap-2 sm:flex-row sm:items-center sm:justify-between">
+        <p class="text-sm text-slate-600" data-key="footerTagline">
+          Roboin · Yonsei University Robotics Circle
+        </p>
+        <p class="text-sm text-slate-500" data-key="footerRights">
+          © 2025 Roboin. All rights reserved.
+        </p>
+      </div>
+    </footer>
+
+    <div
+      id="media-modal"
+      class="media-modal hidden"
+      aria-hidden="true"
+    >
+      <div class="media-modal-backdrop" data-media-close></div>
+      <div
+        class="media-modal-content"
+        role="dialog"
+        aria-modal="true"
+        aria-labelledby="media-modal-caption"
+      >
+        <button
+          class="media-modal-close"
+          type="button"
+          data-media-close
+          data-key="mediaModalClose"
+        >
+          닫기
+        </button>
+        <img
+          id="media-modal-img"
+          alt=""
+        />
+        <p id="media-modal-caption"></p>
+      </div>
+    </div>
+
+    <script type="module" src="assets/js/script.js"></script>
+  </body>
+</html>
+
+

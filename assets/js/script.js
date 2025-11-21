@@ -1,4 +1,4 @@
-import { CONTENT_DATA, AWARDS_DATA, EVENTS_DATA, RESOURCES_DATA, RESOURCES_CONTENT } from "./content.js";
+import { CONTENT_DATA, AWARDS_DATA, EVENTS_DATA, RESOURCES_DATA, RESOURCES_CONTENT, OFFICERS_DATA, HONORARY_MEMBERS_DATA } from "./content.js";
 
 const STORAGE_KEY = "roboin-lang";
 const DEFAULT_LANG = "ko";
@@ -63,6 +63,9 @@ const updateContent = (lang) => {
   renderAwards(lang);
   renderEvents(lang);
   renderResources(lang);
+  renderHighlights(lang);
+  renderOfficers(lang);
+  renderHonoraryMembers(lang);
   
   // Award 모달도 언어 업데이트
   const awardModal = document.getElementById("award-modal");
@@ -233,6 +236,114 @@ const renderEvents = (lang) => {
   initSliders();
 };
 
+const renderHighlights = (lang) => {
+  // 수상실적 하이라이트 (처음 2개, 더 보기에서 2개 더 = 총 4개)
+  const awardsContainer = document.getElementById("highlights-awards");
+  const awardsMoreContainer = document.getElementById("highlights-awards-more");
+  
+  if (awardsContainer && AWARDS_DATA && AWARDS_DATA.length > 0) {
+    const topAwards = AWARDS_DATA.slice(0, 2); // 처음 2개
+    const moreAwards = AWARDS_DATA.slice(2, 4); // 더 보기에서 2개 더
+    
+    awardsContainer.innerHTML = topAwards.map((award, index) => {
+      const content = award[lang] || award.ko;
+      return `
+        <article class="award-card block hover:opacity-90 transition-opacity cursor-pointer" data-award-trigger="${index}">
+          <span class="award-badge">${content.title.split(' ')[0] || 'Award'}</span>
+          <h4 class="award-title">${content.title}</h4>
+          <p class="award-body">${content.body || content.caption || ''}</p>
+        </article>
+      `;
+    }).join("");
+    
+    // Award 모달 이벤트 리스너 설정
+    initAwardModals(lang);
+    
+    if (awardsMoreContainer && moreAwards.length > 0) {
+      awardsMoreContainer.innerHTML = moreAwards.map((award, index) => {
+        const actualIndex = index + 2; // 실제 인덱스는 2부터 시작
+        const content = award[lang] || award.ko;
+        return `
+          <article class="award-card block hover:opacity-90 transition-opacity cursor-pointer" data-award-trigger="${actualIndex}">
+            <span class="award-badge">${content.title.split(' ')[0] || 'Award'}</span>
+            <h4 class="award-title">${content.title}</h4>
+            <p class="award-body">${content.body || content.caption || ''}</p>
+          </article>
+        `;
+      }).join("");
+      
+      // 더 보기 항목에도 모달 이벤트 리스너 설정
+      initAwardModals(lang);
+    }
+  }
+  
+  // 이벤트 하이라이트 (처음 1개, 더 보기에서 1개 더 = 총 2개)
+  const eventsContainer = document.getElementById("highlights-events");
+  const eventsMoreContainer = document.getElementById("highlights-events-more");
+  
+  if (eventsContainer && EVENTS_DATA && EVENTS_DATA.length > 0) {
+    const topEvents = EVENTS_DATA.slice(0, 1); // 처음 1개
+    const moreEvents = EVENTS_DATA.slice(1, 2); // 더 보기에서 1개 더
+    
+    eventsContainer.innerHTML = topEvents.map((event, index) => {
+      const content = event[lang] || event.ko;
+      const formattedDate = event.date ? formatDate(event.date, lang) : "";
+      return `
+        <figure
+          class="event-card block hover:opacity-90 transition-opacity cursor-pointer"
+          data-media-trigger
+          data-media-src="${event.image}"
+          data-media-date="${event.date || ''}"
+          data-media-event-index="${index}"
+          role="button"
+          tabindex="0"
+        >
+          <img
+            src="${event.image}"
+            alt="${content.alt || content.title || content.caption}"
+            loading="lazy"
+          />
+          ${formattedDate ? `<p class="event-date">${formattedDate}</p>` : ''}
+          <figcaption class="event-caption">${content.title || content.caption}</figcaption>
+        </figure>
+      `;
+    }).join("");
+    
+    // 모달 이벤트 리스너 재설정
+    initMediaModal();
+    
+    if (eventsMoreContainer && moreEvents.length > 0) {
+      eventsMoreContainer.innerHTML = moreEvents.map((event, index) => {
+        const actualIndex = index + 1; // 실제 인덱스는 1부터 시작
+        const content = event[lang] || event.ko;
+        const formattedDate = event.date ? formatDate(event.date, lang) : "";
+        return `
+          <figure
+            class="event-card block hover:opacity-90 transition-opacity cursor-pointer"
+            data-media-trigger
+            data-media-src="${event.image}"
+            data-media-date="${event.date || ''}"
+            data-media-event-index="${actualIndex}"
+            role="button"
+            tabindex="0"
+          >
+            <img
+              src="${event.image}"
+              alt="${content.alt || content.title || content.caption}"
+              loading="lazy"
+            />
+            ${formattedDate ? `<p class="event-date">${formattedDate}</p>` : ''}
+            <figcaption class="event-caption">${content.title || content.caption}</figcaption>
+          </figure>
+        `;
+      }).join("");
+      
+      // 더 보기 항목에도 모달 이벤트 리스너 재설정
+      initMediaModal();
+    }
+  }
+};
+
 const renderResources = (lang) => {
   const resourcesContainer = document.getElementById("resources-container");
   if (!resourcesContainer || !RESOURCES_DATA) return;
@@ -317,6 +428,75 @@ const renderResources = (lang) => {
   });
 
   resourcesContainer.innerHTML = html;
+};
+
+const renderOfficers = (lang) => {
+  const officersContainer = document.getElementById("officers-container");
+  if (!officersContainer || !OFFICERS_DATA) return;
+
+  const president = OFFICERS_DATA.find(o => o.ko.role === "회장");
+  const vicePresident = OFFICERS_DATA.find(o => o.ko.role === "부회장");
+  const officers = OFFICERS_DATA.filter(o => o.ko.role === "임원진");
+
+  let html = "";
+
+  if (president) {
+    const content = president[lang] || president.ko;
+    html += `
+      <div>
+        <p class="stack-card-label">${CONTENT_DATA[lang].showcaseOfficersSectionPresidentLabel || "회장"}</p>
+        <p class="stack-card-note">
+          ${content.name} · ${content.major}
+          ${content.email ? `<br><a href="mailto:${content.email}" class="text-blue-600 hover:underline text-sm">${content.email}</a>` : ''}
+        </p>
+      </div>
+    `;
+  }
+
+  if (vicePresident) {
+    const content = vicePresident[lang] || vicePresident.ko;
+    html += `
+      <div>
+        <p class="stack-card-label">${CONTENT_DATA[lang].showcaseOfficersSectionViceLabel || "부회장"}</p>
+        <p class="stack-card-note">
+          ${content.name} · ${content.major}
+          ${content.email ? `<br><a href="mailto:${content.email}" class="text-blue-600 hover:underline text-sm">${content.email}</a>` : ''}
+        </p>
+      </div>
+    `;
+  }
+
+  officers.forEach((officer) => {
+    const content = officer[lang] || officer.ko;
+    html += `
+      <div>
+        <p class="stack-card-label">${CONTENT_DATA[lang].showcaseOfficersSectionOfficerLabel || "임원진"}</p>
+        <p class="stack-card-note">
+          ${content.name} · ${content.major}
+          ${content.email ? `<br><a href="mailto:${content.email}" class="text-blue-600 hover:underline text-sm">${content.email}</a>` : ''}
+        </p>
+      </div>
+    `;
+  });
+
+  officersContainer.innerHTML = html;
+};
+
+const renderHonoraryMembers = (lang) => {
+  const honoraryContainer = document.getElementById("honorary-members-container");
+  if (!honoraryContainer || !HONORARY_MEMBERS_DATA) return;
+
+  const html = HONORARY_MEMBERS_DATA.map((member) => {
+    const content = member[lang] || member.ko;
+    return `
+      <li>
+        <p class="stack-card-label">${content.name}</p>
+        <p class="stack-card-note">${content.affiliation}</p>
+      </li>
+    `;
+  }).join("");
+
+  honoraryContainer.innerHTML = html;
 };
 
 const init = () => {

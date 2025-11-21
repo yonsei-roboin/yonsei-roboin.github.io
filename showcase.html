@@ -197,9 +197,6 @@
           <h2 class="section-title" data-key="showcaseAwardsTitle">
             로보인의 수상 및 대회 기록
           </h2>
-          <p class="section-description" data-key="showcaseAwardsDescription">
-            대표 수상 실적을 우선 공개하고 있으며, 향후 시즌별 기록을 지속적으로 확장할 예정입니다.
-          </p>
         </div>
         <div class="award-list">
           <!-- 수상 내역은 JavaScript로 동적으로 렌더링됩니다 -->
@@ -210,11 +207,8 @@
         <div class="section-header">
           <p class="section-eyebrow" data-key="showcaseEventsEyebrow">Events</p>
           <h2 class="section-title" data-key="showcaseEventsTitle">
-            활동 현장 & 미디어 아카이브
+            갤러리
           </h2>
-          <p class="section-description" data-key="showcaseEventsDescription">
-            대표 사진 두 장을 먼저 공개하고 있으며, 향후 수십 개의 현장 이미지를 갤러리로 확장할 계획입니다.
-          </p>
         </div>
         <div class="event-slider" data-slider>
           <button
@@ -242,7 +236,7 @@
           </button>
         </div>
         <p class="event-note" data-key="showcaseEventsNote">
-          ※ 향후 시즌별 이벤트가 확정되면 갤러리에 순차적으로 추가됩니다.
+          ※ 로보인의 활동들이 갤러리에 순차적으로 추가됩니다.
         </p>
       </section>
 
@@ -252,9 +246,6 @@
           <h2 class="section-title" data-key="showcaseProjectsDetailTitle">
             우수 프로젝트 포트폴리오
           </h2>
-          <p class="section-description" data-key="showcaseProjectsDetailDescription">
-            캡스톤형 프로젝트와 대회용 프로젝트를 분류해 정리했습니다.
-          </p>
         </div>
         <div class="grid gap-6 lg:grid-cols-3">
           <article class="stack-card">
@@ -287,9 +278,6 @@
           <h2 class="section-title" data-key="showcaseCurriculumDetailTitle">
             체계적인 3단계 커리큘럼
           </h2>
-          <p class="section-description" data-key="showcaseCurriculumDetailDescription">
-            각 레벨별 학습 목표와 결과물을 살펴볼 수 있습니다.
-          </p>
         </div>
         <div class="curriculum-list">
           <details class="curriculum-entry" open>
@@ -361,79 +349,18 @@
           <h2 class="section-title" data-key="showcaseHonorarySectionTitle">
             명예 회원 & 현재 임원진
           </h2>
-          <p class="section-description" data-key="showcaseHonorarySectionDescription">
-            졸업자 네트워크와 현재 운영진의 역할을 소개합니다.
-          </p>
         </div>
         <div class="grid gap-6 lg:grid-cols-2">
           <article class="stack-card">
             <h3 class="stack-card-title" data-key="showcaseHonoraryCardTitle">명예 회원</h3>
-            <ul class="stack-card-list">
-              <li>
-                <p class="stack-card-label" data-key="showcaseHonoraryCardItem1Title">해외 대학 연구자</p>
-                <p class="stack-card-note" data-key="showcaseHonoraryCardItem1Body">
-                  Georgia Tech, UC Berkeley 대학원에 진학한 동문이 로보인 명예 회원으로 멘토링합니다.
-                </p>
-              </li>
-              <li>
-                <p class="stack-card-label" data-key="showcaseHonoraryCardItem2Title">산업계 전문가</p>
-                <p class="stack-card-note" data-key="showcaseHonoraryCardItem2Body">
-                  국내외 로봇 기업에 진출한 졸업생이 프로젝트 심사와 커리어 상담을 지원합니다.
-                </p>
-              </li>
-              <li>
-                <p class="stack-card-label" data-key="showcaseHonoraryCardItem3Title">커뮤니티 앰배서더</p>
-                <p class="stack-card-note" data-key="showcaseHonoraryCardItem3Body">
-                  메이커 커뮤니티와 협력을 이끄는 동문이 사회공헌 프로젝트를 함께 만듭니다.
-                </p>
-              </li>
+            <ul class="stack-card-list" id="honorary-members-container">
+              <!-- 명예 회원은 JavaScript로 동적으로 렌더링됩니다 -->
             </ul>
           </article>
           <article class="stack-card">
             <h3 class="stack-card-title" data-key="showcaseOfficersSectionTitle">현재 임원진</h3>
-            <div class="officer-grid">
-              <div>
-                <p class="stack-card-label" data-key="showcaseOfficersSectionPresidentLabel">회장</p>
-                <p class="stack-card-note" data-key="showcaseOfficersSectionPresidentBody">
-                  김민건 · 동아리 비전, 외부 협력 총괄
-                </p>
-              </div>
-              <div>
-                <p class="stack-card-label" data-key="showcaseOfficersSectionViceLabel">부회장</p>
-                <p class="stack-card-note" data-key="showcaseOfficersSectionViceBody">
-                  (모집 중) · 커리큘럼/세미나 운영 리드
-                </p>
-              </div>
-              <div>
-                <p class="stack-card-label" data-key="showcaseOfficersSectionProjectLabel">프로젝트 리드</p>
-                <p class="stack-card-note" data-key="showcaseOfficersSectionProjectBody">
-                  팀장단 · 기술 멘토링, 대회 준비 지원
-                </p>
-              </div>
-              <div>
-                <p class="stack-card-label" data-key="showcaseOfficersSectionCommunityLabel">커뮤니티 리드</p>
-                <p class="stack-card-note" data-key="showcaseOfficersSectionCommunityBody">
-                  명예 회원 및 동문 네트워크 관리
-                </p>
-              </div>
-              <div>
-                <p class="stack-card-label" data-key="showcaseOfficersSectionEducationLabel">교육 리드</p>
-                <p class="stack-card-note" data-key="showcaseOfficersSectionEducationBody">
-                  스터디 커리큘럼 개발 및 신입 온보딩 담당
-                </p>
-              </div>
-              <div>
-                <p class="stack-card-label" data-key="showcaseOfficersSectionMediaLabel">홍보 리드</p>
-                <p class="stack-card-note" data-key="showcaseOfficersSectionMediaBody">
-                  SNS/미디어 콘텐츠 기획과 이벤트 기록
-                </p>
-              </div>
-              <div>
-                <p class="stack-card-label" data-key="showcaseOfficersSectionFinanceLabel">운영 리드</p>
-                <p class="stack-card-note" data-key="showcaseOfficersSectionFinanceBody">
-                  예산·자원 관리 및 장비 지원 조율
-                </p>
-              </div>
+            <div class="officer-grid" id="officers-container">
+              <!-- 현재 임원진은 JavaScript로 동적으로 렌더링됩니다 -->
             </div>
           </article>
         </div>

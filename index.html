@@ -405,65 +405,22 @@
             </p>
           </div>
           <div class="grid gap-6 lg:grid-cols-[1.1fr,0.9fr]">
-            <div class="space-y-4">
-              <div class="award-card">
-                <span class="award-badge" data-key="awardsList1Badge">Competition</span>
-                <h4 class="award-title" data-key="awardsList1Title">
-                  국내 대학 로봇 경진대회 연속 수상
-                </h4>
-                <p class="award-body" data-key="awardsList1Body">
-                  자율주행·로봇팔 분야 프로젝트로 다수 대회에서 본선과 수상을 기록하며 실력을 입증했습니다.
-                </p>
-              </div>
-              <div class="award-card">
-                <span class="award-badge" data-key="awardsList2Badge">Project</span>
-                <h4 class="award-title" data-key="awardsList2Title">
-                  휴머노이드 & 서비스 로봇 시연
-                </h4>
-                <p class="award-body" data-key="awardsList2Body">
-                  학기별 프로젝트 전시회에서 대내외 협력 기관을 초청해 제작 로봇의 퍼포먼스를 공개합니다.
-                </p>
-              </div>
+            <div class="space-y-4" id="highlights-awards">
+              <!-- 수상실적은 JavaScript로 동적으로 렌더링됩니다 -->
             </div>
-            <div class="event-gallery">
-              <figure class="event-card">
-                <img
-                  src="assets/images/events-1.jpg"
-                  alt="로보인 활동을 소개하는 유튜브 채널 프로필 이미지"
-                  loading="lazy"
-                />
-                <figcaption class="event-caption" data-key="eventsPhoto1Caption">
-                  YouTube 채널을 통해 프로젝트 하이라이트 영상을 공개 중입니다.
-                </figcaption>
-              </figure>
+            <div class="event-gallery" id="highlights-events">
+              <!-- 이벤트는 JavaScript로 동적으로 렌더링됩니다 -->
             </div>
           </div>
           <div
             id="activities-more"
             class="grid gap-6 lg:grid-cols-[1.1fr,0.9fr] activities-more-block hidden"
           >
-            <div class="space-y-4">
-              <div class="award-card">
-                <span class="award-badge" data-key="awardsList3Badge">Seminar</span>
-                <h4 class="award-title" data-key="awardsList3Title">
-                  산업·학계 심사단 초청 세션
-                </h4>
-                <p class="award-body" data-key="awardsList3Body">
-                  팀별 결과물을 심사받고 피드백을 공유해 다음 시즌 연구 주제를 정교하게 다듬습니다.
-                </p>
-              </div>
+            <div class="space-y-4" id="highlights-awards-more">
+              <!-- 추가 수상실적은 JavaScript로 동적으로 렌더링됩니다 -->
             </div>
-            <div class="event-gallery">
-              <figure class="event-card">
-                <img
-                  src="assets/images/events-2.gif"
-                  alt="연세대학교 공학원 A524 작업 공간 이미지"
-                  loading="lazy"
-                />
-                <figcaption class="event-caption" data-key="eventsPhoto2Caption">
-                  공학원 A524 작업 공간에서 팀별로 로봇을 제작하고 시험 운행합니다.
-                </figcaption>
-              </figure>
+            <div class="event-gallery" id="highlights-events-more">
+              <!-- 추가 이벤트는 JavaScript로 동적으로 렌더링됩니다 -->
             </div>
           </div>
           <div class="flex justify-center mt-6">
@@ -496,7 +453,7 @@
         <div class="section-header text-center">
           <p class="section-eyebrow" data-key="recruitmentEyebrow">Recruitment</p>
           <h2 class="section-title" data-key="recruitmentTitle">
-            매 학기 초, 새로운 동료를 기다립니다
+            매 학기 초, 신입 부원을 모집합니다
           </h2>
           <p class="section-description" data-key="recruitmentSubtitle">
             로봇을 사랑하고 함께 성장하고 싶은 연세대학교 학부생이라면 전공과 무관하게 누구나 지원 가능합니다.
@@ -507,8 +464,12 @@
             <h3 class="info-card-title" data-key="recruitmentApplicationTitle">
               지원 자격
             </h3>
-            <p class="info-card-body" data-key="recruitmentApplicationBody">
-              연세대학교 학부 재학생, 로봇/임베디드/AI 분야에 열정이 있는 분, 학기 중 주 1회 오프라인 활동 참여가 가능한 분.
+            <p class="info-card-body whitespace-pre-line" data-key="recruitmentApplicationBody">
+              재학생 | 휴학생 | 대학원생, 성별 | 전공 | 학번 상관없습니다.
+
+              로봇에 관심이 있는 사람들과 어울리며, 로봇에 대해 배우고 직접 만들어보고 싶은 사람.
+
+              아무것도 몰라도 괜찮습니다. 로봇에 대한 관심과 열정만 있다면 누구나 환영합니다!
             </p>
           </div>
           <div class="info-card">
@@ -516,7 +477,7 @@
               진행 일정
             </h3>
             <p class="info-card-body" data-key="recruitmentScheduleBody">
-              서류 접수 3/15(토) 마감 → 기술 과제 → 인터뷰 → 최종 발표 4/5(토). 자세한 일정은 개별 안내드립니다.
+              25-2 모집이 마감되었습니다. 26-1 모집에도 많은 관심 부탁드립니다
             </p>
           </div>
           <div class="info-card">
@@ -654,6 +615,96 @@
         </div>
       </section>
     </main>
+
+    <!-- Media Modal (Events) -->
+    <div
+      id="media-modal"
+      class="media-modal hidden"
+      aria-hidden="true"
+    >
+      <div class="media-modal-backdrop" data-media-close></div>
+      <div
+        class="media-modal-content"
+        role="dialog"
+        aria-modal="true"
+        aria-labelledby="media-modal-caption"
+      >
+        <button
+          class="media-modal-close"
+          type="button"
+          data-media-close
+          data-key="mediaModalClose"
+        >
+          닫기
+        </button>
+        <img
+          id="media-modal-img"
+          alt=""
+        />
+        <div class="media-modal-info">
+          <h3 id="media-modal-title" class="media-modal-title"></h3>
+          <p id="media-modal-date" class="media-modal-date"></p>
+          <p id="media-modal-description" class="media-modal-description"></p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Award Modal -->
+    <div
+      id="award-modal"
+      class="award-modal hidden"
+      aria-hidden="true"
+    >
+      <div class="award-modal-backdrop" data-award-close></div>
+      <div
+        class="award-modal-content"
+        role="dialog"
+        aria-modal="true"
+      >
+        <button
+          class="award-modal-close"
+          type="button"
+          data-award-close
+          aria-label="닫기"
+        >
+          ✕
+        </button>
+        <h3 id="award-modal-title" class="award-modal-title"></h3>
+        <p id="award-modal-body" class="award-modal-body"></p>
+        <figure class="award-modal-figure">
+          <img
+            id="award-modal-img"
+            alt=""
+            class="award-modal-img"
+          />
+          <figcaption id="award-modal-caption" class="award-modal-caption"></figcaption>
+        </figure>
+      </div>
+    </div>
+
+    <!-- Image Zoom Modal -->
+    <div
+      id="image-zoom-modal"
+      class="image-zoom-modal hidden"
+      aria-hidden="true"
+    >
+      <div class="image-zoom-backdrop" data-image-zoom-close></div>
+      <div class="image-zoom-content">
+        <button
+          class="image-zoom-close"
+          type="button"
+          data-image-zoom-close
+          aria-label="닫기"
+        >
+          ✕
+        </button>
+        <img
+          id="image-zoom-img"
+          alt=""
+          class="image-zoom-img"
+        />
+      </div>
+    </div>
 
     <footer class="border-t border-slate-200 bg-slate-50">
       <div class="max-w-6xl mx-auto px-4 py-8 flex flex-col gap-2 sm:flex-row sm:items-center sm:justify-between">

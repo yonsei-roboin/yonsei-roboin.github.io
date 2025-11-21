@@ -58,12 +58,12 @@ export const CONTENT_DATA = {
     aboutMembershipCardBody:
       "학부 전공·학년과 관계없이 로봇을 사랑하는 63명이 한 팀이 되어 협업합니다.",
     aboutMembershipCardDetail:
-      "공학원 A524 메이커 스페이스를 거점으로 매주 세션을 운영하고, 스터디/프로젝트 팀별로 장비와 예산을 지원합니다.",
+      "제1공학관 A524 메이커 스페이스를 거점으로 매주 세션을 운영하고, 스터디/프로젝트 팀별로 장비와 예산을 지원합니다.",
     activitiesEyebrow: "Activities",
-    activitiesTitle: "프로젝트부터 세미나까지, 로보인의 일상",
-    activitiesHighlightsTitle: "수상 실적 & 행사 스냅샷",
+    activitiesTitle: "프로젝트부터 세미나까지, 로보인의 활동",
+    activitiesHighlightsTitle: "수상 실적 & 행사",
     activitiesHighlightsDescription:
-      "대표적인 성과와 현장을 먼저 소개하고, 더 보기 버튼으로 전체 갤러리를 확인하세요.",
+      "로보인의 활동현장과 수상실적을 확인하세요",
     activitiesShowMore: "더 보기",
     activitiesShowLess: "간단히 보기",
     activitiesViewAll: "쇼케이스 페이지로 이동",
@@ -77,15 +77,15 @@ export const CONTENT_DATA = {
     activitiesOutreachBody:
       "프로젝트에서 얻은 지식을 세미나로 공유하고 외부 연사를 초청해 로봇 기술 인사이트를 나눕니다.",
     recruitmentEyebrow: "Recruitment",
-    recruitmentTitle: "매 학기 초, 새로운 동료를 기다립니다",
+    recruitmentTitle: "매 학기 초, 신입 부원을 모집합니다",
     recruitmentSubtitle:
-      "로보인은 매 학기 초 신입 회원을 모집합니다. 로봇을 사랑하고 함께 성장하고 싶은 연세대학교 학부생이라면 전공과 무관하게 누구나 지원 가능합니다.",
+      "로봇을 사랑하고 함께 성장하고 싶은 연세대학교 학생이라면 전공과 무관하게 누구나 지원 가능합니다.",
     recruitmentApplicationTitle: "지원 자격",
     recruitmentApplicationBody:
-      "연세대학교 학부 재학생, 로봇/임베디드/AI 분야에 열정이 있는 분, 학기 중 주 1회 오프라인 활동 참여가 가능한 분.",
+      "재학생 | 휴학생 | 대학원생, 성별 | 전공 | 학번 상관없습니다.\n\n로봇에 관심이 있는 사람들과 어울리며, 로봇에 대해 배우고 직접 만들어보고 싶은 사람.\n\n아무것도 몰라도 괜찮습니다. 로봇에 대한 관심과 열정만 있다면 누구나 환영합니다!",
     recruitmentScheduleTitle: "진행 일정",
     recruitmentScheduleBody:
-      "서류 접수 3/15(토) 마감 → 기술 과제 → 인터뷰 → 최종 발표 4/5(토). 자세한 일정은 개별 안내드립니다.",
+      "25-2 모집이 마감되었습니다. 26-1 모집에도 많은 관심 부탁드립니다",
     recruitmentContactTitle: "문의",
     recruitmentContactBody:
       "궁금한 점은 공식 이메일 또는 인스타그램 DM으로 연락 주세요. 활동 소개 세션도 진행 예정입니다.",
@@ -106,7 +106,7 @@ export const CONTENT_DATA = {
     awardsList3Body:
       "팀별 결과물을 심사받고 피드백을 공유해 다음 시즌 연구 주제를 정교하게 다듬습니다.",
     eventsPhoto1Caption: "YouTube 채널을 통해 프로젝트 하이라이트 영상을 공개 중입니다.",
-    eventsPhoto2Caption: "공학원 A524 작업 공간에서 팀별로 로봇을 제작하고 시험 운행합니다.",
+    eventsPhoto2Caption: "제1공학관 A524 작업 공간에서 팀별로 로봇을 제작하고 시험 운행합니다.",
     showcasePreviewEyebrow: "Showcase",
     showcasePreviewTitle: "우수 프로젝트 · 커리큘럼 · 커뮤니티",
     showcasePreviewDescription:
@@ -202,33 +202,13 @@ export const CONTENT_DATA = {
     showcaseCurriculumDetailLevel3Item3Title: "",
     showcaseCurriculumDetailLevel3Item3Body: "",
     showcaseHonorarySectionEyebrow: "Community",
-    showcaseHonorarySectionTitle: "명예 회원 & 현재 임원진",
+    showcaseHonorarySectionTitle: "역대 회장 & 현재 임원진",
     showcaseHonorarySectionDescription: "졸업자 네트워크와 현재 운영진의 역할을 소개합니다.",
-    showcaseHonoraryCardTitle: "명예 회원",
-    showcaseHonoraryCardItem1Title: "해외 대학 연구자",
-    showcaseHonoraryCardItem1Body:
-      "Georgia Tech, UC Berkeley 대학원에 진학한 동문이 로보인 명예 회원으로 멘토링합니다.",
-    showcaseHonoraryCardItem2Title: "산업계 전문가",
-    showcaseHonoraryCardItem2Body:
-      "국내외 로봇 기업에 진출한 졸업생이 프로젝트 심사와 커리어 상담을 지원합니다.",
-    showcaseHonoraryCardItem3Title: "커뮤니티 앰배서더",
-    showcaseHonoraryCardItem3Body:
-      "메이커 커뮤니티와 협력을 이끄는 동문이 사회공헌 프로젝트를 함께 만듭니다.",
+    showcaseHonoraryCardTitle: "역대 회장",
     showcaseOfficersSectionTitle: "현재 임원진",
     showcaseOfficersSectionPresidentLabel: "회장",
-    showcaseOfficersSectionPresidentBody: "김민건 · 동아리 비전, 외부 협력 총괄",
     showcaseOfficersSectionViceLabel: "부회장",
-    showcaseOfficersSectionViceBody: "황서현 · 커리큘럼/세미나 운영 리드",
-    showcaseOfficersSectionProjectLabel: "프로젝트 리드",
-    showcaseOfficersSectionProjectBody: "팀장단 · 기술 멘토링, 대회 준비 지원",
-    showcaseOfficersSectionCommunityLabel: "커뮤니티 리드",
-    showcaseOfficersSectionCommunityBody: "명예 회원 및 동문 네트워크 관리",
-    showcaseOfficersSectionEducationLabel: "교육 리드",
-    showcaseOfficersSectionEducationBody: "스터디 커리큘럼 개발 및 신입 온보딩 담당",
-    showcaseOfficersSectionMediaLabel: "홍보 리드",
-    showcaseOfficersSectionMediaBody: "SNS/미디어 콘텐츠 기획과 이벤트 기록",
-    showcaseOfficersSectionFinanceLabel: "운영 리드",
-    showcaseOfficersSectionFinanceBody: "예산·자원 관리 및 장비 지원 조율",
+    showcaseOfficersSectionOfficerLabel: "임원진",
     mediaModalClose: "닫기",
     keywordsEyebrow: "Keywords",
     keywordsTitle: "로보인이 탐구하는 주제들",
@@ -318,15 +298,15 @@ export const CONTENT_DATA = {
       "We meet weekly at Engineering Hall A524, offering equipment, budget, and mentoring for every study or project team.",
     activitiesEyebrow: "Activities",
     activitiesTitle: "What our daily work looks like",
-    activitiesHighlightsTitle: "Awards & event snapshots",
+    activitiesHighlightsTitle: "Awards & Events",
     activitiesHighlightsDescription:
-      "Preview signature achievements and click the button to explore the full gallery.",
+      "Check out Roboin's activities and achievements",
     activitiesShowMore: "Show more",
     activitiesShowLess: "Show less",
     activitiesViewAll: "Go to showcase page",
     activitiesRobotsTitle: "Projects",
     activitiesRobotsBody:
-      "Teams pick themes such as robotic arms, humanoids, or autonomous driving and build the robots themselves.",
+      "Teams pick themes such as robotic arms, humanoids, or autonomous driving and build the robots themselves.", 
     activitiesResearchTitle: "Competition challenges",
     activitiesResearchBody:
       "We enter domestic and global robotics contests, preparing strategies with fellow club members.",
@@ -334,18 +314,18 @@ export const CONTENT_DATA = {
     activitiesOutreachBody:
       "Members host knowledge-sharing sessions and invite external speakers to discuss robotics insights.",
     recruitmentEyebrow: "Recruitment",
-    recruitmentTitle: "We welcome new members every semester",
+    recruitmentTitle: "We recruit new members at the start of each semester",
     recruitmentSubtitle:
-      "Roboin recruits at the beginning of each semester. Any Yonsei undergraduate passionate about robots can apply regardless of major.",
-    recruitmentApplicationTitle: "Who we seek",
+      "Any Yonsei University student who loves robotics and wants to grow together is welcome to apply, regardless of major.",
+    recruitmentApplicationTitle: "Eligibility",
     recruitmentApplicationBody:
-      "Yonsei undergraduates excited about robotics, embedded systems, or AI who can join weekly on-campus sessions.",
-    recruitmentScheduleTitle: "Timeline",
+      "Current students | On leave | Graduate students, regardless of gender, major, or year.\n\nThose who want to interact with people interested in robots, learn about robots, and build robots.\n\nIt's okay if you don't know anything. Anyone with interest and passion for robotics is welcome!",
+    recruitmentScheduleTitle: "Schedule",
     recruitmentScheduleBody:
-      "Application deadline Mar 15 (Sat) → Technical task → Interview → Final announcement Apr 5 (Sat). Details shared individually.",
-    recruitmentContactTitle: "Ask us",
+      "Fall 2025-2 recruitment has closed. We look forward to many applications for Spring 2026-1!",
+    recruitmentContactTitle: "Inquiries",
     recruitmentContactBody:
-      "Reach out via official email or Instagram DM. We also host open info sessions during the recruitment period.",
+      "For questions, please contact us via official email or Instagram DM. We also plan to hold information sessions about our activities.",
     awardsEyebrow: "Highlights",
     awardsTitle: "Awards & event snapshots",
     awardsDescription:
@@ -450,7 +430,7 @@ export const CONTENT_DATA = {
       "Recognized for releasing an open-source autonomous driving module.",
     showcaseAwardsAccordion11Caption: "Presenting the repository and architecture to judges.",
     showcaseEventsEyebrow: "Events",
-    showcaseEventsTitle: "Activity snapshots & media archive",
+    showcaseEventsTitle: "Gallery",
     showcaseEventsDescription:
       "Two representative photos are shown now; dozens more will roll out as the archive grows.",
     showcaseEventsCaption1: "Project highlight videos premiere on our YouTube channel.",
@@ -465,9 +445,9 @@ export const CONTENT_DATA = {
     showcaseEventsCaption10: "Hands-on embedded seminar session.",
     showcaseEventsCaption11: "Community networking day snapshot.",
     showcaseEventsCaption12: "Year-end demo day display area.",
-    showcaseEventsPrev: "Prev",
+    showcaseEventsPrev: "Prev", 
     showcaseEventsNext: "Next",
-    showcaseEventsNote: "Additional event photos will be appended after each season.",
+    showcaseEventsNote: "Additional event photos will be appended as the archive grows.",
     showcaseProjectsDetailEyebrow: "Projects",
     showcaseProjectsDetailTitle: "Featured project portfolio",
     showcaseProjectsDetailDescription:
@@ -515,10 +495,10 @@ export const CONTENT_DATA = {
     showcaseCurriculumDetailLevel3Item3Title: "",
     showcaseCurriculumDetailLevel3Item3Body: "",
     showcaseHonorarySectionEyebrow: "Community",
-    showcaseHonorarySectionTitle: "Honorary members & leadership",
+    showcaseHonorarySectionTitle: "Former Presidents & Leadership",
     showcaseHonorarySectionDescription:
-      "Meet the alumni mentors and the officers steering the club today.",
-    showcaseHonoraryCardTitle: "Honorary members",
+      "Meet the alumni mentors and the faculty steering the club today.",
+    showcaseHonoraryCardTitle: "Former Presidents",
     showcaseHonoraryCardItem1Title: "Academic researchers",
     showcaseHonoraryCardItem1Body:
       "Graduate students at Georgia Tech and UC Berkeley mentor current members remotely.",
@@ -528,11 +508,10 @@ export const CONTENT_DATA = {
     showcaseHonoraryCardItem3Title: "Community ambassadors",
     showcaseHonoraryCardItem3Body:
       "Graduates leading maker outreach help us expand social-impact initiatives.",
-    showcaseOfficersSectionTitle: "Current officers",
+    showcaseOfficersSectionTitle: "Current faculty",
     showcaseOfficersSectionPresidentLabel: "President",
-    showcaseOfficersSectionPresidentBody: "Mingeon Kim · Vision & partnerships",
     showcaseOfficersSectionViceLabel: "Vice President",
-    showcaseOfficersSectionViceBody: "(Open role) · Curriculum & seminar lead",
+    showcaseOfficersSectionOfficerLabel: "Faculty",
     showcaseOfficersSectionProjectLabel: "Project leads",
     showcaseOfficersSectionProjectBody: "Captains · Technical mentoring and competition prep",
     showcaseOfficersSectionCommunityLabel: "Community lead",
@@ -1064,6 +1043,174 @@ export const RESOURCES_DATA = [
     quantity: "여러 개",
     status: "available",
     image: null
+  }
+];
+
+// 현재 임원진 데이터
+export const OFFICERS_DATA = [
+  {
+    ko: {
+      name: "김민건",
+      major: "전기전자공학 20",
+      position: "2025 회장",
+      email: "rlaalsrjswww@yonsei.ac.kr",
+      role: "회장"
+    },
+    en: {
+      name: "Mingeon Kim",
+      major: "Electrical & Electronic Engineering '20",
+      position: "2025 President",
+      email: "rlaalsrjswww@yonsei.ac.kr",
+      role: "President"
+    }
+  },
+  {
+    ko: {
+      name: "황서현",
+      major: "천문우주학/기계공학 22",
+      position: "2025 부회장",
+      email: "hsh0917n@yonsei.ac.kr",
+      role: "부회장"
+    },
+    en: {
+      name: "Seohyun Hwang",
+      major: "Astronomy & Space Science / Mechanical Engineering '22",
+      position: "2025 Vice President",
+      email: "hsh0917n@yonsei.ac.kr",
+      role: "Vice President"
+    }
+  },
+  {
+    ko: {
+      name: "전형준",
+      major: "기계공학/컴퓨터과학 21",
+      position: "2025 임원진",
+      email: "jeon_hj@yonsei.ac.kr",
+      role: "임원진"
+    },
+    en: {
+      name: "Hyungjoon Jeon",
+      major: "Mechanical Engineering / Computer Science '21",
+      position: "2025 Faculty",
+      email: "jeon_hj@yonsei.ac.kr",
+      role: "Faculty"
+    }
+  },
+  {
+    ko: {
+      name: "신동욱",
+      major: "기계공학 20",
+      position: "2025 임원진",
+      email: "",
+      role: "임원진"
+    },
+    en: {
+      name: "Dongwook Shin",
+      major: "Mechanical Engineering '20",
+      position: "2025 Faculty",
+      email: "",
+      role: "Faculty"
+    }
+  },
+  {
+    ko: {
+      name: "박성현",
+      major: "기계공학 21",
+      position: "2025 임원진",
+      email: "",
+      role: "임원진"
+    },
+    en: {
+      name: "Sunghyun Park",
+      major: "Mechanical Engineering '21",
+      position: "2025 Faculty",
+      email: "",
+      role: "Faculty"
+    }
+  },
+  {
+    ko: {
+      name: "신동훈",
+      major: "기계공학 21",
+      position: "2025 임원진",
+      email: "",
+      role: "임원진"
+    },
+    en: {
+      name: "Donghun Shin",
+      major: "Mechanical Engineering '21",
+      position: "2025 Faculty",
+      email: "",
+      role: "Faculty"
+    }
+  },
+  {
+    ko: {
+      name: "정희원",
+      major: "기계공학 21",
+      position: "2025 임원진",
+      email: "",
+      role: "임원진"
+    },
+    en: {
+      name: "Hewon Jung",
+      major: "Mechanical Engineering '21",
+      position: "2025 Faculty",
+      email: "",
+      role: "Faculty"
+    }
+  }
+];
+
+// 명예 회원 데이터 (역대 회장단)
+export const HONORARY_MEMBERS_DATA = [
+  {
+    ko: {
+      name: "장민준",
+      affiliation: "Ph.D. Student @ Georgia Institute of Technology",
+      role: "명예 회원"
+    },
+    en: {
+      name: "Minjun Chang",
+      affiliation: "Ph.D. Student @ Georgia Institute of Technology",
+      role: "Honorary Member"
+    }
+  },
+  {
+    ko: {
+      name: "남다현",
+      affiliation: "M.S. Student @ Seoul National University",
+      role: "명예 회원"
+    },
+    en: {
+      name: "Dahyun Nam",
+      affiliation: "M.S. Student @ Seoul National University",
+      role: "Honorary Member"
+    }
+  },
+  {
+    ko: {
+      name: "서기훈",
+      affiliation: "Samsung Electronics",
+      role: "명예 회원"
+    },
+    en: {
+      name: "Kihoon Seo",
+      affiliation: "Samsung Electronics",
+      role: "Honorary Member"
+    }
+  },
+  {
+    ko: {
+      name: "최서연",
+      affiliation: "Ph.D. Student @ UC Berkeley",
+      role: "명예 회원"
+    },
+    en: {
+      name: "Seoyeon Choi",
+      affiliation: "Ph.D. Student @ UC Berkeley",
+      role: "Honorary Member"
+    }
   }
 ];
 

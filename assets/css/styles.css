@@ -330,12 +330,22 @@ body {
   display: block;
 }
 
+.event-date {
+  padding: 0.75rem 1.5rem 0.5rem;
+  font-size: 0.85rem;
+  color: #64748b;
+  font-weight: 500;
+  background: #f8fafc;
+  border-top: 1px solid #e2e8f0;
+  margin: 0;
+}
+
 .event-caption {
-  padding: 1.25rem 1.5rem;
+  padding: 0.75rem 1.5rem 1.25rem;
   font-size: 0.95rem;
   color: #334155;
   background: #f8fafc;
-  border-top: 1px solid #e2e8f0;
+  margin: 0;
 }
 
 .activities-highlights {
@@ -720,6 +730,47 @@ body {
   border-radius: 1rem;
 }
 
+.media-modal-info {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.media-modal-title {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #0f172a;
+  margin: 0;
+  padding: 0 1.5rem;
+  padding-top: 1rem;
+}
+
+.media-modal-date {
+  font-size: 0.9rem;
+  color: #64748b;
+  font-weight: 500;
+  margin: 0;
+  padding: 0 1.5rem;
+  display: block;
+}
+
+.media-modal-description {
+  font-size: 1rem;
+  color: #475569;
+  line-height: 1.6;
+  margin: 0;
+  padding: 0 1.5rem;
+  padding-bottom: 1rem;
+  white-space: pre-line;
+}
+
+.media-modal-caption {
+  font-size: 1rem;
+  color: #334155;
+  margin: 0;
+  padding: 0.5rem 0;
+}
+
 .media-modal-close {
   position: absolute;
   top: 1rem;
@@ -998,6 +1049,45 @@ body {
   opacity: 1;
 }
 
+/* 리소스 카드 스타일 */
+.resource-card {
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 1rem;
+  padding: 1.5rem;
+  transition: transform 200ms ease, box-shadow 200ms ease;
+}
+
+.resource-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 25px rgba(15, 23, 42, 0.1);
+}
+
+.resource-card-title {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: #0f172a;
+  margin: 0;
+}
+
+.resource-card-description {
+  font-size: 0.95rem;
+  line-height: 1.6;
+  color: #475569;
+  margin: 0.75rem 0 0 0;
+}
+
+.resource-status-badge {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.25rem 0.75rem;
+  border-radius: 999px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
 @media (max-width: 768px) {
   .hero-gradient {
     padding-top: 5rem;
@@ -1010,6 +1100,14 @@ body {
   
   .award-modal-title {
     font-size: 1.25rem;
+  }
+  
+  .resource-card {
+    padding: 1.25rem;
+  }
+  
+  .resource-card-title {
+    font-size: 1.1rem;
   }
 }
 

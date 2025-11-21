@@ -9,6 +9,7 @@ export const CONTENT_DATA = {
     navRecruitment: "모집",
     navContact: "문의",
     navShowcase: "쇼케이스",
+    navResources: "리소스",
     langToggleLabel: "English",
     langToggleAria: "언어를 영어로 전환",
     heroBadge: "Yonsei Robotics",
@@ -182,24 +183,24 @@ export const CONTENT_DATA = {
     showcaseCurriculumDetailItem3Title: "LEVEL 3 · Explorer",
     showcaseCurriculumDetailItem3Body:
       "팀별 연구를 진행하고 대회 출전 혹은 자체 전시회로 성과를 발표합니다.",
-    showcaseCurriculumDetailLevel1Item1Title: "센서 회로 워크숍",
-    showcaseCurriculumDetailLevel1Item1Body: "아두이노 기반으로 센서 동작과 회로 설계를 실습합니다.",
-    showcaseCurriculumDetailLevel1Item2Title: "MCU 프로그래밍",
-    showcaseCurriculumDetailLevel1Item2Body: "C/Python으로 기본 제어 로직을 구현합니다.",
-    showcaseCurriculumDetailLevel1Item3Title: "구동기 제어 기초",
-    showcaseCurriculumDetailLevel1Item3Body: "모터·서보 제어를 통해 간단한 로봇 동작을 제작합니다.",
-    showcaseCurriculumDetailLevel2Item1Title: "ROS 네비게이션",
-    showcaseCurriculumDetailLevel2Item1Body: "ROS2를 활용해 맵핑·네비게이션 파이프라인을 구성합니다.",
-    showcaseCurriculumDetailLevel2Item2Title: "컴퓨터 비전 스터디",
-    showcaseCurriculumDetailLevel2Item2Body: "OpenCV·딥러닝 기반 인지 모듈을 개발합니다.",
-    showcaseCurriculumDetailLevel2Item3Title: "임베디드 최적화",
-    showcaseCurriculumDetailLevel2Item3Body: "RTOS·보드 최적화를 통해 실시간 처리 성능을 높입니다.",
-    showcaseCurriculumDetailLevel3Item1Title: "대회/전시 프로젝트",
-    showcaseCurriculumDetailLevel3Item1Body: "팀별 주제를 정해 자율 프로젝트를 수행합니다.",
-    showcaseCurriculumDetailLevel3Item2Title: "테스트 & 튜닝",
-    showcaseCurriculumDetailLevel3Item2Body: "실내외 테스트를 반복하며 성능을 개선합니다.",
-    showcaseCurriculumDetailLevel3Item3Title: "성과 발표",
-    showcaseCurriculumDetailLevel3Item3Body: "대회 출전, 데모데이, 외부 전시로 결과를 공유합니다.",
+    showcaseCurriculumDetailLevel1Item1Title: "LED 조명제작 💡",
+    showcaseCurriculumDetailLevel1Item1Body: "간단한 스위치 조명 제작을 통해 아두이노 코딩, LED, 플로팅/풀다운 저항 및 택트 스위치에 대해 학습합니다. 아두이노에 컴퓨터, 빵판, 빨강/노랑/초록 LED, 저항, 택트 스위치를 연결하는 회로를 구성하고, 누르는 스위치에 따라 다른 LED가 점등되도록 합니다.",
+    showcaseCurriculumDetailLevel1Item2Title: "거북목 방지기 🙇",
+    showcaseCurriculumDetailLevel1Item2Body: "아두이노 사용 기초, 디지털 입출력, 시리얼 통신, 회로 기초, 초음파 센서에 대해 배웁니다. 3D 프린터를 이용해 센서 거치대를 출력하고, 초음파 센서가 읽는 거리가 50cm 이하가 될 경우 LED가 켜지도록 구성합니다.",
+    showcaseCurriculumDetailLevel1Item3Title: "차단봉 제작 🚧",
+    showcaseCurriculumDetailLevel1Item3Body: "아두이노, 서보 모터, CAD, 3D 프린팅에 대해 배웁니다. 아두이노에 서보 모터를 제어할 수 있는 회로를 구성하고, CAD로 차단봉을 모델링한 후 3D 프린터로 출력하여 서보 모터에 부착합니다. 3000ms 간격으로 0~90도 회전을 하도록 구성합니다.",
+    showcaseCurriculumDetailLevel2Item1Title: "선풍기 제작 💨",
+    showcaseCurriculumDetailLevel2Item1Body: "아두이노, DC모터, 모터드라이버, 택트 스위치에 대해 배웁니다. 택트 스위치와 DC 모터 드라이버를 활용하여 세기 조절이 가능한 선풍기를 만듭니다. 초기 상태에서 한번 스위치를 누르면 켜지고, 한번 더 누르면 1단, 더 누르면 2단이 되는 방식으로 총 3단까지 세기를 조절할 수 있게 합니다. 3단에서 한번 더 스위치를 누르면 선풍기가 꺼지도록 합니다.",
+    showcaseCurriculumDetailLevel2Item2Title: "신호등 제작 🚦",
+    showcaseCurriculumDetailLevel2Item2Body: "라즈베리파이 환경 구축 및 코딩, LED, 교통 신호체계 구성에 대해 배웁니다. 라즈베리파이 OS 설치 후 PC와의 원격 연결(VNC Viewer) 또는 모니터를 활용한 직접 연결에 성공하고, C or Python 개발환경을 구축합니다. GPIO 포트를 활용하여 LED 작동을 위한 회로를 구성하고, 코딩을 통한 신호 cycle을 구성합니다 (예: 초록 10초, 노랑 2초, 빨강 10초).",
+    showcaseCurriculumDetailLevel2Item3Title: "계산기 제작 🔢",
+    showcaseCurriculumDetailLevel2Item3Body: "라즈베리파이, LCD, 시리얼 통신에 대해 배웁니다. LCD와 시리얼 통신을 활용하여 입력받은 계산의 결과를 출력하는 계산기를 만듭니다. 두 수의 사칙연산을 수행하며, 소수까지 입력받을 수 있습니다. 시리얼 모니터로 계산을 송신하면 LCD로 계산과 결과를 함께 출력합니다.",
+    showcaseCurriculumDetailLevel3Item1Title: "엔코더 모터 PID 🏎️",
+    showcaseCurriculumDetailLevel3Item1Body: "엔코더로 펄스 및 위치 측정, 속도 측정, PID 제어 개념에 대해 배웁니다. 엔코더는 2체배로 계산합니다. 엔코더 모터 RPM을 계산하고(시리얼 모니터에 띄우기), PID 제어를 적용한 속도 제어를 수행합니다(미리 설정한 PWM 값/RPM 값).",
+    showcaseCurriculumDetailLevel3Item2Title: "기울기 센서를 활용한 스텝모터 제어 📐",
+    showcaseCurriculumDetailLevel3Item2Body: "IMU 사용법, I2C 통신, 스텝모터 사용법, 상보필터에 대해 배웁니다. IMU로부터 상보필터를 적용하여 기울기 데이터를 얻습니다. 고정된 임의의 회전축을 중심으로 기울어진 정도가 0~30도이면 스텝모터 정지, 30~90도이면 30rpm의 속도로 스텝모터가 회전합니다. 양 방향에 대해 모두 적용합니다.",
+    showcaseCurriculumDetailLevel3Item3Title: "",
+    showcaseCurriculumDetailLevel3Item3Body: "",
     showcaseHonorarySectionEyebrow: "Community",
     showcaseHonorarySectionTitle: "명예 회원 & 현재 임원진",
     showcaseHonorarySectionDescription: "졸업자 네트워크와 현재 운영진의 역할을 소개합니다.",
@@ -265,6 +266,7 @@ export const CONTENT_DATA = {
     navRecruitment: "Recruitment",
     navContact: "Contact",
     navShowcase: "Showcase",
+    navResources: "Resources",
     langToggleLabel: "한국어",
     langToggleAria: "Switch site language to Korean",
     heroBadge: "Yonsei Robotics",
@@ -494,24 +496,24 @@ export const CONTENT_DATA = {
     showcaseCurriculumDetailItem3Title: "LEVEL 3 · Explorer",
     showcaseCurriculumDetailItem3Body:
       "Team research that culminates in competitions or standalone showcases.",
-    showcaseCurriculumDetailLevel1Item1Title: "Sensor circuit workshop",
-    showcaseCurriculumDetailLevel1Item1Body: "Build sensor circuits and readouts with Arduino.",
-    showcaseCurriculumDetailLevel1Item2Title: "MCU programming",
-    showcaseCurriculumDetailLevel1Item2Body: "Implement core control logic in C/Python.",
-    showcaseCurriculumDetailLevel1Item3Title: "Actuator fundamentals",
-    showcaseCurriculumDetailLevel1Item3Body: "Control motors and servos to build simple robots.",
-    showcaseCurriculumDetailLevel2Item1Title: "ROS navigation",
-    showcaseCurriculumDetailLevel2Item1Body: "Configure mapping/navigation pipelines with ROS2.",
-    showcaseCurriculumDetailLevel2Item2Title: "Computer vision study",
-    showcaseCurriculumDetailLevel2Item2Body: "Develop perception modules using OpenCV and deep learning.",
-    showcaseCurriculumDetailLevel2Item3Title: "Embedded optimization",
-    showcaseCurriculumDetailLevel2Item3Body: "Tweak RTOS/boards for reliable real-time performance.",
-    showcaseCurriculumDetailLevel3Item1Title: "Competition/showcase builds",
-    showcaseCurriculumDetailLevel3Item1Body: "Each team runs an autonomous project for contests or demos.",
-    showcaseCurriculumDetailLevel3Item2Title: "Testing & tuning",
-    showcaseCurriculumDetailLevel3Item2Body: "Iterate through indoor/outdoor tests to refine performance.",
-    showcaseCurriculumDetailLevel3Item3Title: "Final presentation",
-    showcaseCurriculumDetailLevel3Item3Body: "Share outcomes via competitions, demo days, or partner events.",
+    showcaseCurriculumDetailLevel1Item1Title: "LED Lighting Project 💡",
+    showcaseCurriculumDetailLevel1Item1Body: "Learn Arduino coding, LEDs, pull-up/pull-down resistors, and tactile switches through simple switch lighting projects. Build a circuit connecting Arduino to a computer, breadboard, red/yellow/green LEDs, resistors, and tactile switches. Configure different LEDs to light up based on which switch is pressed.",
+    showcaseCurriculumDetailLevel1Item2Title: "Posture Correction Device 🙇",
+    showcaseCurriculumDetailLevel1Item2Body: "Learn Arduino basics, digital I/O, serial communication, circuit fundamentals, and ultrasonic sensors. Print a sensor mount using a 3D printer and install an ultrasonic sensor on a webcam/desktop screen. Configure a circuit connecting Arduino to an ultrasonic sensor and LED, where the LED turns on when the sensor reads a distance of 50cm or less.",
+    showcaseCurriculumDetailLevel1Item3Title: "Barrier Gate Project 🚧",
+    showcaseCurriculumDetailLevel1Item3Body: "Learn Arduino, servo motors, CAD, and 3D printing. Build a circuit to control a servo motor with Arduino, model a barrier gate in CAD, then 3D print and attach it to the servo motor. Configure it to rotate from 0 to 90 degrees at 3000ms intervals.",
+    showcaseCurriculumDetailLevel2Item1Title: "Fan Project 💨",
+    showcaseCurriculumDetailLevel2Item1Body: "Learn Arduino, DC motors, motor drivers, and tactile switches. Create an adjustable-speed fan using tactile switches and a DC motor driver. Press once from the initial state to turn on, press again for level 1, again for level 2, up to 3 levels total. Pressing once more at level 3 turns the fan off.",
+    showcaseCurriculumDetailLevel2Item2Title: "Traffic Light Project 🚦",
+    showcaseCurriculumDetailLevel2Item2Body: "Learn Raspberry Pi environment setup and coding, LEDs, and traffic signal systems. Successfully install Raspberry Pi OS and connect via remote connection (VNC Viewer) or direct monitor connection. Set up C or Python development environment (WiringPi or RPi.GPIO). Configure a circuit using GPIO ports for LED operation and code a signal cycle (e.g., green 10s, yellow 2s, red 10s).",
+    showcaseCurriculumDetailLevel2Item3Title: "Calculator Project 🔢",
+    showcaseCurriculumDetailLevel2Item3Body: "Learn Raspberry Pi, LCD, and serial communication. Create a calculator that outputs calculation results using LCD and serial communication. Perform four arithmetic operations on two numbers, accepting decimal inputs. Send calculations via serial monitor and display both the calculation and result on the LCD.",
+    showcaseCurriculumDetailLevel3Item1Title: "Encoder Motor PID 🏎️",
+    showcaseCurriculumDetailLevel3Item1Body: "Learn pulse and position measurement with encoders, speed measurement, and PID control concepts. Encoders are calculated with 2x counting. Calculate encoder motor RPM (display on serial monitor) and implement PID control for speed control (pre-set PWM value/RPM value).",
+    showcaseCurriculumDetailLevel3Item2Title: "Stepper Motor Control with Tilt Sensor 📐",
+    showcaseCurriculumDetailLevel3Item2Body: "Learn IMU usage, I2C communication, stepper motor usage, and complementary filters. Obtain tilt data by applying a complementary filter from the IMU. For a fixed arbitrary rotation axis, if the tilt is 0~30 degrees, the stepper motor stops; if 30~90 degrees, the stepper motor rotates at 30rpm. Apply to both directions.",
+    showcaseCurriculumDetailLevel3Item3Title: "",
+    showcaseCurriculumDetailLevel3Item3Body: "",
     showcaseHonorarySectionEyebrow: "Community",
     showcaseHonorarySectionTitle: "Honorary members & leadership",
     showcaseHonorarySectionDescription:
@@ -724,136 +726,344 @@ export const AWARDS_DATA = [
 // 이미지 경로는 assets/images/ 폴더에 사진을 추가한 후 경로를 지정하세요
 export const EVENTS_DATA = [
   {
+    date: "2025-09-15",
     ko: {
-      caption: "YouTube 채널에서 프로젝트 하이라이트 영상을 상시 공개합니다.",
-      alt: "로보인 유튜브 채널 활동 이미지"
+      title: "취업 세미나",
+      description: "지난 15일, 로보인 전 회장이자 현재 삼성전자 DX부문 VD사업부에서 근무하고 계신 기계 19학번 서기훈 선배님을 모시고 취업 세미나를 진행했습니다.\n\n풍부한 현업 경험을 바탕으로 이력서·포트폴리오 작성, 면접 전략, 커리어 설계 등 실질적이고 유익한 조언을 아낌없이 들려주셨습니다.\n\n바쁜 일정 속에서도 로보인을 위해 귀한 시간을 내어주신 서기훈 선배님께 진심으로 감사드립니다🥰",
+      caption: "취업 세미나 현장",
+      alt: "취업 세미나"
     },
     en: {
-      caption: "Project highlight videos premiere on our YouTube channel.",
-      alt: "Roboin YouTube channel activity"
+      title: "Career Seminar",
+      description: "On the 15th, we held a career seminar with Seo Ki-hoon, former president of Roboin and currently working at Samsung Electronics DX Division VD Business Unit, Class of 19 Mechanical Engineering.\n\nBased on rich industry experience, he generously shared practical and valuable advice on resume and portfolio writing, interview strategies, and career planning.\n\nWe sincerely thank Seo Ki-hoon for taking time out of his busy schedule for Roboin🥰",
+      caption: "Career seminar scene",
+      alt: "Career seminar"
     },
-    image: "assets/images/events-1.jpg"
+    image: "assets/images/events/250915_취업 세미나.jpg"
   },
   {
+    date: "2025-09-11",
     ko: {
-      caption: "공학원 A524 메이커 스페이스에서 팀별로 로봇을 제작합니다.",
-      alt: "연세대학교 공학원 A524 작업 공간"
+      title: "25-2 개강총회",
+      description: "🤖연세대학교 로봇 학술 동아리 로보인🤖에서 지난 11일 25-2학기 개강총회를 가졌습니다.\n\n이번 개강총회는 25-2학기 동안 로보인을 이끌어갈 임원진 소개와 더불어 각 팀의 향후 계획을 간략하게 소개하고, 이후 로보인 신입부원들을 환영하는 시간이었습니다.\n\n신입부원들의 적극적인 참여를 응원하겠습니다🔥",
+      caption: "25-2 개강총회 현장",
+      alt: "25-2 개강총회"
     },
     en: {
-      caption: "Engineering Hall A524 makerspace is where every build happens.",
-      alt: "Yonsei University Engineering Hall A524 workspace"
+      title: "Fall 2025-2 Opening Meeting",
+      description: "🤖Yonsei University Robotics Academic Club Roboin🤖 held the Fall 2025-2 opening meeting on the 11th.\n\nThis opening meeting introduced the executive team who will lead Roboin during the Fall 2025-2 semester, briefly introduced each team's future plans, and welcomed new Roboin members.\n\nWe support the active participation of new members🔥",
+      caption: "Fall 2025-2 opening meeting scene",
+      alt: "Fall 2025-2 opening meeting"
     },
-    image: "assets/images/events-2.gif"
+    image: "assets/images/events/250911_개총.png"
   },
   {
+    date: "2025-09-04",
     ko: {
-      caption: "신입 부원 웰컴 세션에서 팀 소개를 진행합니다.",
-      alt: "로보인 활동 사진 3"
+      title: "25-2 동아리박람회",
+      description: "지난 9월 3일, 4일 🤖연세대학교 로봇 학술 동아리 로보인🤖에서 동아리 박람회에 참여하였습니다.\n\n로보인 부스에서는 터틀봇 팀, 사족보행 팀, 로봇팔 팀의 방학 중 프로젝트를 전시하였습니다. 동아리 박람회 준비를 위해서 방학동안 열심히 준비해준 방학 프로젝트 팀에게 박수 부탁드립니다!!\n\n저희의 부스가 로봇에 관심있는 연세인에게 많은 영감을 주었길 기대해봅니다🥺\n\n앞으로도 로보인의 다양한 프로젝트 진행을 응원합니다~~~",
+      caption: "25-2 동아리박람회 부스",
+      alt: "25-2 동아리박람회"
     },
     en: {
-      caption: "New member welcome session where teams introduce themselves.",
-      alt: "Roboin activity photo 3"
+      title: "Fall 2025-2 Club Fair",
+      description: "On September 3rd and 4th, 🤖Yonsei University Robotics Academic Club Roboin🤖 participated in the club fair.\n\nAt the Roboin booth, we exhibited projects from the TurtleBot team, quadruped walking team, and robot arm team during the vacation. Let's give a round of applause to the vacation project teams who worked hard during the vacation to prepare for the club fair!!\n\nWe hope our booth inspired many Yonsei students interested in robots🥺\n\nWe will continue to support Roboin's various projects~~~",
+      caption: "Fall 2025-2 club fair booth",
+      alt: "Fall 2025-2 club fair"
     },
-    image: "assets/images/events-1.jpg"
+    image: "assets/images/events/250904_동박.png"
   },
   {
+    date: "2025-06-05",
     ko: {
-      caption: "로봇팔 튜닝 워크숍 장면입니다.",
-      alt: "로보인 활동 사진 4"
+      title: "로봇 제어 기초 세미나",
+      description: "로보인 내 장기 프로젝트인 휴머노이드 팀에서, 로봇 제어의 기초를 주제로 세미나를 진행해주셨습니다",
+      caption: "로봇 제어 기초 세미나",
+      alt: "로봇 제어 기초 세미나"
     },
     en: {
-      caption: "Robot arm tuning workshop in action.",
-      alt: "Roboin activity photo 4"
+      title: "Robot Control Basics Seminar",
+      description: "The humanoid team, a long-term project within Roboin, conducted a seminar on the basics of robot control",
+      caption: "Robot control basics seminar",
+      alt: "Robot control basics seminar"
     },
-    image: "assets/images/events-2.gif"
+    image: "assets/images/events/250605_제어 기초 세미나.jpg"
   },
   {
+    date: "2025-05-21",
     ko: {
-      caption: "휴머노이드 시연 전 장비를 점검하는 모습입니다.",
-      alt: "로보인 활동 사진 5"
+      title: "미국 대학원 유학 세미나",
+      description: "로보인의 전 회장이자 Georgia Institute of Technology 박사과정에 진학하신 기계 19 장민준 선배님께서 유학 세미나를 진행해 주셨습니다. 본인의 실제 준비 과정을 중심으로 유학 프로세스 전반, CV, SOP 작성법 등 현실적이고 유익한 조언을 아낌 없이 들려주셨습니다. 바쁜 일정 속에서도 로보인을 위해 귀한 시간을 내어주신 장민준 선배님께 진심으로 감사드립니다.",
+      caption: "미국 대학원 유학 세미나",
+      alt: "미국 대학원 유학 세미나"
     },
     en: {
-      caption: "Final checks before the humanoid demo.",
-      alt: "Roboin activity photo 5"
+      title: "US Graduate School Study Abroad Seminar",
+      description: "Jang Min-jun, former president of Roboin and currently pursuing a Ph.D. at Georgia Institute of Technology, Class of 19 Mechanical Engineering, conducted a study abroad seminar. Based on his actual preparation process, he generously shared practical and valuable advice on the overall study abroad process, CV and SOP writing methods. We sincerely thank Jang Min-jun for taking time out of his busy schedule for Roboin.",
+      caption: "US graduate school study abroad seminar",
+      alt: "US graduate school study abroad seminar"
     },
-    image: "assets/images/events-1.jpg"
+    image: "assets/images/events/250521_유학 세미나.jpg"
   },
   {
+    date: "2025-03-13",
     ko: {
-      caption: "대회 출전을 앞두고 회의 중인 팀원들.",
-      alt: "로보인 활동 사진 6"
+      title: "25-1 개강총회",
+      description: "🤖연세대학교 로봇 학술 동아리 로보인🤖에서 지난 13일 25-1학기 개강총회를 가졌습니다.\n\n이번 개강총회는 25-1학기 동안 로보인을 이끌어갈 임원진 소개와 더불어 각 팀의 향후 계획을 간략하게 소개하고, 이후 로보인 신입부원들을 환영하는 시간이었습니다.\n\n신입부원들의 적극적인 참여를 응원하겠습니다🔥",
+      caption: "25-1 개강총회 현장",
+      alt: "25-1 개강총회"
     },
     en: {
-      caption: "Strategy meeting right before competition day.",
-      alt: "Roboin activity photo 6"
+      title: "Spring 2025-1 Opening Meeting",
+      description: "🤖Yonsei University Robotics Academic Club Roboin🤖 held the Spring 2025-1 opening meeting on the 13th.\n\nThis opening meeting introduced the executive team who will lead Roboin during the Spring 2025-1 semester, briefly introduced each team's future plans, and welcomed new Roboin members.\n\nWe support the active participation of new members🔥",
+      caption: "Spring 2025-1 opening meeting scene",
+      alt: "Spring 2025-1 opening meeting"
     },
-    image: "assets/images/events-2.gif"
+    image: "assets/images/events/250313_개총.jpg"
   },
   {
+    date: "2024-09-13",
     ko: {
-      caption: "메이커 교육 참가자와 함께한 단체 사진.",
-      alt: "로보인 활동 사진 7"
+      title: "24-2 개강총회",
+      description: "🤖연세대학교 로봇 학술 동아리 로보인🤖에서 지난 13일 24-2학기 개강총회를 가졌습니다.\n\n이번 개강총회는 24-2학기 동안 로보인을 이끌어갈 임원진 소개와 더불어 각 팀의 향후 계획을 간략하게 소개하고, 이후 로보인 신입부원들을 환영하는 시간이었습니다.\n\n신입부원들의 적극적인 참여를 응원하겠습니다🔥",
+      caption: "24-2 개강총회 현장",
+      alt: "24-2 개강총회"
     },
     en: {
-      caption: "Group photo with participants from the maker education program.",
-      alt: "Roboin activity photo 7"
+      title: "Fall 2024-2 Opening Meeting",
+      description: "🤖Yonsei University Robotics Academic Club Roboin🤖 held the Fall 2024-2 opening meeting on the 13th.\n\nThis opening meeting introduced the executive team who will lead Roboin during the Fall 2024-2 semester, briefly introduced each team's future plans, and welcomed new Roboin members.\n\nWe support the active participation of new members🔥",
+      caption: "Fall 2024-2 opening meeting scene",
+      alt: "Fall 2024-2 opening meeting"
     },
-    image: "assets/images/events-1.jpg"
+    image: "assets/images/events/240913_개총.jpg"
   },
   {
+    date: "2024-06-11",
     ko: {
-      caption: "산학 협력 미팅에서 프로젝트를 설명하는 장면.",
-      alt: "로보인 활동 사진 8"
+      title: "미국 대학원 유학 세미나",
+      description: "로보인의 전 회장이자 UC Berkely 박사과정에 진학하신 기계 19 최서연 선배님께서 유학 세미나를 진행해 주셨습니다. 본인의 실제 준비 과정을 중심으로 유학 프로세스 전반, CV, SOP 작성법 등 현실적이고 유익한 조언을 아낌 없이 들려주셨습니다. 바쁜 일정 속에서도 로보인을 위해 귀한 시간을 내어주신 최서연 선배님께 진심으로 감사드립니다.",
+      caption: "미국 대학원 유학 세미나",
+      alt: "미국 대학원 유학 세미나"
     },
     en: {
-      caption: "Explaining our project during an industry meeting.",
-      alt: "Roboin activity photo 8"
+      title: "US Graduate School Study Abroad Seminar",
+      description: "Choi Seo-yeon, former president of Roboin and currently pursuing a Ph.D. at UC Berkeley, Class of 19 Mechanical Engineering, conducted a study abroad seminar. Based on her actual preparation process, she generously shared practical and valuable advice on the overall study abroad process, CV and SOP writing methods. We sincerely thank Choi Seo-yeon for taking time out of her busy schedule for Roboin.",
+      caption: "US graduate school study abroad seminar",
+      alt: "US graduate school study abroad seminar"
     },
-    image: "assets/images/events-2.gif"
+    image: "assets/images/events/240611_유학 세미나.png"
   },
   {
+    date: "2024-05-21",
     ko: {
-      caption: "캠퍼스 로봇 투어를 준비하는 자율주행 팀.",
-      alt: "로보인 활동 사진 9"
+      title: "Actuators for Robotic Applications 세미나",
+      description: "로보인 전 회장이자 현재 서울대 Biorobotics Lab에서 석사과정에 진학하신 기계 20학번 남다현 선배님께서 Actuators for Robotic Applications의 주제로 세미나를 진행해주셨습니다.\n\n바쁜 일정 속에서도 로보인을 위해 귀한 시간을 내어주신 남다현 선배님께 진심으로 감사드립니다🥰",
+      caption: "Actuators for Robotic Applications 세미나",
+      alt: "Actuators for Robotic Applications 세미나"
     },
     en: {
-      caption: "Autonomous driving team preparing for the campus tour.",
-      alt: "Roboin activity photo 9"
+      title: "Actuators for Robotic Applications Seminar",
+      description: "Nam Da-hyun, former president of Roboin and currently pursuing a master's degree at Seoul National University Biorobotics Lab, Class of 20 Mechanical Engineering, conducted a seminar on the topic of Actuators for Robotic Applications.\n\nWe sincerely thank Nam Da-hyun for taking time out of her busy schedule for Roboin🥰",
+      caption: "Actuators for Robotic Applications seminar",
+      alt: "Actuators for Robotic Applications seminar"
     },
-    image: "assets/images/events-1.jpg"
+    image: "assets/images/events/240521_세미나.png"
   },
   {
+    date: "2024-04-29",
     ko: {
-      caption: "임베디드 세미나에서 실습을 진행하는 모습.",
-      alt: "로보인 활동 사진 10"
+      title: "KAIST 박해원 교수님 초청 세미나",
+      description: "로보인 선배이신 KAIST 기계공학과 박해원 교수님을 모시고 세미나를 진행했습니다. 바쁜 일정 속에서도 로보인을 위해 귀한 시간을 내어주신 박해원 교수님께 진심으로 감사드립니다.",
+      caption: "KAIST 박해원 교수님 초청 세미나",
+      alt: "KAIST 박해원 교수님 초청 세미나"
     },
     en: {
-      caption: "Hands-on embedded seminar session.",
-      alt: "Roboin activity photo 10"
+      title: "KAIST Professor Park Hae-won Invited Seminar",
+      description: "We held a seminar with Professor Park Hae-won from KAIST Department of Mechanical Engineering, a Roboin alumnus. We sincerely thank Professor Park Hae-won for taking time out of his busy schedule for Roboin.",
+      caption: "KAIST Professor Park Hae-won invited seminar",
+      alt: "KAIST Professor Park Hae-won invited seminar"
     },
-    image: "assets/images/events-2.gif"
+    image: "assets/images/events/240429_박해원 교수님.jpg"
   },
   {
+    date: "2022-11-17",
     ko: {
-      caption: "커뮤니티 네트워킹 데이 현장입니다.",
-      alt: "로보인 활동 사진 11"
+      title: "연세-넥슨 √i RC창의플랫폼 창보고 전시회",
+      description: "2022 연세-넥슨 √i RC창의플랫폼 창보고 전시회에 초청을 받아 각종 프로젝트 작품 전시 및 설명을 진행하였습니다. 많은 신입생들이 로봇에 관심을 보이고, 로보인에 대한 좋은 인상을 심어줄 수 있는 기회였습니다.",
+      caption: "연세-넥슨 √i RC창의플랫폼 창보고 전시회",
+      alt: "연세-넥슨 √i RC창의플랫폼 창보고 전시회"
     },
     en: {
-      caption: "Community networking day snapshot.",
-      alt: "Roboin activity photo 11"
+      title: "Yonsei-Nexon √i RC Creative Platform Exhibition",
+      description: "We were invited to the 2022 Yonsei-Nexon √i RC Creative Platform Exhibition and exhibited and explained various project works. It was an opportunity for many freshmen to show interest in robots and create a good impression of Roboin.",
+      caption: "Yonsei-Nexon √i RC Creative Platform Exhibition",
+      alt: "Yonsei-Nexon √i RC Creative Platform Exhibition"
     },
-    image: "assets/images/events-1.jpg"
+    image: "assets/images/events/221117_창의플랫폼 전시회.png"
   },
   {
+    date: "2022-05-28",
     ko: {
-      caption: "연말 데모데이에서 로봇을 전시하는 장면.",
-      alt: "로보인 활동 사진 12"
+      title: "미국 대학원 유학 세미나",
+      description: "로보인의 전 회장이자 미국 대학원에 진학하신 선배님께서 유학 세미나를 진행해 주셨습니다.",
+      caption: "미국 대학원 유학 세미나",
+      alt: "미국 대학원 유학 세미나"
     },
     en: {
-      caption: "Year-end demo day display area.",
-      alt: "Roboin activity photo 12"
+      title: "US Graduate School Study Abroad Seminar",
+      description: "A former president of Roboin who entered a US graduate school conducted a study abroad seminar.",
+      caption: "US graduate school study abroad seminar",
+      alt: "US graduate school study abroad seminar"
     },
-    image: "assets/images/events-2.gif"
+    image: "assets/images/events/220528_유학 세미나.png"
+  }
+];
+
+// 리소스 페이지 텍스트
+export const RESOURCES_CONTENT = {
+  ko: {
+    resourcesHeroEyebrow: "Resources",
+    resourcesHeroTitle: "동아리방 리소스",
+    resourcesHeroSubtitle: "로보인 동아리방에서 사용 가능한 장비와 리소스를 확인하세요.",
+    resourcesDescription: "프로젝트와 연구에 필요한 다양한 하드웨어와 소프트웨어 리소스를 제공합니다.",
+    resourcesCategoryComputers: "컴퓨터",
+    resourcesCategoryPrinters: "3D 프린터",
+    resourcesCategoryEmbedded: "임베디드",
+    resourcesCategoryComponents: "부품",
+    resourcesCategoryTools: "도구",
+    resourcesAvailable: "사용 가능",
+    resourcesInUse: "사용 중",
+    resourcesMaintenance: "점검 중"
+  },
+  en: {
+    resourcesHeroEyebrow: "Resources",
+    resourcesHeroTitle: "Club Resources",
+    resourcesHeroSubtitle: "Check out the equipment and resources available in the Roboin club room.",
+    resourcesDescription: "We provide various hardware and software resources needed for projects and research.",
+    resourcesCategoryComputers: "Computers",
+    resourcesCategoryPrinters: "3D Printers",
+    resourcesCategoryEmbedded: "Embedded Systems",
+    resourcesCategoryComponents: "Components",
+    resourcesCategoryTools: "Tools",
+    resourcesAvailable: "Available",
+    resourcesInUse: "In Use",
+    resourcesMaintenance: "Maintenance"
+  }
+};
+
+// 리소스 데이터 - 여기에 새로운 리소스를 추가하세요
+export const RESOURCES_DATA = [
+  {
+    category: "computers",
+    ko: {
+      name: "Ubuntu PC",
+      description: "개발 및 시뮬레이션 작업용 데스크톱 컴퓨터",
+      specs: "Ubuntu 22.04 LTS, RTX 3060"
+    },
+    en: {
+      name: "Ubuntu PC",
+      description: "Desktop computer for development and simulation work",
+      specs: "Ubuntu 22.04 LTS, RTX 3060"
+    },
+    quantity: 1,
+    status: "available",
+    image: null
+  },
+  {
+    category: "printers",
+    ko: {
+      name: "Creality 3D 프린터",
+      description: "FDM 방식 3D 프린터",
+      specs: "Creality Ender 시리즈"
+    },
+    en: {
+      name: "Creality 3D Printer",
+      description: "FDM 3D printer",
+      specs: "Creality Ender series"
+    },
+    quantity: 2,
+    status: "available",
+    image: null
+  },
+  {
+    category: "printers",
+    ko: {
+      name: "Bambu Lab 3D 프린터",
+      description: "고속 고품질 3D 프린터",
+      specs: "Bambu P1S"
+    },
+    en: {
+      name: "Bambu Lab 3D Printer",
+      description: "High-speed, high-quality 3D printer",
+      specs: "Bambu P1S"
+    },
+    quantity: 1,
+    status: "available",
+    image: null
+  },
+  {
+    category: "embedded",
+    ko: {
+      name: "라즈베리파이",
+      description: "임베디드 프로젝트용 싱글보드 컴퓨터",
+      specs: "Raspberry Pi 4 또는 최신 모델"
+    },
+    en: {
+      name: "Raspberry Pi",
+      description: "Single-board computer for embedded projects",
+      specs: "Raspberry Pi 4 or latest model"
+    },
+    quantity: "여러 대",
+    status: "available",
+    image: null
+  },
+  {
+    category: "embedded",
+    ko: {
+      name: "Jetson Nano",
+      description: "AI 및 딥러닝 프로젝트용 엣지 컴퓨팅 보드",
+      specs: "NVIDIA Jetson Nano Developer Kit"
+    },
+    en: {
+      name: "Jetson Nano",
+      description: "Edge computing board for AI and deep learning projects",
+      specs: "NVIDIA Jetson Nano Developer Kit"
+    },
+    quantity: 1,
+    status: "available",
+    image: null
+  },
+  {
+    category: "components",
+    ko: {
+      name: "다이나믹셀",
+      description: "로봇 관절 제어용 서보 모터",
+      specs: "ROBOTIS Dynamixel 시리즈"
+    },
+    en: {
+      name: "Dynamixel",
+      description: "Servo motors for robot joint control",
+      specs: "ROBOTIS Dynamixel series"
+    },
+    quantity: "여러 개",
+    status: "available",
+    image: null
+  },
+  {
+    category: "components",
+    ko: {
+      name: "배터리",
+      description: "로봇 및 프로젝트용 전원 공급 장치",
+      specs: "리튬이온 배터리, 다양한 용량"
+    },
+    en: {
+      name: "Batteries",
+      description: "Power supply for robots and projects",
+      specs: "Lithium-ion batteries, various capacities"
+    },
+    quantity: "여러 개",
+    status: "available",
+    image: null
   }
 ];
 

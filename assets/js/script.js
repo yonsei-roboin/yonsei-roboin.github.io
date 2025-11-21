@@ -1,4 +1,4 @@
-import { CONTENT_DATA, AWARDS_DATA, EVENTS_DATA } from "./content.js";
+import { CONTENT_DATA, AWARDS_DATA, EVENTS_DATA, RESOURCES_DATA, RESOURCES_CONTENT } from "./content.js";
 
 const STORAGE_KEY = "roboin-lang";
 const DEFAULT_LANG = "ko";
@@ -62,6 +62,7 @@ const updateContent = (lang) => {
   updateLangToggleA11y(lang);
   renderAwards(lang);
   renderEvents(lang);
+  renderResources(lang);
   
   // Award 모달도 언어 업데이트
   const awardModal = document.getElementById("award-modal");
@@ -182,18 +183,36 @@ const renderAwards = (lang) => {
   initAwardModals(lang);
 };
 
+// 날짜 포맷팅 함수
+const formatDate = (dateString, lang) => {
+  if (!dateString) return "";
+  const date = new Date(dateString);
+  if (isNaN(date.getTime())) return "";
+  
+  if (lang === "ko") {
+    return `${date.getFullYear()}년 ${date.getMonth() + 1}월 ${date.getDate()}일`;
+  } else {
+    const months = ["January", "February", "March", "April", "May", "June", 
+                   "July", "August", "September", "October", "November", "December"];
+    return `${months[date.getMonth()]} ${date.getDate()}, ${date.getFullYear()}`;
+  }
+};
+
 const renderEvents = (lang) => {
   const eventsTrack = document.querySelector(".event-slider-track");
   if (!eventsTrack || !EVENTS_DATA) return;
 
-  eventsTrack.innerHTML = EVENTS_DATA.map((event) => {
+  eventsTrack.innerHTML = EVENTS_DATA.map((event, index) => {
     const content = event[lang] || event.ko; // 언어별 데이터 가져오기
+    const formattedDate = event.date ? formatDate(event.date, lang) : "";
     return `
       <figure
         class="event-card"
         data-slider-item
         data-media-trigger
         data-media-src="${event.image}"
+        data-media-date="${event.date || ''}"
+        data-media-event-index="${index}"
         data-media-caption-key=""
         role="button"
         tabindex="0"
@@ -203,6 +222,7 @@ const renderEvents = (lang) => {
           alt="${content.alt}"
           loading="lazy"
         />
+        ${formattedDate ? `<p class="event-date">${formattedDate}</p>` : ''}
         <figcaption class="event-caption">${content.caption}</figcaption>
       </figure>
     `;
@@ -211,6 +231,92 @@ const renderEvents = (lang) => {
   // 이벤트 리스너 재설정
   initMediaModal();
   initSliders();
+};
+
+const renderResources = (lang) => {
+  const resourcesContainer = document.getElementById("resources-container");
+  if (!resourcesContainer || !RESOURCES_DATA) return;
+
+  const content = RESOURCES_CONTENT[lang] || RESOURCES_CONTENT.ko;
+  
+  // 카테고리별로 그룹화
+  const categories = {
+    computers: [],
+    printers: [],
+    embedded: [],
+    components: [],
+    tools: []
+  };
+
+  RESOURCES_DATA.forEach((resource) => {
+    if (categories[resource.category]) {
+      categories[resource.category].push(resource);
+    }
+  });
+
+  // 카테고리 이름 매핑
+  const categoryNames = {
+    computers: content.resourcesCategoryComputers,
+    printers: content.resourcesCategoryPrinters,
+    embedded: content.resourcesCategoryEmbedded,
+    components: content.resourcesCategoryComponents,
+    tools: content.resourcesCategoryTools
+  };
+
+  // 상태 배지 스타일
+  const statusStyles = {
+    available: "bg-green-100 text-green-800",
+    "in-use": "bg-yellow-100 text-yellow-800",
+    maintenance: "bg-red-100 text-red-800"
+  };
+
+  const statusLabels = {
+    available: content.resourcesAvailable,
+    "in-use": content.resourcesInUse,
+    maintenance: content.resourcesMaintenance
+  };
+
+  let html = "";
+
+  // 각 카테고리별로 렌더링
+  Object.keys(categories).forEach((categoryKey) => {
+    const categoryResources = categories[categoryKey];
+    if (categoryResources.length === 0) return;
+
+    html += `
+      <div class="lg:col-span-2 xl:col-span-3">
+        <h3 class="text-2xl font-bold text-slate-900 mb-4">${categoryNames[categoryKey]}</h3>
+      </div>
+    `;
+
+    categoryResources.forEach((resource) => {
+      const resourceContent = resource[lang] || resource.ko;
+      const statusStyle = statusStyles[resource.status] || statusStyles.available;
+      const statusLabel = statusLabels[resource.status] || statusLabels.available;
+      
+      html += `
+        <article class="resource-card">
+          <div class="flex items-start justify-between mb-3">
+            <h4 class="resource-card-title">${resourceContent.name}</h4>
+            <span class="resource-status-badge ${statusStyle}">${statusLabel}</span>
+          </div>
+          <p class="resource-card-description">${resourceContent.description}</p>
+          <div class="mt-4 space-y-2">
+            <div class="flex items-center gap-2 text-sm text-slate-600">
+              <span class="font-semibold">${lang === "ko" ? "수량:" : "Quantity:"}</span>
+              <span>${resource.quantity}</span>
+            </div>
+            <div class="flex items-center gap-2 text-sm text-slate-600">
+              <span class="font-semibold">${lang === "ko" ? "사양:" : "Specs:"}</span>
+              <span>${resourceContent.specs}</span>
+            </div>
+          </div>
+        </article>
+      `;
+    });
+  });
+
+  resourcesContainer.innerHTML = html;
 };
 
 const init = () => {
@@ -355,14 +461,42 @@ const initMediaModal = () => {
   if (!modal) return;
 
   const img = modal.querySelector("#media-modal-img");
-  const captionEl = modal.querySelector("#media-modal-caption");
+  const titleEl = modal.querySelector("#media-modal-title");
+  const dateEl = modal.querySelector("#media-modal-date");
+  const descriptionEl = modal.querySelector("#media-modal-description");
   const closeTargets = modal.querySelectorAll("[data-media-close]");
   const triggers = document.querySelectorAll("[data-media-trigger]");
 
-  const openModal = (src, caption) => {
+  const openModal = (src, title, date, description) => {
     if (!src) return;
     img.src = src;
-    captionEl.textContent = caption || "";
+    
+    if (titleEl) {
+      titleEl.textContent = title || "";
+      titleEl.style.display = title ? "block" : "none";
+    }
+    
+    if (dateEl) {
+      if (date && date.trim() !== "") {
+        dateEl.textContent = date;
+        dateEl.style.display = "block";
+      } else {
+        dateEl.textContent = "";
+        dateEl.style.display = "none";
+      }
+    }
+    
+    if (descriptionEl) {
+      if (description && description.trim() !== "") {
+        // 줄바꿈을 <br>로 변환
+        descriptionEl.innerHTML = description.replace(/\n/g, "<br>");
+        descriptionEl.style.display = "block";
+      } else {
+        descriptionEl.textContent = "";
+        descriptionEl.style.display = "none";
+      }
+    }
+    
     modal.classList.remove("hidden");
     modal.setAttribute("aria-hidden", "false");
   };
@@ -371,6 +505,18 @@ const initMediaModal = () => {
     modal.classList.add("hidden");
     modal.setAttribute("aria-hidden", "true");
     img.src = "";
+    if (titleEl) {
+      titleEl.textContent = "";
+      titleEl.style.display = "none";
+    }
+    if (dateEl) {
+      dateEl.textContent = "";
+      dateEl.style.display = "none";
+    }
+    if (descriptionEl) {
+      descriptionEl.textContent = "";
+      descriptionEl.style.display = "none";
+    }
   };
 
   triggers.forEach((trigger) => {
@@ -378,12 +524,27 @@ const initMediaModal = () => {
       const src =
         trigger.getAttribute("data-media-src") ||
         trigger.querySelector("img")?.getAttribute("src");
-      const captionKey = trigger.getAttribute("data-media-caption-key");
-      const dictionary = CONTENT_DATA[currentLang];
-      const fallbackCaption =
-        trigger.querySelector("figcaption")?.textContent?.trim() || "";
-      const caption = (captionKey && dictionary?.[captionKey]) || fallbackCaption;
-      openModal(src, caption);
+      const eventIndex = trigger.getAttribute("data-media-event-index");
+      
+      // EVENTS_DATA에서 이벤트 정보 가져오기
+      if (eventIndex !== null && EVENTS_DATA && EVENTS_DATA[parseInt(eventIndex)]) {
+        const event = EVENTS_DATA[parseInt(eventIndex)];
+        const content = event[currentLang] || event.ko;
+        const dateString = event.date || "";
+        const formattedDate = dateString ? formatDate(dateString, currentLang) : "";
+        
+        openModal(src, content.title || "", formattedDate, content.description || "");
+      } else {
+        // 기존 방식 (다른 곳에서 사용할 수 있음)
+        const captionKey = trigger.getAttribute("data-media-caption-key");
+        const dateString = trigger.getAttribute("data-media-date");
+        const dictionary = CONTENT_DATA[currentLang];
+        const fallbackCaption =
+          trigger.querySelector("figcaption")?.textContent?.trim() || "";
+        const caption = (captionKey && dictionary?.[captionKey]) || fallbackCaption;
+        const formattedDate = dateString ? formatDate(dateString, currentLang) : "";
+        openModal(src, caption, formattedDate, "");
+      }
     };
 
     trigger.addEventListener("click", handleActivate);

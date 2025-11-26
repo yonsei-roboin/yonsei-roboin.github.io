@@ -8,7 +8,7 @@ export const CONTENT_DATA = {
     navActivities: "활동",
     navRecruitment: "모집",
     navContact: "문의",
-    navShowcase: "쇼케이스",
+    navShowcase: "아카이브",
     navResources: "리소스",
     langToggleLabel: "English",
     langToggleAria: "언어를 영어로 전환",
@@ -32,7 +32,7 @@ export const CONTENT_DATA = {
     statusDescription:
       "자율주행 서비스 로봇과 커뮤니티 협업 프로젝트를 중심으로 연구·시연을 준비하고 있습니다.",
     aboutEyebrow: "About Roboin",
-    aboutTitle: "연세대학교 공과대학 소속 로봇 학술 동아리",
+    aboutTitle: "로봇을 만드는 사람들",
     aboutDescription:
       "로보인은 로봇을 사랑하는 학부생들이 모여 프로젝트와 세미나, 대회 활동을 통해 실전 로보틱스 경험을 쌓는 연세대학교 최초이자 유일의 로봇 학술 동아리입니다.",
     aboutMissionTitle: "정체성",
@@ -58,7 +58,7 @@ export const CONTENT_DATA = {
     aboutMembershipCardBody:
       "학부 전공·학년과 관계없이 로봇을 사랑하는 63명이 한 팀이 되어 협업합니다.",
     aboutMembershipCardDetail:
-      "제1공학관 A524 메이커 스페이스를 거점으로 매주 세션을 운영하고, 스터디/프로젝트 팀별로 장비와 예산을 지원합니다.",
+      "제1공학관 A524 동아리방을 거점으로 매주 세션을 운영하고, 스터디/프로젝트 팀별로 장비와 예산을 지원합니다.",
     activitiesEyebrow: "Activities",
     activitiesTitle: "프로젝트부터 세미나까지, 로보인의 활동",
     activitiesHighlightsTitle: "수상 실적 & 행사",
@@ -66,14 +66,14 @@ export const CONTENT_DATA = {
       "로보인의 활동현장과 수상실적을 확인하세요",
     activitiesShowMore: "더 보기",
     activitiesShowLess: "간단히 보기",
-    activitiesViewAll: "쇼케이스 페이지로 이동",
+    activitiesViewAll: "아카이브 페이지로 이동",
     activitiesRobotsTitle: "프로젝트",
     activitiesRobotsBody:
       "로봇팔, 휴머노이드, 자율주행 등 관심 주제를 정해 팀을 꾸리고 직접 로봇을 제작합니다.",
     activitiesResearchTitle: "대회 도전",
     activitiesResearchBody:
       "국내외 로봇 대회에 출전해 실력을 검증하고 동아리 팀원들과 전략을 세워 도전합니다.",
-    activitiesOutreachTitle: "세미나 & 공유",
+    activitiesOutreachTitle: "세미나",
     activitiesOutreachBody:
       "프로젝트에서 얻은 지식을 세미나로 공유하고 외부 연사를 초청해 로봇 기술 인사이트를 나눕니다.",
     recruitmentEyebrow: "Recruitment",
@@ -88,7 +88,7 @@ export const CONTENT_DATA = {
       "25-2 모집이 마감되었습니다. 26-1 모집에도 많은 관심 부탁드립니다",
     recruitmentContactTitle: "문의",
     recruitmentContactBody:
-      "궁금한 점은 공식 이메일 또는 인스타그램 DM으로 연락 주세요. 활동 소개 세션도 진행 예정입니다.",
+      "궁금한 점은 공식 이메일 또는 인스타그램 DM으로 연락 주세요.",
     awardsEyebrow: "Highlights",
     awardsTitle: "수상 실적과 현장 스냅샷",
     awardsDescription:
@@ -107,10 +107,10 @@ export const CONTENT_DATA = {
       "팀별 결과물을 심사받고 피드백을 공유해 다음 시즌 연구 주제를 정교하게 다듬습니다.",
     eventsPhoto1Caption: "YouTube 채널을 통해 프로젝트 하이라이트 영상을 공개 중입니다.",
     eventsPhoto2Caption: "제1공학관 A524 작업 공간에서 팀별로 로봇을 제작하고 시험 운행합니다.",
-    showcasePreviewEyebrow: "Showcase",
+    showcasePreviewEyebrow: "Archive",
     showcasePreviewTitle: "우수 프로젝트 · 커리큘럼 · 커뮤니티",
     showcasePreviewDescription:
-      "로보인이 자랑하는 대표 프로그램과 구성원 스토리를 요약으로 살펴보고, 더 자세한 내용은 쇼케이스 페이지에서 확인하세요.",
+      "로보인이 자랑하는 대표 프로그램과 구성원 스토리를 요약으로 살펴보고, 더 자세한 내용은 아카이브 페이지에서 확인하세요.",
     showcaseProjectsTitle: "우수 프로젝트",
     showcaseProject1Title: "자율주행 서비스 로봇",
     showcaseProject1Body: "SLAM·센서 융합 기반 실내 주행 로봇으로 25-2 시즌 핵심 프로젝트입니다.",
@@ -138,23 +138,22 @@ export const CONTENT_DATA = {
     showcaseOfficerViceBody: "모집 중 · 교육/커리큘럼 리드",
     showcaseOfficerOpsLabel: "프로젝트 리드",
     showcaseOfficerOpsBody: "팀장단 · 프로젝트 PM & 기술 멘토",
-    showcasePreviewCTA: "쇼케이스 전체 보기",
-    showcaseHeroEyebrow: "Showcase",
-    showcaseHeroTitle: "로보인의 모든 하이라이트를 한 곳에서",
+    showcasePreviewCTA: "아카이브 전체 보기",
+    showcaseHeroEyebrow: "Archive",
+    showcaseHeroTitle: "로보인의 역사",
     showcaseHeroSubtitle:
-      "수상 실적, 대회/행사 기록, 우수 프로젝트와 커리큘럼, 명예 회원 이야기까지 로보인의 성장 연대를 담았습니다.",
+      "수상 실적, 대회/행사 기록, 우수 프로젝트와 커리큘럼, 명예 회원까지 로보인의 기록을 살펴보세요.",
     showcaseHeroCTA: "메인 페이지로 돌아가기",
     showcaseAwardsEyebrow: "Awards",
     showcaseAwardsTitle: "로보인의 수상 및 대회 기록",
     showcaseAwardsDescription:
-      "대표 수상 실적을 우선 공개하고 있으며, 향후 시즌별 기록을 지속적으로 확장할 예정입니다.",
+      "대표 수상 실적을 우선 공개하고 있으며, 향후 지속적으로 업데이트트할 예정입니다.",
     showcaseEventsEyebrow: "Events",
-    showcaseEventsTitle: "활동 현장 & 미디어 아카이브",
+    showcaseEventsTitle: "갤러리",
     showcaseEventsDescription:
       "대표 사진 두 장을 먼저 공개하고 있으며, 향후 수십 개의 현장 이미지를 갤러리로 확장할 계획입니다.",
     showcaseEventsPrev: "이전",
     showcaseEventsNext: "다음",
-    showcaseEventsNote: "※ 향후 시즌별 이벤트가 확정되면 갤러리에 순차적으로 추가됩니다.",
     showcaseProjectsDetailEyebrow: "Projects",
     showcaseProjectsDetailTitle: "우수 프로젝트 포트폴리오",
     showcaseProjectsDetailDescription:
@@ -211,10 +210,9 @@ export const CONTENT_DATA = {
     showcaseOfficersSectionOfficerLabel: "임원진",
     mediaModalClose: "닫기",
     keywordsEyebrow: "Keywords",
-    keywordsTitle: "로보인이 탐구하는 주제들",
-    keywordsDescription: "로봇팔부터 임베디드 소프트웨어까지 다양한 키워드를 함께 공부합니다.",
+    keywordsDescription: "로보인은 로봇과 관련된 다양한 주제들을 함께 공부합니다.",
     contactEyebrow: "Contact",
-    contactTitle: "함께 움직일 준비가 되셨나요?",
+    contactTitle: "궁금한 점이 있으신가요",
     contactDescription:
       "협업 제안, 세미나 초청, 산학 프로젝트 등 모든 문의를 환영합니다. 가능한 빠르게 답변드리겠습니다.",
     contactLeadLabel: "대표",
@@ -303,14 +301,14 @@ export const CONTENT_DATA = {
       "Check out Roboin's activities and achievements",
     activitiesShowMore: "Show more",
     activitiesShowLess: "Show less",
-    activitiesViewAll: "Go to showcase page",
+    activitiesViewAll: "Go to archive page",
     activitiesRobotsTitle: "Projects",
     activitiesRobotsBody:
       "Teams pick themes such as robotic arms, humanoids, or autonomous driving and build the robots themselves.", 
     activitiesResearchTitle: "Competition challenges",
     activitiesResearchBody:
       "We enter domestic and global robotics contests, preparing strategies with fellow club members.",
-    activitiesOutreachTitle: "Seminars & sharing",
+    activitiesOutreachTitle: "Seminars",
     activitiesOutreachBody:
       "Members host knowledge-sharing sessions and invite external speakers to discuss robotics insights.",
     recruitmentEyebrow: "Recruitment",
@@ -325,7 +323,7 @@ export const CONTENT_DATA = {
       "Fall 2025-2 recruitment has closed. We look forward to many applications for Spring 2026-1!",
     recruitmentContactTitle: "Inquiries",
     recruitmentContactBody:
-      "For questions, please contact us via official email or Instagram DM. We also plan to hold information sessions about our activities.",
+      "For questions, please contact us via official email or Instagram DM.",
     awardsEyebrow: "Highlights",
     awardsTitle: "Awards & event snapshots",
     awardsDescription:
@@ -343,11 +341,11 @@ export const CONTENT_DATA = {
     awardsList3Body:
       "External reviewers evaluate team outcomes, helping refine research topics for upcoming seasons.",
     eventsPhoto1Caption: "Our YouTube channel premieres highlight reels from every build season.",
-    eventsPhoto2Caption: "Teams prototype and test robots inside Engineering Hall A524 makerspace.",
-    showcasePreviewEyebrow: "Showcase",
+    eventsPhoto2Caption: "Teams prototype and test robots inside Engineering Hall A524 club room.",
+    showcasePreviewEyebrow: "Archive",
     showcasePreviewTitle: "Featured projects · curriculum · community",
     showcasePreviewDescription:
-      "Get a quick overview of our flagship programs and stories, then visit the showcase page for full archives.",
+      "Get a quick overview of our flagship programs and stories, then visit the archive page for full details.",
     showcaseProjectsTitle: "Featured projects",
     showcaseProject1Title: "Autonomous service robot",
     showcaseProject1Body: "Core project for Fall 25-2 focusing on SLAM and indoor navigation.",
@@ -375,16 +373,16 @@ export const CONTENT_DATA = {
     showcaseOfficerViceBody: "Open role · Curriculum & education lead",
     showcaseOfficerOpsLabel: "Project leads",
     showcaseOfficerOpsBody: "Team captains · Project PMs & technical mentors",
-    showcasePreviewCTA: "View full showcase",
-    showcaseHeroEyebrow: "Showcase",
-    showcaseHeroTitle: "All Roboin highlights in one place",
+    showcasePreviewCTA: "View full archive",
+    showcaseHeroEyebrow: "Archive",
+    showcaseHeroTitle: "Roboin's history",
     showcaseHeroSubtitle:
-      "Awards, events, flagship projects, curriculum, and honorary members—capture the full story of our growth.",
+      "Awards, events, flagship projects, curriculum, and honorary members—check out the full history of Roboin.",
     showcaseHeroCTA: "Back to main site",
     showcaseAwardsEyebrow: "Awards",
     showcaseAwardsTitle: "Competition & award history",
     showcaseAwardsDescription:
-      "We publish representative wins first and keep expanding the archive with every season.",
+      "We publish representative wins first and keep updating the archive continuously.",
     showcaseAwardsAccordion1Title: "2024 Korea Autonomous Robotics Grand Prize",
     showcaseAwardsAccordion1Body:
       "Topped the finals with a SLAM-powered indoor autonomous robot.",
@@ -434,7 +432,7 @@ export const CONTENT_DATA = {
     showcaseEventsDescription:
       "Two representative photos are shown now; dozens more will roll out as the archive grows.",
     showcaseEventsCaption1: "Project highlight videos premiere on our YouTube channel.",
-    showcaseEventsCaption2: "Engineering Hall A524 makerspace is where every build happens.",
+    showcaseEventsCaption2: "Engineering Hall A524 club room is where every build happens.",
     showcaseEventsCaption3: "New member welcome session where teams introduce themselves.",
     showcaseEventsCaption4: "Robot arm tuning workshop in action.",
     showcaseEventsCaption5: "Final checks before the humanoid demo.",
@@ -447,7 +445,6 @@ export const CONTENT_DATA = {
     showcaseEventsCaption12: "Year-end demo day display area.",
     showcaseEventsPrev: "Prev", 
     showcaseEventsNext: "Next",
-    showcaseEventsNote: "Additional event photos will be appended as the archive grows.",
     showcaseProjectsDetailEyebrow: "Projects",
     showcaseProjectsDetailTitle: "Featured project portfolio",
     showcaseProjectsDetailDescription:
@@ -524,7 +521,6 @@ export const CONTENT_DATA = {
     showcaseOfficersSectionFinanceBody: "Manages budget, resources, and equipment support",
     mediaModalClose: "Close",
     keywordsEyebrow: "Keywords",
-    keywordsTitle: "Topics we explore",
     keywordsDescription: "We dive into everything from robotic arms to embedded software.",
     contactEyebrow: "Contact",
     contactTitle: "Ready to move with us?",
@@ -778,7 +774,7 @@ export const EVENTS_DATA = [
     },
     en: {
       title: "US Graduate School Study Abroad Seminar",
-      description: "Jang Min-jun, former president of Roboin and currently pursuing a Ph.D. at Georgia Institute of Technology, Class of 19 Mechanical Engineering, conducted a study abroad seminar. Based on his actual preparation process, he generously shared practical and valuable advice on the overall study abroad process, CV and SOP writing methods. We sincerely thank Jang Min-jun for taking time out of his busy schedule for Roboin.",
+      description: "Chang Min-jun(Mechanical Engineering '19), former president of Roboin and currently pursuing a Ph.D. at Georgia Institute of Technology, conducted a study abroad seminar. Based on his actual preparation process, he generously shared practical and valuable advice on the overall study abroad process, CV and SOP writing methods. We sincerely thank Jang Min-jun for taking time out of his busy schedule for Roboin.",
       caption: "US graduate school study abroad seminar",
       alt: "US graduate school study abroad seminar"
     },
@@ -826,7 +822,7 @@ export const EVENTS_DATA = [
     },
     en: {
       title: "US Graduate School Study Abroad Seminar",
-      description: "Choi Seo-yeon, former president of Roboin and currently pursuing a Ph.D. at UC Berkeley, Class of 19 Mechanical Engineering, conducted a study abroad seminar. Based on her actual preparation process, she generously shared practical and valuable advice on the overall study abroad process, CV and SOP writing methods. We sincerely thank Choi Seo-yeon for taking time out of her busy schedule for Roboin.",
+      description: "Choi Seo-yeon(Mechanical Engineering '19), former president of Roboin and currently pursuing a Ph.D. at UC Berkeley, conducted a study abroad seminar. Based on her actual preparation process, she generously shared practical and valuable advice on the overall study abroad process, CV and SOP writing methods. We sincerely thank Choi Seo-yeon for taking time out of her busy schedule for Roboin.",
       caption: "US graduate school study abroad seminar",
       alt: "US graduate school study abroad seminar"
     },
@@ -842,7 +838,7 @@ export const EVENTS_DATA = [
     },
     en: {
       title: "Actuators for Robotic Applications Seminar",
-      description: "Nam Da-hyun, former president of Roboin and currently pursuing a master's degree at Seoul National University Biorobotics Lab, Class of 20 Mechanical Engineering, conducted a seminar on the topic of Actuators for Robotic Applications.\n\nWe sincerely thank Nam Da-hyun for taking time out of her busy schedule for Roboin🥰",
+      description: "Nam Da-hyun(Mecahnical Engineering '20), former president of Roboin and currently pursuing a master's degree at Seoul National University Biorobotics Lab, conducted a seminar on the topic of Actuators for Robotic Applications.\n\nWe sincerely thank Nam Da-hyun for taking time out of her busy schedule for Roboin🥰",
       caption: "Actuators for Robotic Applications seminar",
       alt: "Actuators for Robotic Applications seminar"
     },
@@ -953,12 +949,12 @@ export const RESOURCES_DATA = [
     ko: {
       name: "Creality 3D 프린터",
       description: "FDM 방식 3D 프린터",
-      specs: "Creality Ender 시리즈"
+      specs: "Creality Ender3 V3 SE"
     },
     en: {
       name: "Creality 3D Printer",
       description: "FDM 3D printer",
-      specs: "Creality Ender series"
+      specs: "Creality Ender3 V3 SE"
     },
     quantity: 2,
     status: "available",
@@ -985,12 +981,12 @@ export const RESOURCES_DATA = [
     ko: {
       name: "라즈베리파이",
       description: "임베디드 프로젝트용 싱글보드 컴퓨터",
-      specs: "Raspberry Pi 4 또는 최신 모델"
+      specs: "Raspberry Pi 5, Raspberry Pi 4B, Raspberry Pi 3B+ 등"
     },
     en: {
       name: "Raspberry Pi",
       description: "Single-board computer for embedded projects",
-      specs: "Raspberry Pi 4 or latest model"
+      specs: "Raspberry Pi 5, Raspberry Pi 4B, Raspberry Pi 3B+ etc."
     },
     quantity: "여러 대",
     status: "available",
@@ -1017,14 +1013,14 @@ export const RESOURCES_DATA = [
     ko: {
       name: "다이나믹셀",
       description: "로봇 관절 제어용 서보 모터",
-      specs: "ROBOTIS Dynamixel 시리즈"
+      specs: "MX-106 (5개), MX-64 (10개), AX-18A (12개), AX-12 (4개), XM430-W210-T (2개), XL430-W250-T (8개), XL330-M077-T (1개), XL330-M288-T (6개), XC330-T288-T (3개)"
     },
     en: {
       name: "Dynamixel",
       description: "Servo motors for robot joint control",
-      specs: "ROBOTIS Dynamixel series"
+      specs: "MX-106 (5), MX-64 (10), AX-18A (12), AX-12 (4), XM430-W210-T (2), XL430-W250-T (8), XL330-M077-T (1), XL330-M288-T (6), XC330-T288-T (3)"
     },
-    quantity: "여러 개",
+    quantity: "51개",
     status: "available",
     image: null
   },
@@ -1033,12 +1029,12 @@ export const RESOURCES_DATA = [
     ko: {
       name: "배터리",
       description: "로봇 및 프로젝트용 전원 공급 장치",
-      specs: "리튬이온 배터리, 다양한 용량"
+      specs: "알카라인 배터리, 리튬이온 배터리, Li-Po 배터리 등"
     },
     en: {
       name: "Batteries",
       description: "Power supply for robots and projects",
-      specs: "Lithium-ion batteries, various capacities"
+      specs: "Alkaline batteries, Lithium-ion batteries, Li-Po batteries, etc."
     },
     quantity: "여러 개",
     status: "available",
@@ -1166,13 +1162,13 @@ export const OFFICERS_DATA = [
 export const HONORARY_MEMBERS_DATA = [
   {
     ko: {
-      name: "장민준",
-      affiliation: "Ph.D. Student @ Georgia Institute of Technology",
+      name: "서기훈",
+      affiliation: "Samsung Electronics",
       role: "명예 회원"
     },
     en: {
-      name: "Minjun Chang",
-      affiliation: "Ph.D. Student @ Georgia Institute of Technology",
+      name: "Kihoon Seo",
+      affiliation: "Samsung Electronics",
       role: "Honorary Member"
     }
   },
@@ -1190,18 +1186,6 @@ export const HONORARY_MEMBERS_DATA = [
   },
   {
     ko: {
-      name: "서기훈",
-      affiliation: "Samsung Electronics",
-      role: "명예 회원"
-    },
-    en: {
-      name: "Kihoon Seo",
-      affiliation: "Samsung Electronics",
-      role: "Honorary Member"
-    }
-  },
-  {
-    ko: {
       name: "최서연",
       affiliation: "Ph.D. Student @ UC Berkeley",
       role: "명예 회원"
@@ -1209,6 +1193,18 @@ export const HONORARY_MEMBERS_DATA = [
     en: {
       name: "Seoyeon Choi",
       affiliation: "Ph.D. Student @ UC Berkeley",
+      role: "Honorary Member"
+    }
+  },
+  {
+    ko: {
+      name: "장민준",
+      affiliation: "Ph.D. Student @ Georgia Institute of Technology",
+      role: "명예 회원"
+    },
+    en: {
+      name: "Minjun Chang",
+      affiliation: "Ph.D. Student @ Georgia Institute of Technology",
       role: "Honorary Member"
     }
   }

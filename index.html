@@ -43,10 +43,11 @@
           href="#hero"
           class="flex items-center gap-2 text-xl font-semibold tracking-tight text-slate-900"
         >
-          <span
-            class="inline-flex h-10 w-10 items-center justify-center rounded-full bg-blue-600 text-white font-bold"
-            >R</span
-          >
+          <img
+            src="assets/images/logo.jpg"
+            alt="Roboin"
+            class="h-10 w-10 rounded-full object-cover"
+          />
           <span data-key="brandTitle">Roboin</span>
         </a>
         <nav class="hidden md:flex items-center gap-8 text-sm font-medium">
@@ -180,18 +181,19 @@
         id="hero"
         class="hero-gradient"
       >
-        <div class="max-w-6xl mx-auto px-4 py-24 lg:py-32 grid gap-12 lg:grid-cols-[1.2fr,0.8fr] items-center">
-          <div class="space-y-8 text-center lg:text-left">
+        <div class="max-w-6xl mx-auto px-4 py-12 lg:py-16">
+          <div class="grid gap-12 lg:grid-cols-[1.2fr,0.8fr]">
+            <div class="space-y-8 text-center lg:text-left">
             <p class="inline-flex items-center rounded-full border border-blue-200 bg-white/60 px-3 py-1 text-xs font-semibold uppercase tracking-wide text-blue-700">
               <span data-key="heroBadge">Yonsei Robotics</span>
             </p>
             <div class="space-y-4">
-              <h1
-                class="text-4xl sm:text-5xl lg:text-6xl font-bold tracking-tight text-slate-900"
+              <img
+                src="assets/images/logo_with_text.png"
+                alt="연세대학교 최초이자 유일의 로봇 학술 동아리"
+                class="w-full max-w-2xl h-auto"
                 data-key="heroTitle"
-              >
-                연세대학교 최초이자 유일의 로봇 학술 동아리
-              </h1>
+              />
               <p
                 class="text-lg text-slate-700 leading-relaxed"
                 data-key="heroSubtitle"
@@ -231,34 +233,11 @@
                 </p>
               </div>
             </div>
-          </div>
-          <div class="space-y-6">
-            <div class="glass-panel">
-              <p class="text-xs uppercase tracking-[0.3em] text-blue-600 mb-3" data-key="missionBadge">
-                Mission
-              </p>
-              <h3 class="text-2xl font-semibold text-slate-900 mb-4" data-key="missionTitle">
-                로봇으로 세상을 연결합니다
-              </h3>
-              <p class="text-sm text-slate-600 leading-relaxed" data-key="missionBody">
-                학생 주도의 프로젝트, 세미나, 대회 참가를 통해 하드웨어와 소프트웨어를 모두 다루는 실전 로보틱스 역량을 쌓고 있습니다.
-              </p>
-            </div>
-            <div class="status-card">
-              <p class="text-xs font-semibold tracking-[0.25em] text-blue-200/90 uppercase" data-key="statusLabel">
-                CURRENT FOCUS
-              </p>
-              <p class="text-lg font-semibold text-white mt-2" data-key="statusProject">
-                25-2 활동 로드맵 & 프로젝트 팀
-              </p>
-              <p class="text-sm text-blue-100/90" data-key="statusTimeline">
-                2025학년도 2학기
-              </p>
-              <p class="text-sm text-slate-100/90 mt-3 leading-relaxed" data-key="statusDescription">
-                자율주행 서비스 로봇과 커뮤니티 협업 프로젝트를 중심으로 연구·시연을 준비하고 있습니다.
-              </p>
             </div>
           </div>
+        </div>
+        <div id="hero-events-slider" class="hero-events-slider">
+          <!-- Events 이미지가 여기에 동적으로 렌더링됩니다 -->
         </div>
       </section>
 
@@ -269,49 +248,20 @@
         <div class="section-header text-center">
           <p class="section-eyebrow" data-key="aboutEyebrow">About Roboin</p>
           <h2 class="section-title" data-key="aboutTitle">
-            연세대학교 공과대학 소속 로봇 학술 동아리
+            로봇을 만드는 사람들
           </h2>
-          <p class="section-description" data-key="aboutDescription">
-            로보인은 로봇을 사랑하는 학부생들이 모여 프로젝트와 세미나, 대회 활동을 통해 실전 로보틱스 경험을 쌓는 연세대학교 최초이자 유일의 로봇 학술 동아리입니다.
-          </p>
         </div>
-        <div class="grid gap-6 md:grid-cols-3">
-          <div class="info-card">
-            <h3 class="info-card-title" data-key="aboutMissionTitle">
-              정체성
-            </h3>
-            <p class="info-card-body" data-key="aboutMissionBody">
-              연세대학교 최초의 로봇 학술 동아리로, 로봇팔부터 자율주행까지 다양한 주제를 탐구하며 로보틱스를 일상 속으로 확장합니다.
-            </p>
-          </div>
-          <div class="info-card">
-            <h3 class="info-card-title" data-key="aboutValuesTitle">
-              멤버십
-            </h3>
-            <p class="info-card-body" data-key="aboutValuesBody">
-              25-2학기 기준 63명의 회원이 활동 중이며, 전공·학년과 관계없이 로봇을 좋아하는 누구나 팀을 이루어 협업합니다.
-            </p>
-          </div>
-          <div class="info-card">
-            <h3 class="info-card-title" data-key="aboutSupportTitle">
-              문화
-            </h3>
-            <p class="info-card-body" data-key="aboutSupportBody">
-              함께 공부하고 성장하는 문화를 만들며, 프로젝트 경험을 세미나로 공유하고 서로의 시도를 응원합니다.
-            </p>
-          </div>
-        </div>
-        <div class="interactive-grid mt-8">
+        <div class="interactive-grid">
           <article class="feature-card" tabindex="0">
             <div class="feature-card-summary">
               <h3 class="feature-card-title" data-key="aboutCurriculumTitle">
                 초보자도 따라오는 3단계 커리큘럼
               </h3>
-              <p class="feature-card-body" data-key="aboutCurriculumBody">
-                전자·제어 기초부터 임베디드·알고리즘 심화까지 단계별 학습으로 누구나 로봇 프로젝트를 시작할 수 있습니다.
-              </p>
             </div>
             <div class="feature-card-detail">
+              <p data-key="aboutCurriculumBody">
+                전자·제어 기초부터 임베디드·알고리즘 심화까지 단계별 학습으로 누구나 로봇 프로젝트를 시작할 수 있습니다.
+              </p>
               <p data-key="aboutCurriculumDetail">
                 LEVEL 1에서 센서·제어 기초를 익히고, LEVEL 2에서 임베디드/ROS를 다진 뒤 LEVEL 3에서 자율주행·휴머노이드 프로젝트를 완성합니다.
               </p>
@@ -322,11 +272,11 @@
               <h3 class="feature-card-title" data-key="aboutCommunityTitle">
                 20년 역사로 이어지는 커뮤니티
               </h3>
-              <p class="feature-card-body" data-key="aboutCommunityBody">
-                국내외 대학·기업으로 진출한 선배들이 멘토로 참여해 세미나와 네트워킹으로 실전 조언을 전해줍니다.
-              </p>
             </div>
             <div class="feature-card-detail">
+              <p data-key="aboutCommunityBody">
+                국내외 대학·기업으로 진출한 선배들이 멘토로 참여해 세미나와 네트워킹으로 실전 조언을 전해줍니다.
+              </p>
               <p data-key="aboutCommunityDetail">
                 Georgia Tech, UC Berkeley 등 해외 대학과 국내 연구소·기업에서 활동 중인 동문이 정기 세미나와 멘토링으로 프로젝트 피드백을 제공합니다.
               </p>
@@ -337,13 +287,13 @@
               <h3 class="feature-card-title" data-key="aboutMembershipCardTitle">
                 멤버십 & 캠퍼스 네트워크
               </h3>
-              <p class="feature-card-body" data-key="aboutMembershipCardBody">
-                학부 전공·학년과 관계없이 로봇을 사랑하는 63명이 한 팀이 되어 협업합니다.
-              </p>
             </div>
             <div class="feature-card-detail">
+              <p data-key="aboutMembershipCardBody">
+                학부 전공·학년과 관계없이 로봇을 사랑하는 63명이 한 팀이 되어 협업합니다.
+              </p>
               <p data-key="aboutMembershipCardDetail">
-                공학원 A524 메이커 스페이스를 거점으로 매주 세션을 운영하고, 스터디/프로젝트 팀별로 장비와 예산을 지원합니다.
+                공학원 A524 동아리방을 거점으로 매주 세션을 운영하고, 스터디/프로젝트 팀별로 장비와 예산을 지원합니다.
               </p>
             </div>
           </article>
@@ -497,9 +447,6 @@
       >
         <div class="section-header text-center">
           <p class="section-eyebrow" data-key="keywordsEyebrow">Keywords</p>
-          <h2 class="section-title" data-key="keywordsTitle">
-            로보인이 탐구하는 주제들
-          </h2>
           <p class="section-description" data-key="keywordsDescription">
             로봇팔부터 임베디드 소프트웨어까지 다양한 키워드를 함께 공부합니다.
           </p>

@@ -66,6 +66,7 @@ const updateContent = (lang) => {
   renderHighlights(lang);
   renderOfficers(lang);
   renderHonoraryMembers(lang);
+  renderHeroEventsSlider(lang);
   
   // Award 모달도 언어 업데이트
   const awardModal = document.getElementById("award-modal");
@@ -497,6 +498,202 @@ const renderHonoraryMembers = (lang) => {
   }).join("");
 
   honoraryContainer.innerHTML = html;
+};
+
+// 랜덤 배열 섞기 함수 (Fisher-Yates 알고리즘)
+const shuffleArray = (array) => {
+  const shuffled = [...array];
+  for (let i = shuffled.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    [shuffled[i], shuffled[j]] = [shuffled[j], shuffled[i]];
+  }
+  return shuffled;
+};
+
+let heroSliderInterval = null;
+let currentHeroSlideIndex = 0;
+
+const renderHeroEventsSlider = (lang) => {
+  const sliderContainer = document.getElementById("hero-events-slider");
+  if (!sliderContainer || !EVENTS_DATA || EVENTS_DATA.length === 0) return;
+
+  // hero section의 높이를 측정하여 슬라이더 높이에 맞추기
+  const heroSection = sliderContainer.closest('#hero');
+  const gridContainer = heroSection?.querySelector('.grid');
+  
+  const adjustSliderHeight = () => {
+    // hero section의 전체 높이를 직접 측정하여 슬라이더 높이에 맞추기 (padding 포함)
+    let targetHeight = 0;
+    if (heroSection) {
+      // hero section의 전체 높이를 그대로 사용 (padding 구간도 포함)
+      targetHeight = heroSection.offsetHeight;
+    } else if (gridContainer) {
+      // fallback: grid 컨테이너 높이 사용
+      targetHeight = gridContainer.offsetHeight;
+    } else if (leftColumn) {
+      // fallback: 왼쪽 컬럼 높이 사용
+      targetHeight = leftColumn.offsetHeight;
+    }
+    
+    if (targetHeight > 0) {
+      // 슬라이더 컨테이너 높이 설정
+      sliderContainer.style.height = `${targetHeight}px`;
+      
+      // track과 item의 높이도 명시적으로 설정
+      const sliderTrack = document.getElementById("hero-events-slider-track");
+      if (sliderTrack) {
+        sliderTrack.style.height = `${targetHeight}px`;
+        const items = sliderTrack.querySelectorAll('.hero-events-slider-item');
+        items.forEach(item => {
+          item.style.height = `${targetHeight}px`;
+          item.style.minHeight = `${targetHeight}px`;
+          const img = item.querySelector('img');
+          if (img) {
+            img.style.height = `${targetHeight}px`;
+            img.style.minHeight = `${targetHeight}px`;
+          }
+        });
+      }
+    }
+  };
+  
+  // 초기 높이 설정 (약간의 지연을 두어 DOM이 완전히 렌더링된 후 측정)
+  setTimeout(() => {
+    adjustSliderHeight();
+  }, 0);
+
+  // 이벤트 데이터를 랜덤하게 섞기
+  const shuffledEvents = shuffleArray(EVENTS_DATA);
+
+  // 슬라이더 HTML 생성 (제목/캡션 없이 이미지만)
+  const sliderHTML = `
+    <div class="hero-events-slider-track" id="hero-events-slider-track">
+      ${shuffledEvents.map((event, index) => {
+        const content = event[lang] || event.ko;
+        return `
+          <div 
+            class="hero-events-slider-item" 
+            data-slide-index="${index}"
+          >
+            <img
+              src="${event.image}"
+              alt="${content.alt || content.title || content.caption || ''}"
+              loading="lazy"
+            />
+          </div>
+        `;
+      }).join("")}
+    </div>
+  `;
+
+  sliderContainer.innerHTML = sliderHTML;
+
+  // 이미지 로드 후 다시 높이 조정
+  const images = sliderContainer.querySelectorAll('img');
+  let loadedCount = 0;
+  const totalImages = images.length;
+  
+  const forceImageHeight = () => {
+    adjustSliderHeight();
+    // 추가로 이미지 높이를 강제 설정
+    images.forEach((img) => {
+      const item = img.closest('.hero-events-slider-item');
+      if (item && item.offsetHeight > 0) {
+        img.style.height = `${item.offsetHeight}px`;
+        img.style.minHeight = `${item.offsetHeight}px`;
+      }
+    });
+  };
+  
+  if (totalImages > 0) {
+    images.forEach((img) => {
+      if (img.complete) {
+        loadedCount++;
+        if (loadedCount === totalImages) {
+          setTimeout(forceImageHeight, 300);
+        }
+      } else {
+        img.addEventListener('load', () => {
+          loadedCount++;
+          if (loadedCount === totalImages) {
+            setTimeout(forceImageHeight, 300);
+          }
+        });
+      }
+    });
+  } else {
+    setTimeout(forceImageHeight, 300);
+  }
+
+  // 기존 인터벌 정리
+  if (heroSliderInterval) {
+    clearInterval(heroSliderInterval);
+  }
+
+  // 자동 슬라이드 시작
+  currentHeroSlideIndex = 0;
+  const sliderTrack = document.getElementById("hero-events-slider-track");
+  if (!sliderTrack) return;
+
+  const slideCount = shuffledEvents.length;
+  if (slideCount === 0) return;
+
+  const updateSlide = () => {
+    if (sliderTrack) {
+      // 위아래 슬라이딩 (translateY 사용)
+      sliderTrack.style.transform = `translateY(-${currentHeroSlideIndex * 100}%)`;
+    }
+  };
+
+  // 초기 슬라이드 설정
+  updateSlide();
+
+  // 자동 슬라이드 (5초마다)
+  heroSliderInterval = setInterval(() => {
+    currentHeroSlideIndex = (currentHeroSlideIndex + 1) % slideCount;
+    updateSlide();
+  }, 5000);
+
+  // 윈도우 리사이즈 시 높이 재조정
+  const resizeObserver = new ResizeObserver(() => {
+    adjustSliderHeight();
+    // 이미지 높이도 다시 강제 설정
+    setTimeout(() => {
+      const images = sliderContainer.querySelectorAll('img');
+      images.forEach((img) => {
+        const item = img.closest('.hero-events-slider-item');
+        if (item && item.offsetHeight > 0) {
+          img.style.height = `${item.offsetHeight}px`;
+          img.style.minHeight = `${item.offsetHeight}px`;
+        }
+      });
+    }, 100);
+  });
+  if (heroSection) {
+    resizeObserver.observe(heroSection);
+  }
+  if (leftColumn) {
+    resizeObserver.observe(leftColumn);
+  }
+  if (gridContainer) {
+    resizeObserver.observe(gridContainer);
+  }
+  
+  // 윈도우 리사이즈 이벤트도 추가
+  const handleResize = () => {
+    adjustSliderHeight();
+    setTimeout(() => {
+      const images = sliderContainer.querySelectorAll('img');
+      images.forEach((img) => {
+        const item = img.closest('.hero-events-slider-item');
+        if (item && item.offsetHeight > 0) {
+          img.style.height = `${item.offsetHeight}px`;
+          img.style.minHeight = `${item.offsetHeight}px`;
+        }
+      });
+    }, 100);
+  };
+  window.addEventListener('resize', handleResize);
 };
 
 const init = () => {

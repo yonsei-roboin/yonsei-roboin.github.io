@@ -48,17 +48,17 @@ export const CONTENT_DATA = {
     aboutCurriculumBody:
       "전자·제어 기초부터 임베디드·알고리즘 심화까지 단계별 학습으로 누구나 로봇 프로젝트를 시작할 수 있습니다.",
     aboutCurriculumDetail:
-      "LEVEL 1에서 센서·제어 기초를 익히고, LEVEL 2에서 임베디드/ROS를 다진 뒤 LEVEL 3에서 자율주행·휴머노이드 프로젝트를 완성합니다.",
+      "LEVEL 1에서는 기초적인 전자 회로 구성과 센서 데이터 처리를 통해 하드웨어 제어의 기틀을 마련합니다. LEVEL 2에서는 라즈베리파이와 리눅스 환경의 기초를 습득하고, 시리얼 통신 기법을 활용하여 시스템을 제어하는 방법을 배웁니다. LEVEL 3에서는 PID 제어 알고리즘과 필터 등 수학적 모델을 기반으로 시스템을 정밀하게 제어하는 기술을 익힙니다.",
     aboutCommunityTitle: "20년 역사로 이어지는 커뮤니티",
     aboutCommunityBody:
       "국내외 대학·기업으로 진출한 선배들이 멘토로 참여해 세미나와 네트워킹으로 실전 조언을 전해줍니다.",
     aboutCommunityDetail:
       "Georgia Tech, UC Berkeley 등 해외 대학과 국내 연구소·기업에서 활동 중인 동문이 정기 세미나와 멘토링으로 프로젝트 피드백을 제공합니다.",
-    aboutMembershipCardTitle: "멤버십 & 캠퍼스 네트워크",
+    aboutMembershipCardTitle: "다양한 장비로 실현하는 아이디어",
     aboutMembershipCardBody:
-      "학부 전공·학년과 관계없이 로봇을 사랑하는 63명이 한 팀이 되어 협업합니다.",
+      "동아리방에는 다양한 로봇 제작 장비와 자원이 갖춰져 있어 원하는 프로젝트를 자유롭게 시작할 수 있습니다.",
     aboutMembershipCardDetail:
-      "제1공학관 A524 동아리방을 거점으로 매주 세션을 운영하고, 스터디/프로젝트 팀별로 장비와 예산을 지원합니다.",
+      "제1공학관 A524 동아리방에는 3D 프린터, 개발 PC, 임베디드 보드 등 다양한 장비가 구비되어 있으며, 팀별 프로젝트에 필요한 자원을 적극 지원합니다.",
     activitiesEyebrow: "Activities",
     activitiesTitle: "프로젝트부터 세미나까지, 로보인의 활동",
     activitiesHighlightsTitle: "수상 실적 & 행사",
@@ -119,11 +119,11 @@ export const CONTENT_DATA = {
     showcaseProject3Title: "메이커 커뮤니티 협업",
     showcaseProject3Body: "지역 청소년 대상 메이커 교육과 공동 프로젝트를 운영합니다.",
     showcaseCurriculumTitle: "우수 커리큘럼",
-    showcaseCurriculum1Title: "LEVEL 1 Starter",
+    showcaseCurriculum1Title: "LEVEL 1",
     showcaseCurriculum1Body: "전자회로, MCU, 기본 제어를 실습하며 로봇 제작의 기초를 다집니다.",
-    showcaseCurriculum2Title: "LEVEL 2 Builder",
+    showcaseCurriculum2Title: "LEVEL 2",
     showcaseCurriculum2Body: "임베디드/ROS/컴퓨터비전 세션으로 프로젝트를 위한 기술 스택을 완성합니다.",
-    showcaseCurriculum3Title: "LEVEL 3 Explorer",
+    showcaseCurriculum3Title: "LEVEL 3",
     showcaseCurriculum3Body: "팀별 자율 연구를 통해 대회 출전 혹은 자체 전시로 성과를 발표합니다.",
     showcaseHonoraryTitle: "명예 회원 스토리",
     showcaseHonoraryBody:
@@ -173,15 +173,15 @@ export const CONTENT_DATA = {
     showcaseCurriculumDetailEyebrow: "Curriculum",
     showcaseCurriculumDetailTitle: "체계적인 3단계 커리큘럼",
     showcaseCurriculumDetailDescription: "각 레벨별 학습 목표와 결과물을 살펴볼 수 있습니다.",
-    showcaseCurriculumDetailItem1Title: "LEVEL 1 · Starter",
+    showcaseCurriculumDetailItem1Title: "LEVEL 1",
     showcaseCurriculumDetailItem1Body:
-      "회로 설계, MCU 프로그래밍, 기본 제어를 실습하여 로봇 제작 기초를 다집니다.",
-    showcaseCurriculumDetailItem2Title: "LEVEL 2 · Builder",
+      "기초적인 전자 회로 구성과 센서 데이터 처리를 통해 하드웨어 제어의 기틀을 마련합니다.",
+    showcaseCurriculumDetailItem2Title: "LEVEL 2",
     showcaseCurriculumDetailItem2Body:
-      "ROS, 컴퓨터 비전, 임베디드 최적화 등을 통해 본격적인 프로젝트를 준비합니다.",
-    showcaseCurriculumDetailItem3Title: "LEVEL 3 · Explorer",
+      "라즈베리파이와 리눅스 환경의 기초를 습득하고, 시리얼 통신 기법을 활용하여 시스템을 제어하는 방법을 배웁니다.",
+    showcaseCurriculumDetailItem3Title: "LEVEL 3",
     showcaseCurriculumDetailItem3Body:
-      "팀별 연구를 진행하고 대회 출전 혹은 자체 전시회로 성과를 발표합니다.",
+      "PID 제어 알고리즘과 필터 등 수학적 모델을 기반으로 시스템을 정밀하게 제어하는 기술을 익힙니다.",
     showcaseCurriculumDetailLevel1Item1Title: "LED 조명제작 💡",
     showcaseCurriculumDetailLevel1Item1Body: "간단한 스위치 조명 제작을 통해 아두이노 코딩, LED, 플로팅/풀다운 저항 및 택트 스위치에 대해 학습합니다. 아두이노에 컴퓨터, 빵판, 빨강/노랑/초록 LED, 저항, 택트 스위치를 연결하는 회로를 구성하고, 누르는 스위치에 따라 다른 LED가 점등되도록 합니다.",
     showcaseCurriculumDetailLevel1Item2Title: "거북목 방지기 🙇",
@@ -204,6 +204,7 @@ export const CONTENT_DATA = {
     showcaseHonorarySectionTitle: "역대 회장 & 현재 임원진",
     showcaseHonorarySectionDescription: "졸업자 네트워크와 현재 운영진의 역할을 소개합니다.",
     showcaseHonoraryCardTitle: "역대 회장",
+    showcaseHonoraryCardDescription: "로보틱스 분야 현업에 계신 선배님들의 지속적인 지원이 로보인에게 큰 힘이 되고 있습니다.",
     showcaseOfficersSectionTitle: "현재 임원진",
     showcaseOfficersSectionPresidentLabel: "회장",
     showcaseOfficersSectionViceLabel: "부회장",
@@ -228,7 +229,7 @@ export const CONTENT_DATA = {
     socialYoutubeLabel: "YouTube",
     socialYoutubeBody: "프로젝트 영상과 시연 영상을 모아둔 공식 채널입니다.",
     socialCafeLabel: "Naver Cafe",
-    socialCafeBody: "활동 공지와 운영 정보를 가장 안정적으로 확인할 수 있습니다.",
+    socialCafeBody: "프로젝트 내역과 활동 기록을 확인할 수 있습니다.",
     socialGithubLabel: "GitHub",
     socialGithubBody: "로보인 팀이 개발하는 로봇 소프트웨어와 연구 코드를 살펴보세요.",
     footerTagline: "Roboin · Yonsei University Robotics Circle",
@@ -243,7 +244,7 @@ export const CONTENT_DATA = {
     navActivities: "Activities",
     navRecruitment: "Recruitment",
     navContact: "Contact",
-    navShowcase: "Showcase",
+    navShowcase: "Archive",
     navResources: "Resources",
     langToggleLabel: "한국어",
     langToggleAria: "Switch site language to Korean",
@@ -283,17 +284,17 @@ export const CONTENT_DATA = {
     aboutCurriculumBody:
       "From electronics and control basics to embedded software and algorithms, members progress step by step.",
     aboutCurriculumDetail:
-      "Level 1 covers sensing/control basics, Level 2 focuses on embedded/ROS, and Level 3 ships autonomous or humanoid projects.",
+      "Level 1 builds foundational hardware control skills through basic circuit design and sensor data processing. Level 2 teaches the basics of Raspberry Pi and Linux environments, and mastering system control using serial communication techniques. Level 3 focuses on precise system control techniques based on mathematical models such as PID control algorithms and filters.",
     aboutCommunityTitle: "Community built over 20+ years",
     aboutCommunityBody:
       "Alumni across academia and industry return as mentors, sharing advice through seminars and networking.",
     aboutCommunityDetail:
       "Graduates at Georgia Tech, UC Berkeley, and Korean labs host mentoring sessions and share project feedback.",
-    aboutMembershipCardTitle: "Membership & campus network",
+    aboutMembershipCardTitle: "Ideas realized through diverse equipment",
     aboutMembershipCardBody:
-      "63 students across majors collaborate each semester simply because they love robots.",
+      "Our club room is equipped with various robotics equipment and resources, allowing members to freely start any project they want.",
     aboutMembershipCardDetail:
-      "We meet weekly at Engineering Hall A524, offering equipment, budget, and mentoring for every study or project team.",
+      "Engineering Hall A524 features 3D printers, development PCs, embedded boards, and other equipment, actively supporting resources needed for team projects.",
     activitiesEyebrow: "Activities",
     activitiesTitle: "What our daily work looks like",
     activitiesHighlightsTitle: "Awards & Events",
@@ -327,7 +328,7 @@ export const CONTENT_DATA = {
     awardsEyebrow: "Highlights",
     awardsTitle: "Awards & event snapshots",
     awardsDescription:
-      "See how Roboin showcases accomplishments through competitions and on-site activities.",
+      "See how Roboin archives accomplishments through competitions and on-site activities.",
     awardsList1Badge: "Competition",
     awardsList1Title: "Consistent wins at university contests",
     awardsList1Body:
@@ -335,7 +336,7 @@ export const CONTENT_DATA = {
     awardsList2Badge: "Project",
     awardsList2Title: "Humanoid & service robot demos",
     awardsList2Body:
-      "Each semester we host showcases where partners experience our robots live.",
+      "Each semester we host events where partners experience our robots live.",
     awardsList3Badge: "Seminar",
     awardsList3Title: "Industry-academia jury sessions",
     awardsList3Body:
@@ -350,16 +351,16 @@ export const CONTENT_DATA = {
     showcaseProject1Title: "Autonomous service robot",
     showcaseProject1Body: "Core project for Fall 25-2 focusing on SLAM and indoor navigation.",
     showcaseProject2Title: "Humanoid motion lab",
-    showcaseProject2Body: "Human-robot interaction demos presented during campus showcases.",
+    showcaseProject2Body: "Human-robot interaction demos presented during campus events.",
     showcaseProject3Title: "Maker community collaboration",
     showcaseProject3Body: "Workshops with local students to build robots together.",
     showcaseCurriculumTitle: "Signature curriculum",
-    showcaseCurriculum1Title: "LEVEL 1 Starter",
+    showcaseCurriculum1Title: "LEVEL 1",
     showcaseCurriculum1Body: "Hands-on electronics, MCU, and control basics.",
-    showcaseCurriculum2Title: "LEVEL 2 Builder",
+    showcaseCurriculum2Title: "LEVEL 2",
     showcaseCurriculum2Body: "Embedded, ROS, and computer vision toolbox for projects.",
-    showcaseCurriculum3Title: "LEVEL 3 Explorer",
-    showcaseCurriculum3Body: "Team research that culminates in competitions or showcases.",
+    showcaseCurriculum3Title: "LEVEL 3",
+    showcaseCurriculum3Body: "Team research that culminates in competitions or events.",
     showcaseHonoraryTitle: "Honorary members",
     showcaseHonoraryBody:
       "Alumni in top universities, labs, and companies stay involved as honorary members.",
@@ -394,7 +395,7 @@ export const CONTENT_DATA = {
     showcaseAwardsAccordion3Title: "2023 Humanoid Performance Grand Award",
     showcaseAwardsAccordion3Body:
       "Human-robot motion demos captured the judges’ choice for top design.",
-    showcaseAwardsAccordion3Caption: "The humanoid greets the audience during the showcase.",
+    showcaseAwardsAccordion3Caption: "The humanoid greets the audience during the event.",
     showcaseAwardsAccordion4Title: "2023 Robot Control Algorithm Gold Prize",
     showcaseAwardsAccordion4Body:
       "A reinforcement-learning controlled robotic arm earned the gold medal.",
@@ -464,15 +465,15 @@ export const CONTENT_DATA = {
     showcaseCurriculumDetailEyebrow: "Curriculum",
     showcaseCurriculumDetailTitle: "Structured three-level curriculum",
     showcaseCurriculumDetailDescription: "Each level includes clear goals and deliverables.",
-    showcaseCurriculumDetailItem1Title: "LEVEL 1 · Starter",
+    showcaseCurriculumDetailItem1Title: "LEVEL 1",
     showcaseCurriculumDetailItem1Body:
-      "Circuit design, MCU programming, and core control labs to build fundamentals.",
-    showcaseCurriculumDetailItem2Title: "LEVEL 2 · Builder",
+      "Build foundational hardware control skills through basic circuit design and sensor data processing.",
+    showcaseCurriculumDetailItem2Title: "LEVEL 2",
     showcaseCurriculumDetailItem2Body:
-      "ROS, computer vision, and embedded optimization to prepare for real projects.",
-    showcaseCurriculumDetailItem3Title: "LEVEL 3 · Explorer",
+      "Learn the basics of Raspberry Pi and Linux environments, and master system control using serial communication techniques.",
+    showcaseCurriculumDetailItem3Title: "LEVEL 3",
     showcaseCurriculumDetailItem3Body:
-      "Team research that culminates in competitions or standalone showcases.",
+      "Master precise system control techniques based on mathematical models such as PID control algorithms and filters.",
     showcaseCurriculumDetailLevel1Item1Title: "LED Lighting Project 💡",
     showcaseCurriculumDetailLevel1Item1Body: "Learn Arduino coding, LEDs, pull-up/pull-down resistors, and tactile switches through simple switch lighting projects. Build a circuit connecting Arduino to a computer, breadboard, red/yellow/green LEDs, resistors, and tactile switches. Configure different LEDs to light up based on which switch is pressed.",
     showcaseCurriculumDetailLevel1Item2Title: "Posture Correction Device 🙇",
@@ -496,6 +497,7 @@ export const CONTENT_DATA = {
     showcaseHonorarySectionDescription:
       "Meet the alumni mentors and the faculty steering the club today.",
     showcaseHonoraryCardTitle: "Former Presidents",
+    showcaseHonoraryCardDescription: "Continuous support from alumni active in the robotics field is a great asset to Roboin.",
     showcaseHonoraryCardItem1Title: "Academic researchers",
     showcaseHonoraryCardItem1Body:
       "Graduate students at Georgia Tech and UC Berkeley mentor current members remotely.",
@@ -539,7 +541,7 @@ export const CONTENT_DATA = {
     socialYoutubeLabel: "YouTube",
     socialYoutubeBody: "Watch project highlights and demo videos on our official channel.",
     socialCafeLabel: "Naver Cafe",
-    socialCafeBody: "Check announcements and operations in the most stable channel.",
+    socialCafeBody: "Check project history and activity records.",
     socialGithubLabel: "GitHub",
     socialGithubBody: "Browse the software and research code our teams are developing.",
     footerTagline: "Roboin · Yonsei University Robotics Circle",
@@ -1205,6 +1207,78 @@ export const HONORARY_MEMBERS_DATA = [
     en: {
       name: "Minjun Chang",
       affiliation: "Ph.D. Student @ Georgia Institute of Technology",
+      role: "Honorary Member"
+    }
+  },
+  {
+    ko: {
+      name: "김원석",
+      affiliation: "",
+      role: "명예 회원"
+    },
+    en: {
+      name: "Wonseok Kim",
+      affiliation: "",
+      role: "Honorary Member"
+    }
+  },
+  {
+    ko: {
+      name: "고예진",
+      affiliation: "",
+      role: "명예 회원"
+    },
+    en: {
+      name: "Yejin Ko",
+      affiliation: "",
+      role: "Honorary Member"
+    }
+  },
+  {
+    ko: {
+      name: "오인욱",
+      affiliation: "Ph.D. Student @ Yonsei University",
+      role: "명예 회원"
+    },
+    en: {
+      name: "Inwook Oh",
+      affiliation: "Ph.D. Student @ Yonsei University",
+      role: "Honorary Member"
+    }
+  },
+  {
+    ko: {
+      name: "기인호",
+      affiliation: "Ph.D. Student @ University of Michigan",
+      role: "명예 회원"
+    },
+    en: {
+      name: "Inho Kee",
+      affiliation: "Ph.D. Student @ University of Michigan",
+      role: "Honorary Member"
+    }
+  },
+  {
+    ko: {
+      name: "이승욱",
+      affiliation: "Research Engineer @ Hyudai Motor Group",
+      role: "명예 회원"
+    },
+    en: {
+      name: "Seungwook Lee",
+      affiliation: "Research Engineer @ Hyudai Motor Group",
+      role: "Honorary Member"
+    }
+  },
+  {
+    ko: {
+      name: "서주환",
+      affiliation: "Ph.D. Student @ UC Berkeley",
+      role: "명예 회원"
+    },
+    en: {
+      name: "Joohwan Seo",
+      affiliation: "Ph.D. Student @ UC Berkeley",
       role: "Honorary Member"
     }
   }

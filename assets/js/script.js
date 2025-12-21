@@ -46,6 +46,15 @@ const updateContent = (lang) => {
     const value = dictionary[key];
     if (!value) return;
 
+    // img 태그는 건너뛰기 (이미지는 data-key로 텍스트를 변경하지 않음)
+    if (element.tagName === "IMG") return;
+
+    // 언어 전환 버튼은 별도 처리
+    if (element.id === "lang-toggle") {
+      element.textContent = value;
+      return;
+    }
+
     if (element.matches("input, textarea")) {
       element.setAttribute("placeholder", value);
     } else if (element.hasAttribute("data-show-more")) {
@@ -114,13 +123,18 @@ const closeMobileMenuOnNavigate = () => {
 };
 
 const setupEventListeners = () => {
+  // 이벤트 리스너 중복 등록 방지
   const langToggle = document.getElementById("lang-toggle");
   const mobileToggle = document.getElementById("mobile-menu-toggle");
   const mobileLinks = document.querySelectorAll("#primary-nav a");
   const showMoreButtons = document.querySelectorAll("[data-show-more]");
 
+  // 언어 전환 버튼 이벤트 리스너 설정
   if (langToggle) {
-    langToggle.addEventListener("click", handleLanguageToggle);
+    // 기존 이벤트 리스너 제거 후 재등록 (중복 방지)
+    const newLangToggle = langToggle.cloneNode(true);
+    langToggle.parentNode.replaceChild(newLangToggle, langToggle);
+    newLangToggle.addEventListener("click", handleLanguageToggle);
   }
 
   if (mobileToggle) {
@@ -698,8 +712,8 @@ const renderHeroEventsSlider = (lang) => {
 
 const init = () => {
   currentLang = getStoredLanguage();
-  updateContent(currentLang);
   setupEventListeners();
+  updateContent(currentLang);
   setupAwardModalClose();
   setupImageZoomClose();
 };
@@ -954,5 +968,11 @@ const initMediaModal = () => {
   });
 };
 
-document.addEventListener("DOMContentLoaded", init);
+// 모듈 스크립트는 자동으로 defer되므로 DOM이 준비된 후 실행됩니다
+if (document.readyState === "loading") {
+  document.addEventListener("DOMContentLoaded", init);
+} else {
+  // DOM이 이미 로드된 경우
+  init();
+}
 

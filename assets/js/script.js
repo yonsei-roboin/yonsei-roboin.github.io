@@ -75,7 +75,7 @@ const updateContent = (lang) => {
   renderHighlights(lang);
   renderOfficers(lang);
   renderHonoraryMembers(lang);
-  renderHeroEventsSlider(lang);
+  renderMainEventsSlider(lang);
   
   // Award 모달도 언어 업데이트
   const awardModal = document.getElementById("award-modal");
@@ -459,7 +459,7 @@ const renderOfficers = (lang) => {
     const content = president[lang] || president.ko;
     html += `
       <div>
-        <p class="stack-card-label">${CONTENT_DATA[lang].showcaseOfficersSectionPresidentLabel || "회장"}</p>
+        <p class="stack-card-label">${CONTENT_DATA[lang].archiveOfficersSectionPresidentLabel || "회장"}</p>
         <p class="stack-card-note">
           ${content.name} · ${content.major}
           ${content.email ? `<br><a href="mailto:${content.email}" class="text-blue-600 hover:underline text-sm">${content.email}</a>` : ''}
@@ -472,7 +472,7 @@ const renderOfficers = (lang) => {
     const content = vicePresident[lang] || vicePresident.ko;
     html += `
       <div>
-        <p class="stack-card-label">${CONTENT_DATA[lang].showcaseOfficersSectionViceLabel || "부회장"}</p>
+        <p class="stack-card-label">${CONTENT_DATA[lang].archiveOfficersSectionViceLabel || "부회장"}</p>
         <p class="stack-card-note">
           ${content.name} · ${content.major}
           ${content.email ? `<br><a href="mailto:${content.email}" class="text-blue-600 hover:underline text-sm">${content.email}</a>` : ''}
@@ -485,7 +485,7 @@ const renderOfficers = (lang) => {
     const content = officer[lang] || officer.ko;
     html += `
       <div>
-        <p class="stack-card-label">${CONTENT_DATA[lang].showcaseOfficersSectionOfficerLabel || "임원진"}</p>
+        <p class="stack-card-label">${CONTENT_DATA[lang].archiveOfficersSectionOfficerLabel || "임원진"}</p>
         <p class="stack-card-note">
           ${content.name} · ${content.major}
           ${content.email ? `<br><a href="mailto:${content.email}" class="text-blue-600 hover:underline text-sm">${content.email}</a>` : ''}
@@ -524,23 +524,23 @@ const shuffleArray = (array) => {
   return shuffled;
 };
 
-let heroSliderInterval = null;
-let currentHeroSlideIndex = 0;
+let mainSliderInterval = null;
+let currentMainSlideIndex = 0;
 
-const renderHeroEventsSlider = (lang) => {
-  const sliderContainer = document.getElementById("hero-events-slider");
+const renderMainEventsSlider = (lang) => {
+  const sliderContainer = document.getElementById("main-events-slider");
   if (!sliderContainer || !EVENTS_DATA || EVENTS_DATA.length === 0) return;
 
-  // hero section의 높이를 측정하여 슬라이더 높이에 맞추기
-  const heroSection = sliderContainer.closest('#hero');
-  const gridContainer = heroSection?.querySelector('.grid');
+  // main section의 높이를 측정하여 슬라이더 높이에 맞추기
+  const mainSection = sliderContainer.closest('#main');
+  const gridContainer = mainSection?.querySelector('.grid');
   
   const adjustSliderHeight = () => {
-    // hero section의 전체 높이를 직접 측정하여 슬라이더 높이에 맞추기 (padding 포함)
+    // main section의 전체 높이를 직접 측정하여 슬라이더 높이에 맞추기 (padding 포함)
     let targetHeight = 0;
-    if (heroSection) {
-      // hero section의 전체 높이를 그대로 사용 (padding 구간도 포함)
-      targetHeight = heroSection.offsetHeight;
+    if (mainSection) {
+      // main section의 전체 높이를 그대로 사용 (padding 구간도 포함)
+      targetHeight = mainSection.offsetHeight;
     } else if (gridContainer) {
       // fallback: grid 컨테이너 높이 사용
       targetHeight = gridContainer.offsetHeight;
@@ -554,10 +554,10 @@ const renderHeroEventsSlider = (lang) => {
       sliderContainer.style.height = `${targetHeight}px`;
       
       // track과 item의 높이도 명시적으로 설정
-      const sliderTrack = document.getElementById("hero-events-slider-track");
+      const sliderTrack = document.getElementById("main-events-slider-track");
       if (sliderTrack) {
         sliderTrack.style.height = `${targetHeight}px`;
-        const items = sliderTrack.querySelectorAll('.hero-events-slider-item');
+        const items = sliderTrack.querySelectorAll('.main-events-slider-item');
         items.forEach(item => {
           item.style.height = `${targetHeight}px`;
           item.style.minHeight = `${targetHeight}px`;
@@ -581,12 +581,12 @@ const renderHeroEventsSlider = (lang) => {
 
   // 슬라이더 HTML 생성 (제목/캡션 없이 이미지만)
   const sliderHTML = `
-    <div class="hero-events-slider-track" id="hero-events-slider-track">
+    <div class="main-events-slider-track" id="main-events-slider-track">
       ${shuffledEvents.map((event, index) => {
         const content = event[lang] || event.ko;
         return `
           <div 
-            class="hero-events-slider-item" 
+            class="main-events-slider-item" 
             data-slide-index="${index}"
           >
             <img
@@ -611,7 +611,7 @@ const renderHeroEventsSlider = (lang) => {
     adjustSliderHeight();
     // 추가로 이미지 높이를 강제 설정
     images.forEach((img) => {
-      const item = img.closest('.hero-events-slider-item');
+      const item = img.closest('.main-events-slider-item');
       if (item && item.offsetHeight > 0) {
         img.style.height = `${item.offsetHeight}px`;
         img.style.minHeight = `${item.offsetHeight}px`;
@@ -640,13 +640,13 @@ const renderHeroEventsSlider = (lang) => {
   }
 
   // 기존 인터벌 정리
-  if (heroSliderInterval) {
-    clearInterval(heroSliderInterval);
+  if (mainSliderInterval) {
+    clearInterval(mainSliderInterval);
   }
 
   // 자동 슬라이드 시작
-  currentHeroSlideIndex = 0;
-  const sliderTrack = document.getElementById("hero-events-slider-track");
+  currentMainSlideIndex = 0;
+  const sliderTrack = document.getElementById("main-events-slider-track");
   if (!sliderTrack) return;
 
   const slideCount = shuffledEvents.length;
@@ -655,7 +655,7 @@ const renderHeroEventsSlider = (lang) => {
   const updateSlide = () => {
     if (sliderTrack) {
       // 위아래 슬라이딩 (translateY 사용)
-      sliderTrack.style.transform = `translateY(-${currentHeroSlideIndex * 100}%)`;
+      sliderTrack.style.transform = `translateY(-${currentMainSlideIndex * 100}%)`;
     }
   };
 
@@ -663,8 +663,8 @@ const renderHeroEventsSlider = (lang) => {
   updateSlide();
 
   // 자동 슬라이드 (5초마다)
-  heroSliderInterval = setInterval(() => {
-    currentHeroSlideIndex = (currentHeroSlideIndex + 1) % slideCount;
+  mainSliderInterval = setInterval(() => {
+    currentMainSlideIndex = (currentMainSlideIndex + 1) % slideCount;
     updateSlide();
   }, 5000);
 
@@ -675,7 +675,7 @@ const renderHeroEventsSlider = (lang) => {
     setTimeout(() => {
       const images = sliderContainer.querySelectorAll('img');
       images.forEach((img) => {
-        const item = img.closest('.hero-events-slider-item');
+        const item = img.closest('.main-events-slider-item');
         if (item && item.offsetHeight > 0) {
           img.style.height = `${item.offsetHeight}px`;
           img.style.minHeight = `${item.offsetHeight}px`;
@@ -683,8 +683,8 @@ const renderHeroEventsSlider = (lang) => {
       });
     }, 100);
   });
-  if (heroSection) {
-    resizeObserver.observe(heroSection);
+  if (mainSection) {
+    resizeObserver.observe(mainSection);
   }
   if (leftColumn) {
     resizeObserver.observe(leftColumn);
@@ -699,7 +699,7 @@ const renderHeroEventsSlider = (lang) => {
     setTimeout(() => {
       const images = sliderContainer.querySelectorAll('img');
       images.forEach((img) => {
-        const item = img.closest('.hero-events-slider-item');
+        const item = img.closest('.main-events-slider-item');
         if (item && item.offsetHeight > 0) {
           img.style.height = `${item.offsetHeight}px`;
           img.style.minHeight = `${item.offsetHeight}px`;

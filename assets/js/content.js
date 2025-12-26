@@ -716,7 +716,7 @@ export const EVENTS_DATA = [
       caption: "25-2 end of semester meeting",
       alt: "25-2 end of semester meeting"
     },
-    image: "assets/images/events/251222_종강 총회.jpg"
+    image: "assets/images/events/251222_종총.jpg"
   },
   {
     date: "2025-11-27",
@@ -732,7 +732,7 @@ export const EVENTS_DATA = [
       caption: "Humanoid control seminar",
       alt: "Humanoid control seminar"
     },
-    image: "assets/images/events/250915_취업 세미나.jpg"
+    image: "assets/images/events/251127_휴머노이드 제어 세미나.jpg"
   },
   {
     date: "2025-11-19",
@@ -748,7 +748,7 @@ export const EVENTS_DATA = [
       caption: "Yongmoon High School Leaders Day",
       alt: "High School Partnership Activity"
     },
-    image: "assets/images/events/251119_고교연계활동.jpg"
+    image: "assets/images/events/251119_용문고 전공동아리 리더스데이.jpg"
   },
   {
     date: "2025-09-15",

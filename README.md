@@ -89,17 +89,17 @@ Tailwind CSS로 커버되지 않는 커스텀 스타일을 정의합니다:
 2. **예시: 메인 타이틀 수정**
    ```html
    <!-- index.html -->
-   <h1 data-key="heroTitle">...</h1>
+   <h1 data-key="ㅡmainTitle">...</h1>
    ```
    ```javascript
    // assets/js/content.js
    export const CONTENT_DATA = {
      ko: {
-       heroTitle: "수정할 텍스트",
+       mainTitle: "수정할 텍스트",
        // ...
      },
      en: {
-       heroTitle: "Modified text",
+       mainTitle: "Modified text",
        // ...
      }
    };

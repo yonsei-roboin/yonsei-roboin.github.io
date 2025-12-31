@@ -144,6 +144,7 @@ export const CONTENT_DATA = {
     archiveMainSubtitle:
       "수상 실적, 대회/행사 기록, 우수 프로젝트와 커리큘럼, 명예 회원까지 로보인의 기록을 살펴보세요.",
     archiveMainCTA: "메인 페이지로 돌아가기",
+    archiveProjectsComingSoon: "업로드 예정",
     archiveAwardsEyebrow: "Awards",
     archiveAwardsTitle: "로보인의 수상 및 대회 기록",
     archiveAwardsDescription:
@@ -210,6 +211,7 @@ export const CONTENT_DATA = {
     archiveOfficersSectionViceLabel: "부회장",
     archiveOfficersSectionOfficerLabel: "임원진",
     mediaModalClose: "닫기",
+    modalClose: "닫기",
     keywordsEyebrow: "Keywords",
     keywordsDescription: "로보인은 로봇과 관련된 다양한 주제들을 함께 공부합니다.",
     contactEyebrow: "Contact",
@@ -233,7 +235,10 @@ export const CONTENT_DATA = {
     socialGithubLabel: "GitHub",
     socialGithubBody: "로보인 팀이 개발하는 로봇 소프트웨어와 연구 코드를 살펴보세요.",
     footerTagline: "Roboin · Yonsei University Robotics Circle",
-    footerRights: "© 2025 Roboin. All rights reserved."
+    footerRights: "© 2025 Roboin. All rights reserved.",
+    resourcesMainEyebrow: "Resources",
+    resourcesMainTitle: "동아리방 리소스",
+    resourcesMainSubtitle: "로보인 동아리방에서 사용 가능한 장비와 리소스를 확인하세요."
   },
   en: {
     pageTitle: "Roboin · Yonsei University Robotics Club",
@@ -380,6 +385,7 @@ export const CONTENT_DATA = {
     archiveMainSubtitle:
       "Awards, events, flagship projects, curriculum, and honorary members—check out the full history of Roboin.",
     archiveMainCTA: "Back to main site",
+    archiveProjectsComingSoon: "Coming soon",
     archiveAwardsEyebrow: "Awards",
     archiveAwardsTitle: "Competition & award history",
     archiveAwardsDescription:
@@ -522,6 +528,7 @@ export const CONTENT_DATA = {
     archiveOfficersSectionFinanceLabel: "Operations lead",
     archiveOfficersSectionFinanceBody: "Manages budget, resources, and equipment support",
     mediaModalClose: "Close",
+    modalClose: "Close",
     keywordsEyebrow: "Keywords",
     keywordsDescription: "We dive into everything from robotic arms to embedded software.",
     contactEyebrow: "Contact",
@@ -545,7 +552,10 @@ export const CONTENT_DATA = {
     socialGithubLabel: "GitHub",
     socialGithubBody: "Browse the software and research code our teams are developing.",
     footerTagline: "Roboin · Yonsei University Robotics Circle",
-    footerRights: "© 2025 Roboin. All rights reserved."
+    footerRights: "© 2025 Roboin. All rights reserved.",
+    resourcesMainEyebrow: "Resources",
+    resourcesMainTitle: "Club Resources",
+    resourcesMainSubtitle: "Check out the equipment and resources available in the Roboin club room."
   }
 };
 
@@ -958,7 +968,9 @@ export const RESOURCES_CONTENT = {
     resourcesCategoryTools: "도구",
     resourcesAvailable: "사용 가능",
     resourcesInUse: "사용 중",
-    resourcesMaintenance: "점검 중"
+    resourcesMaintenance: "점검 중",
+    resourcesDynamixelModel: "모델",
+    resourcesDynamixelStatus: "상태"
   },
   en: {
     resourcesMainEyebrow: "Resources",
@@ -972,7 +984,9 @@ export const RESOURCES_CONTENT = {
     resourcesCategoryTools: "Tools",
     resourcesAvailable: "Available",
     resourcesInUse: "In Use",
-    resourcesMaintenance: "Maintenance"
+    resourcesMaintenance: "Maintenance",
+    resourcesDynamixelModel: "Model",
+    resourcesDynamixelStatus: "Status"
   }
 };
 
@@ -1063,16 +1077,134 @@ export const RESOURCES_DATA = [
     ko: {
       name: "다이나믹셀",
       description: "로봇 관절 제어용 서보 모터",
-      specs: "MX-106 (5개), MX-64 (10개), AX-18A (12개), AX-12 (4개), XM430-W210-T (2개), XL430-W250-T (8개), XL330-M077-T (1개), XL330-M288-T (6개), XC330-T288-T (3개)"
+      specs: "MX-106 (5개), RX-64 (2개), MX-64AR (1개), MX-64 (7개), AX-18A (12개), AX-12A (12개), XM430-W210-T (2개), XL430-W250-T (8개), XL330-M077-T (1개), XL330-M288-T (6개), XC330-T288-T (3개)"
     },
     en: {
       name: "Dynamixel",
       description: "Servo motors for robot joint control",
-      specs: "MX-106 (5), MX-64 (10), AX-18A (12), AX-12 (4), XM430-W210-T (2), XL430-W250-T (8), XL330-M077-T (1), XL330-M288-T (6), XC330-T288-T (3)"
+      specs: "MX-106 (5), RX-64 (2), MX-64AR (1), MX-64 (7), AX-18A (12), AX-12A (11), XM430-W210-T (2), XL430-W250-T (8), XL330-M077-T (1), XL330-M288-T (4), XC330-T288-T (3)"
     },
-    quantity: "51개",
+    quantity: "59개",
     status: "available",
-    image: null
+    image: null,
+    isDynamixel: true,
+    dynamixelMotors: [
+      {
+        model: "MX-106",
+        units: [
+          { status: "available", project: null },
+          { status: "available", project: null },
+          { status: "available", project: null },
+          { status: "available", project: null },
+          { status: "available", project: null }
+        ]
+      },
+      {
+        model: "RX-64",
+        units: [
+          { status: "available", project: null },
+          { status: "available", project: null }
+        ]
+      },
+      {
+        model: "MX-64AR",
+        units: [
+          { status: "in-use", project: "SAJOGI" }
+        ]
+      },
+      {
+        model: "MX-64",
+        units: [
+          { status: "in-use", project: "SAJOGI" },
+          { status: "in-use", project: "SAJOGI" },
+          { status: "in-use", project: "SAJOGI" },
+          { status: "in-use", project: "SAJOGI" },
+          { status: "in-use", project: "SAJOGI" },
+          { status: "in-use", project: "SAJOGI" },
+          { status: "available", project: null }
+        ]
+      },
+      {
+        model: "AX-18A",
+        units: [
+          { status: "in-use", project: "DEXTRA" },
+          { status: "in-use", project: "DEXTRA" },
+          { status: "in-use", project: "DEXTRA" },
+          { status: "in-use", project: "DEXTRA" },
+          { status: "in-use", project: "DEXTRA" },
+          { status: "in-use", project: "DEXTRA" },
+          { status: "in-use", project: "DEXTRA" },
+          { status: "in-use", project: "DEXTRA" },
+          { status: "in-use", project: "DEXTRA" },
+          { status: "in-use", project: "DEXTRA" },
+          { status: "in-use", project: "DEXTRA" },
+          { status: "in-use", project: "DEXTRA" }
+        ]
+      },
+      {
+        model: "AX-12A",
+        units: [
+          { status: "in-use", project: "DEXTRA" },
+          { status: "in-use", project: "DEXTRA" },
+          { status: "in-use", project: "DEXTRA" },
+          { status: "in-use", project: "DEXTRA" },
+          { status: "in-use", project: "DEXTRA" },
+          { status: "in-use", project: "DEXTRA" },
+          { status: "in-use", project: "DEXTRA" },
+          { status: "in-use", project: "DEXTRA" },
+          { status: "in-use", project: "DEXTRA" },
+          { status: "available", project: null },
+          { status: "available", project: null }
+        ]
+      },
+      {
+        model: "XM430-W210-T",
+        units: [
+          { status: "available", project: null },
+          { status: "available", project: null }
+        ]
+      },
+      {
+        model: "XL430-W250-T",
+        units: [
+          { status: "in-use", project: "ROBOTIC HAND" },
+          { status: "in-use", project: "ROBOTIC HAND" },
+          { status: "in-use", project: "ROBOTIC HAND" },
+          { status: "in-use", project: "ROBOTIC HAND" },
+          { status: "in-use", project: "ROBOTIC HAND" },
+          { status: "available", project: null },
+          { status: "available", project: null },
+          { status: "available", project: null },
+          { status: "in-use", project: "TURTLEBOT" },
+          { status: "in-use", project: "TURTLEBOT" },
+          { status: "in-use", project: "TURTLEBOT" },
+          { status: "in-use", project: "TURTLEBOT" }
+        ]
+      },
+      {
+        model: "XL330-M077-T",
+        units: [
+          { status: "available", project: null }
+        ]
+      },
+      {
+        model: "XL330-M288-T",
+        units: [
+          { status: "available", project: null },
+          { status: "available", project: null },
+          { status: "available", project: null },
+          { status: "available", project: null }
+        ]
+      },
+      {
+        model: "XC330-T288-T",
+        units: [
+          { status: "available", project: null },
+          { status: "available", project: null },
+          { status: "available", project: null }
+        ]
+      }
+    ]
   },
   {
     category: "components",

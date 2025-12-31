@@ -1,454 +1,413 @@
-    <!DOCTYPE html>
-    <html lang="ko">
-    <head>
-        <meta charset="UTF-8" />
-        <meta
-        name="viewport"
-        content="width=device-width, initial-scale=1.0"
-        />
-        <title data-key="pageTitle">연세대학교 로봇동아리 Roboin</title>
-        <link
-        rel="preconnect"
-        href="https://fonts.googleapis.com"
-        />
-        <link
-        rel="preconnect"
-        href="https://fonts.gstatic.com"
-        crossorigin
-        />
-        <link
-        href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&display=swap"
-        rel="stylesheet"
-        />
-        <script src="https://cdn.tailwindcss.com"></script>
-        <link
-        rel="stylesheet"
-        href="assets/css/styles.css"
-        />
-    </head>
-    <body class="font-sans text-slate-900 bg-slate-50">
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0"
+    />
+    <title data-key="pageTitle"></title>
+    <meta
+      name="description"
+      content="연세대학교 로봇 동아리 Roboin 아카이브 - 수상 실적, 이벤트 갤러리, 커리큘럼"
+    />
+    <link
+      rel="preconnect"
+      href="https://fonts.googleapis.com"
+    />
+    <link
+      rel="preconnect"
+      href="https://fonts.gstatic.com"
+      crossorigin
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link
+      rel="stylesheet"
+      href="assets/css/styles.css"
+    />
+  </head>
+  <body class="font-sans text-slate-900 bg-slate-50">
+    <a
+      href="#main"
+      class="skip-link"
+      data-key="skipLink"
+    ></a>
+    <header class="sticky top-0 z-50 bg-slate-50/90 backdrop-blur border-b border-slate-200">
+      <div class="max-w-6xl mx-auto flex items-center justify-between px-4 py-4">
         <a
-        href="#main"
-        class="skip-link"
-        data-key="skipLink"
-        >본문으로 건너뛰기</a
+          href="index.html#main"
+          class="flex items-center gap-2 text-xl font-semibold tracking-tight text-slate-900"
         >
-        <header class="sticky top-0 z-50 bg-slate-50/90 backdrop-blur border-b border-slate-200">
-        <div class="max-w-6xl mx-auto flex items-center justify-between px-4 py-4">
-            <a
+          <img
+            src="assets/images/logo.jpg"
+            alt="Roboin"
+            class="h-10 w-10 rounded-full object-cover"
+          />
+          <span data-key="brandTitle"></span>
+        </a>
+        <nav class="hidden md:flex items-center gap-8 text-sm font-medium">
+          <a
             href="index.html#main"
-            class="flex items-center gap-2 text-xl font-semibold tracking-tight text-slate-900"
-            >
-            <img
-                src="assets/images/logo.jpg"
-                alt="Roboin"
-                class="h-10 w-10 rounded-full object-cover"
-            />
-            <span data-key="brandTitle">Roboin</span>
-            </a>
-            <nav class="hidden md:flex items-center gap-8 text-sm font-medium">
-            <a
-                href="index.html#main"
-                class="nav-link"
-                data-key="navHome"
-                >홈</a
-            >
-            <a
-                href="index.html#about"
-                class="nav-link"
-                data-key="navAbout"
-                >소개</a
-            >
-            <a
-                href="index.html#activities"
-                class="nav-link"
-                data-key="navActivities"
-                >활동</a
-            >
-            <a
-                href="index.html#recruitment"
-                class="nav-link"
-                data-key="navRecruitment"
-                >모집</a
-            >
-            <a
-                href="index.html#contact"
-                class="nav-link"
-                data-key="navContact"
-                >문의</a
-            >
-            <a
-                href="archive.html"
-                class="nav-link active"
-                data-key="navArchive"
-                >아카이브</a
-            >
-            <a
-                href="resources.html"
-                class="nav-link"
-                data-key="navResources"
-                >리소스</a
-            >
-            </nav>
-            <div class="flex items-center gap-3">
-            <button
-                id="lang-toggle"
-                class="btn btn-secondary text-sm font-semibold"
-                type="button"
-                data-key="langToggleLabel"
-            >
-                English
-            </button>
-            <button
-                id="mobile-menu-toggle"
-                class="md:hidden inline-flex items-center justify-center rounded-full border border-slate-300 p-2 text-slate-700"
-                type="button"
-                aria-label="Menu"
-                aria-expanded="false"
-            >
-                <svg
-                xmlns="http://www.w3.org/2000/svg"
-                class="h-5 w-5"
-                fill="none"
-                viewBox="0 0 24 24"
-                stroke="currentColor"
-                >
-                <path
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    stroke-width="1.8"
-                    d="M4 6h16M4 12h16M4 18h16"
-                />
-                </svg>
-            </button>
-            </div>
-        </div>
-        <nav
-            id="primary-nav"
-            class="md:hidden hidden border-t border-slate-200 bg-white"
-        >
-            <a
-            href="index.html#main"
-            class="mobile-nav-link"
+            class="nav-link"
             data-key="navHome"
-            >홈</a
-            >
-            <a
+          ></a>
+          <a
             href="index.html#about"
-            class="mobile-nav-link"
+            class="nav-link"
             data-key="navAbout"
-            >소개</a
-            >
-            <a
+          ></a>
+          <a
             href="index.html#activities"
-            class="mobile-nav-link"
+            class="nav-link"
             data-key="navActivities"
-            >활동</a
-            >
-            <a
+          ></a>
+          <a
             href="index.html#recruitment"
-            class="mobile-nav-link"
+            class="nav-link"
             data-key="navRecruitment"
-            >모집</a
-            >
-            <a
+          ></a>
+          <a
             href="index.html#contact"
-            class="mobile-nav-link"
+            class="nav-link"
             data-key="navContact"
-            >문의</a
-            >
-            <a
-                href="archive.html"
-                class="mobile-nav-link"
-                data-key="navArchive"
-                >아카이브</a
-            >
-            <a
-                href="resources.html"
-                class="mobile-nav-link"
-                data-key="navResources"
-                >리소스</a
-            >
-            </nav>
-        </header>
-
-        <main id="main" class="relative">
-        <section class="archive-main">
-            <div class="max-w-4xl mx-auto px-4 py-20 text-center space-y-6">
-            <p class="section-eyebrow mx-auto" data-key="archiveMainEyebrow">Archive</p>
-            <h1 class="text-4xl sm:text-5xl font-bold text-slate-900" data-key="archiveMainTitle">
-                로보인의 모든 하이라이트를 한 곳에서
-            </h1>
-            <p class="text-lg text-slate-600" data-key="archiveMainSubtitle">
-                수상 실적, 대회/행사 기록, 우수 프로젝트와 커리큘럼, 명예 회원 이야기까지 로보인의 성장 연대를 담았습니다.
-            </p>
-            <a
-                href="index.html#activities"
-                class="btn btn-primary"
-                data-key="archiveMainCTA"
-            >
-                메인 페이지로 돌아가기
-            </a>
-            </div>
-        </section>
-
-        <section class="section">
-            <div class="section-header">
-            <p class="section-eyebrow" data-key="archiveAwardsEyebrow">Awards</p>
-            <h2 class="section-title" data-key="archiveAwardsTitle">
-                로보인의 수상 및 대회 기록
-            </h2>
-            </div>
-            <div class="award-list">
-            <!-- 수상 내역은 JavaScript로 동적으로 렌더링됩니다 -->
-            </div>
-        </section>
-
-        <section class="section bg-white">
-            <div class="section-header">
-            <p class="section-eyebrow" data-key="archiveEventsEyebrow">Events</p>
-            <h2 class="section-title" data-key="archiveEventsTitle">
-                갤러리
-            </h2>
-            </div>
-            <div class="event-slider" data-slider>
-            <button
-                class="slider-button"
-                type="button"
-                data-slider-prev
-                aria-label="previous events"
-                data-key="archiveEventsPrev"
-            >
-                ‹
-            </button>
-            <div class="event-slider-window">
-                <div class="event-slider-track" data-slider-track>
-                <!-- 이벤트 사진은 JavaScript로 동적으로 렌더링됩니다 -->
-                </div>
-            </div>
-            <button
-                class="slider-button"
-                type="button"
-                data-slider-next
-                aria-label="next events"
-                data-key="archiveEventsNext"
-            >
-                ›
-            </button>
-            </div>
-        </section>
-
-        <section class="section">
-            <div class="section-header">
-            <p class="section-eyebrow" data-key="archiveProjectsDetailEyebrow">Projects</p>
-            <h2 class="section-title" data-key="archiveProjectsDetailTitle">
-                우수 프로젝트 포트폴리오
-            </h2>
-            </div>
-            <div class="text-center py-12">
-                <p class="text-lg text-slate-600">업로드 예정</p>
-            </div>
-        </section>
-
-        <section class="section bg-white">
-            <div class="section-header">
-            <p class="section-eyebrow" data-key="archiveCurriculumDetailEyebrow">Curriculum</p>
-            <h2 class="section-title" data-key="archiveCurriculumDetailTitle">
-                체계적인 3단계 커리큘럼
-            </h2>
-            </div>
-            <div class="curriculum-list">
-            <details class="curriculum-entry" open>
-                <summary>
-                <span data-key="archiveCurriculumDetailItem1Title">LEVEL 1 · Starter</span>
-                <small data-key="archiveCurriculumDetailItem1Body"></small>
-                </summary>
-                <div class="curriculum-entry-body">
-                <article class="curriculum-subcard">
-                    <h4 data-key="archiveCurriculumDetailLevel1Item1Title"></h4>
-                    <p data-key="archiveCurriculumDetailLevel1Item1Body"></p>
-                </article>
-                <article class="curriculum-subcard">
-                    <h4 data-key="archiveCurriculumDetailLevel1Item2Title"></h4>
-                    <p data-key="archiveCurriculumDetailLevel1Item1Body"></p>
-                </article>
-                <article class="curriculum-subcard">
-                    <h4 data-key="archiveCurriculumDetailLevel1Item3Title"></h4>
-                    <p data-key="archiveCurriculumDetailLevel1Item3Body"></p>
-                </article>
-                </div>
-            </details>
-            <details class="curriculum-entry">
-                <summary>
-                <span data-key="archiveCurriculumDetailItem2Title">LEVEL 2 · Builder</span>
-                <small data-key="archiveCurriculumDetailItem2Body"></small>
-                </summary>
-                <div class="curriculum-entry-body">
-                <article class="curriculum-subcard">
-                    <h4 data-key="archiveCurriculumDetailLevel2Item1Title"></h4>
-                    <p data-key="archiveCurriculumDetailLevel2Item1Body"></p>
-                </article>
-                <article class="curriculum-subcard">
-                    <h4 data-key="archiveCurriculumDetailLevel2Item2Title"></h4>
-                    <p data-key="archiveCurriculumDetailLevel2Item2Body"></p>
-                </article>
-                <article class="curriculum-subcard">
-                    <h4 data-key="archiveCurriculumDetailLevel2Item3Title"></h4>
-                    <p data-key="archiveCurriculumDetailLevel2Item3Body"></p>
-                </article>
-                </div>
-            </details>
-            <details class="curriculum-entry">
-                <summary>
-                <span data-key="archiveCurriculumDetailItem3Title">LEVEL 3 · Explorer</span>
-                <small data-key="archiveCurriculumDetailItem3Body"></small>
-                </summary>
-                <div class="curriculum-entry-body">
-                <article class="curriculum-subcard">
-                    <h4 data-key="archiveCurriculumDetailLevel3Item1Title"></h4>
-                    <p data-key="archiveCurriculumDetailLevel3Item1Body"></p>
-                </article>
-                <article class="curriculum-subcard">
-                    <h4 data-key="archiveCurriculumDetailLevel3Item2Title"></h4>
-                    <p data-key="archiveCurriculumDetailLevel3Item2Body"></p>
-                </article>
-                <article class="curriculum-subcard">
-                    <h4 data-key="archiveCurriculumDetailLevel3Item3Title"></h4>
-                    <p data-key="archiveCurriculumDetailLevel3Item3Body"></p>
-                </article>
-                </div>
-            </details>
-            </div>
-        </section>
-
-        <section class="section">
-            <div class="section-header">
-            <p class="section-eyebrow" data-key="archiveHonorarySectionEyebrow">Community</p>
-            <h2 class="section-title" data-key="archiveHonorarySectionTitle">
-                명예 회원 & 현재 임원진
-            </h2>
-            </div>
-            <div class="grid gap-6 lg:grid-cols-2">
-            <article class="stack-card">
-                <h3 class="stack-card-title" data-key="archiveHonoraryCardTitle">명예 회원</h3>
-                <p class="text-sm text-slate-600 mb-4" data-key="archiveHonoraryCardDescription">
-                    로보틱스 분야 현업에 계신 선배님들의 지속적인 지원이 로보인에게 큰 힘이 되고 있습니다.
-                </p>
-                <ul class="stack-card-list" id="honorary-members-container">
-                <!-- 명예 회원은 JavaScript로 동적으로 렌더링됩니다 -->
-                </ul>
-            </article>
-            <article class="stack-card">
-                <h3 class="stack-card-title" data-key="archiveOfficersSectionTitle">현재 임원진</h3>
-                <div class="officer-grid" id="officers-container">
-                <!-- 현재 임원진은 JavaScript로 동적으로 렌더링됩니다 -->
-                </div>
-            </article>
-            </div>
-        </section>
-        </main>
-
-        <footer class="border-t border-slate-200 bg-slate-50">
-        <div class="max-w-6xl mx-auto px-4 py-8 flex flex-col gap-2 sm:flex-row sm:items-center sm:justify-between">
-            <p class="text-sm text-slate-600" data-key="footerTagline">
-            Roboin · Yonsei University Robotics Circle
-            </p>
-            <p class="text-sm text-slate-500" data-key="footerRights">
-            © 2025 Roboin. All rights reserved.
-            </p>
-        </div>
-        </footer>
-
-        <div
-        id="media-modal"
-        class="media-modal hidden"
-        aria-hidden="true"
-        >
-        <div class="media-modal-backdrop" data-media-close></div>
-        <div
-            class="media-modal-content"
-            role="dialog"
-            aria-modal="true"
-            aria-labelledby="media-modal-caption"
-        >
-            <button
-            class="media-modal-close"
+          ></a>
+          <a
+            href="archive.html"
+            class="nav-link active"
+            data-key="navArchive"
+          ></a>
+          <a
+            href="resources.html"
+            class="nav-link"
+            data-key="navResources"
+          ></a>
+        </nav>
+        <div class="flex items-center gap-3">
+          <button
+            id="lang-toggle"
+            class="btn btn-secondary text-sm font-semibold"
             type="button"
-            data-media-close
-            data-key="mediaModalClose"
+            data-key="langToggleLabel"
+          ></button>
+          <button
+            id="mobile-menu-toggle"
+            class="md:hidden inline-flex items-center justify-center rounded-full border border-slate-300 p-2 text-slate-700"
+            type="button"
+            aria-label="Menu"
+            aria-expanded="false"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              class="h-5 w-5"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
             >
-            닫기
-            </button>
-            <img
-            id="media-modal-img"
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="1.8"
+                d="M4 6h16M4 12h16M4 18h16"
+              />
+            </svg>
+          </button>
+        </div>
+      </div>
+      <nav
+        id="primary-nav"
+        class="md:hidden hidden border-t border-slate-200 bg-white"
+      >
+        <a
+          href="index.html#main"
+          class="mobile-nav-link"
+          data-key="navHome"
+        ></a>
+        <a
+          href="index.html#about"
+          class="mobile-nav-link"
+          data-key="navAbout"
+        ></a>
+        <a
+          href="index.html#activities"
+          class="mobile-nav-link"
+          data-key="navActivities"
+        ></a>
+        <a
+          href="index.html#recruitment"
+          class="mobile-nav-link"
+          data-key="navRecruitment"
+        ></a>
+        <a
+          href="index.html#contact"
+          class="mobile-nav-link"
+          data-key="navContact"
+        ></a>
+        <a
+          href="archive.html"
+          class="mobile-nav-link"
+          data-key="navArchive"
+        ></a>
+        <a
+          href="resources.html"
+          class="mobile-nav-link"
+          data-key="navResources"
+        ></a>
+      </nav>
+    </header>
+
+    <main id="main" class="relative">
+      <section class="archive-main">
+        <div class="max-w-4xl mx-auto px-4 py-20 text-center space-y-6">
+          <p class="section-eyebrow mx-auto" data-key="archiveMainEyebrow"></p>
+          <h1 class="text-4xl sm:text-5xl font-bold text-slate-900" data-key="archiveMainTitle"></h1>
+          <p class="text-lg text-slate-600" data-key="archiveMainSubtitle"></p>
+          <a
+            href="index.html#activities"
+            class="btn btn-primary"
+            data-key="archiveMainCTA"
+          ></a>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="section-header">
+          <p class="section-eyebrow" data-key="archiveAwardsEyebrow"></p>
+          <h2 class="section-title" data-key="archiveAwardsTitle"></h2>
+        </div>
+        <div class="award-list">
+          <!-- 수상 내역은 JavaScript로 동적으로 렌더링됩니다 -->
+        </div>
+      </section>
+
+      <section class="section bg-white">
+        <div class="section-header">
+          <p class="section-eyebrow" data-key="archiveEventsEyebrow"></p>
+          <h2 class="section-title" data-key="archiveEventsTitle"></h2>
+        </div>
+        <div class="event-slider" data-slider>
+          <button
+            class="slider-button"
+            type="button"
+            data-slider-prev
+            aria-label="previous events"
+            data-key="archiveEventsPrev"
+          ></button>
+          <div class="event-slider-window">
+            <div class="event-slider-track" data-slider-track>
+              <!-- 이벤트 사진은 JavaScript로 동적으로 렌더링됩니다 -->
+            </div>
+          </div>
+          <button
+            class="slider-button"
+            type="button"
+            data-slider-next
+            aria-label="next events"
+            data-key="archiveEventsNext"
+          ></button>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="section-header">
+          <p class="section-eyebrow" data-key="archiveProjectsDetailEyebrow"></p>
+          <h2 class="section-title" data-key="archiveProjectsDetailTitle"></h2>
+        </div>
+        <div class="text-center py-12">
+          <p class="text-lg text-slate-600" data-key="archiveProjectsComingSoon">업로드 예정</p>
+        </div>
+      </section>
+
+      <section class="section bg-white">
+        <div class="section-header">
+          <p class="section-eyebrow" data-key="archiveCurriculumDetailEyebrow"></p>
+          <h2 class="section-title" data-key="archiveCurriculumDetailTitle"></h2>
+        </div>
+        <div class="curriculum-list">
+          <details class="curriculum-entry" open>
+            <summary>
+              <span data-key="archiveCurriculumDetailItem1Title"></span>
+              <small data-key="archiveCurriculumDetailItem1Body"></small>
+            </summary>
+            <div class="curriculum-entry-body">
+              <article class="curriculum-subcard">
+                <h4 data-key="archiveCurriculumDetailLevel1Item1Title"></h4>
+                <p data-key="archiveCurriculumDetailLevel1Item1Body"></p>
+              </article>
+              <article class="curriculum-subcard">
+                <h4 data-key="archiveCurriculumDetailLevel1Item2Title"></h4>
+                <p data-key="archiveCurriculumDetailLevel1Item2Body"></p>
+              </article>
+              <article class="curriculum-subcard">
+                <h4 data-key="archiveCurriculumDetailLevel1Item3Title"></h4>
+                <p data-key="archiveCurriculumDetailLevel1Item3Body"></p>
+              </article>
+            </div>
+          </details>
+          <details class="curriculum-entry">
+            <summary>
+              <span data-key="archiveCurriculumDetailItem2Title"></span>
+              <small data-key="archiveCurriculumDetailItem2Body"></small>
+            </summary>
+            <div class="curriculum-entry-body">
+              <article class="curriculum-subcard">
+                <h4 data-key="archiveCurriculumDetailLevel2Item1Title"></h4>
+                <p data-key="archiveCurriculumDetailLevel2Item1Body"></p>
+              </article>
+              <article class="curriculum-subcard">
+                <h4 data-key="archiveCurriculumDetailLevel2Item2Title"></h4>
+                <p data-key="archiveCurriculumDetailLevel2Item2Body"></p>
+              </article>
+              <article class="curriculum-subcard">
+                <h4 data-key="archiveCurriculumDetailLevel2Item3Title"></h4>
+                <p data-key="archiveCurriculumDetailLevel2Item3Body"></p>
+              </article>
+            </div>
+          </details>
+          <details class="curriculum-entry">
+            <summary>
+              <span data-key="archiveCurriculumDetailItem3Title"></span>
+              <small data-key="archiveCurriculumDetailItem3Body"></small>
+            </summary>
+            <div class="curriculum-entry-body">
+              <article class="curriculum-subcard">
+                <h4 data-key="archiveCurriculumDetailLevel3Item1Title"></h4>
+                <p data-key="archiveCurriculumDetailLevel3Item1Body"></p>
+              </article>
+              <article class="curriculum-subcard">
+                <h4 data-key="archiveCurriculumDetailLevel3Item2Title"></h4>
+                <p data-key="archiveCurriculumDetailLevel3Item2Body"></p>
+              </article>
+              <article class="curriculum-subcard">
+                <h4 data-key="archiveCurriculumDetailLevel3Item3Title"></h4>
+                <p data-key="archiveCurriculumDetailLevel3Item3Body"></p>
+              </article>
+            </div>
+          </details>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="section-header">
+          <p class="section-eyebrow" data-key="archiveHonorarySectionEyebrow"></p>
+          <h2 class="section-title" data-key="archiveHonorarySectionTitle"></h2>
+        </div>
+        <div class="grid gap-6 lg:grid-cols-2">
+          <article class="stack-card">
+            <h3 class="stack-card-title" data-key="archiveHonoraryCardTitle"></h3>
+            <p class="text-sm text-slate-600 mb-4" data-key="archiveHonoraryCardDescription"></p>
+            <ul class="stack-card-list" id="honorary-members-container">
+              <!-- 명예 회원은 JavaScript로 동적으로 렌더링됩니다 -->
+            </ul>
+          </article>
+          <article class="stack-card">
+            <h3 class="stack-card-title" data-key="archiveOfficersSectionTitle"></h3>
+            <div class="officer-grid" id="officers-container">
+              <!-- 현재 임원진은 JavaScript로 동적으로 렌더링됩니다 -->
+            </div>
+          </article>
+        </div>
+      </section>
+    </main>
+
+    <footer class="border-t border-slate-200 bg-slate-50">
+      <div class="max-w-6xl mx-auto px-4 py-8 flex flex-col gap-2 sm:flex-row sm:items-center sm:justify-between">
+        <p class="text-sm text-slate-600" data-key="footerTagline"></p>
+        <p class="text-sm text-slate-500" data-key="footerRights"></p>
+      </div>
+    </footer>
+
+    <div
+      id="media-modal"
+      class="media-modal hidden"
+      aria-hidden="true"
+    >
+      <div class="media-modal-backdrop" data-media-close></div>
+      <div
+        class="media-modal-content"
+        role="dialog"
+        aria-modal="true"
+        aria-labelledby="media-modal-caption"
+      >
+        <button
+          class="media-modal-close"
+          type="button"
+          data-media-close
+          data-key="mediaModalClose"
+        ></button>
+        <img
+          id="media-modal-img"
+          alt=""
+        />
+        <div class="media-modal-info">
+          <h3 id="media-modal-title" class="media-modal-title"></h3>
+          <p id="media-modal-date" class="media-modal-date"></p>
+          <p id="media-modal-description" class="media-modal-description"></p>
+        </div>
+      </div>
+    </div>
+
+    <div
+      id="award-modal"
+      class="award-modal hidden"
+      aria-hidden="true"
+    >
+      <div class="award-modal-backdrop" data-award-close></div>
+      <div
+        class="award-modal-content"
+        role="dialog"
+        aria-modal="true"
+      >
+        <button
+          class="award-modal-close"
+          type="button"
+          data-award-close
+          data-key="modalClose"
+          aria-label="닫기"
+        >
+          ✕
+        </button>
+        <h3 id="award-modal-title" class="award-modal-title"></h3>
+        <p id="award-modal-body" class="award-modal-body"></p>
+        <figure class="award-modal-figure">
+          <img
+            id="award-modal-img"
             alt=""
-            />
-            <div class="media-modal-info">
-            <h3 id="media-modal-title" class="media-modal-title"></h3>
-            <p id="media-modal-date" class="media-modal-date"></p>
-            <p id="media-modal-description" class="media-modal-description"></p>
-            </div>
-        </div>
-        </div>
+            class="award-modal-img"
+          />
+          <figcaption id="award-modal-caption" class="award-modal-caption"></figcaption>
+        </figure>
+      </div>
+    </div>
 
-        <!-- Award 상세 모달 -->
-        <div
-        id="award-modal"
-        class="award-modal hidden"
-        aria-hidden="true"
+    <div
+      id="image-zoom-modal"
+      class="image-zoom-modal hidden"
+      aria-hidden="true"
+    >
+      <div class="image-zoom-backdrop" data-image-zoom-close></div>
+      <div class="image-zoom-content">
+        <button
+          class="image-zoom-close"
+          type="button"
+          data-image-zoom-close
+          data-key="modalClose"
+          aria-label="닫기"
         >
-        <div class="award-modal-backdrop" data-award-close></div>
-        <div
-            class="award-modal-content"
-            role="dialog"
-            aria-modal="true"
-        >
-            <button
-            class="award-modal-close"
-            type="button"
-            data-award-close
-            aria-label="닫기"
-            >
-            ✕
-            </button>
-            <h3 id="award-modal-title" class="award-modal-title"></h3>
-            <p id="award-modal-body" class="award-modal-body"></p>
-            <figure class="award-modal-figure">
-            <img
-                id="award-modal-img"
-                alt=""
-                class="award-modal-img"
-            />
-            <figcaption id="award-modal-caption" class="award-modal-caption"></figcaption>
-            </figure>
-        </div>
-        </div>
+          ✕
+        </button>
+        <img
+          id="image-zoom-img"
+          alt=""
+          class="image-zoom-img"
+        />
+      </div>
+    </div>
 
-        <!-- 이미지 확대 모달 -->
-        <div
-        id="image-zoom-modal"
-        class="image-zoom-modal hidden"
-        aria-hidden="true"
-        >
-        <div class="image-zoom-backdrop" data-image-zoom-close></div>
-        <div class="image-zoom-content">
-            <button
-            class="image-zoom-close"
-            type="button"
-            data-image-zoom-close
-            aria-label="닫기"
-            >
-            ✕
-            </button>
-            <img
-            id="image-zoom-img"
-            alt=""
-            class="image-zoom-img"
-            />
-        </div>
-        </div>
-
-        <script type="module" src="assets/js/script.js"></script>
-    </body>
-    </html>
+    <script type="module" src="assets/js/script.js"></script>
+  </body>
+</html>
 

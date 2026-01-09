@@ -1172,8 +1172,8 @@ export const RESOURCES_DATA = [
           { status: "in-use", project: "ROBOTIC HAND" },
           { status: "in-use", project: "ROBOTIC HAND" },
           { status: "in-use", project: "ROBOTIC HAND" },
-          { status: "available", project: null },
-          { status: "available", project: null },
+          { status: "available", project: "ROBOTIC ARM" },
+          { status: "available", project: "ROBOTIC ARM" },
           { status: "available", project: null },
           { status: "in-use", project: "TURTLEBOT" },
           { status: "in-use", project: "TURTLEBOT" },
@@ -1190,10 +1190,10 @@ export const RESOURCES_DATA = [
       {
         model: "XL330-M288-T",
         units: [
-          { status: "available", project: null },
-          { status: "available", project: null },
-          { status: "available", project: null },
-          { status: "available", project: null }
+          { status: "available", project: "ROBOTIC ARM" },
+          { status: "available", project: "ROBOTIC ARM" },
+          { status: "available", project: "ROBOTIC ARM" },
+          { status: "available", project: "ROBOTIC ARM" }
         ]
       },
       {

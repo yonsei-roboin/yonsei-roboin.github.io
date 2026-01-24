@@ -1228,17 +1228,17 @@ export const RESOURCES_DATA = [
 export const OFFICERS_DATA = [
   {
     ko: {
-      name: "김민건",
-      major: "전기전자공학 20",
-      position: "2025 회장",
-      email: "rlaalsrjswww@yonsei.ac.kr",
+      name: "전형준",
+      major: "기계공학/컴퓨터과학 21",
+      position: "2026 회장",
+      email: "jeon_hj@yonsei.ac.kr",
       role: "회장"
     },
     en: {
-      name: "Mingeon Kim",
-      major: "Electrical & Electronic Engineering '20",
-      position: "2025 President",
-      email: "rlaalsrjswww@yonsei.ac.kr",
+      name: "Hyungjoon Jeon",
+      major: "Mechanical Engineering / Computer Science '21",
+      position: "2026 President",
+      email: "jeon_hj@yonsei.ac.kr",
       role: "President"
     }
   },
@@ -1246,62 +1246,94 @@ export const OFFICERS_DATA = [
     ko: {
       name: "황서현",
       major: "천문우주학/기계공학 22",
-      position: "2025 부회장",
+      position: "2026 부회장",
       email: "hsh0917n@yonsei.ac.kr",
       role: "부회장"
     },
     en: {
       name: "Seohyun Hwang",
-      major: "Astronomy & Space Science / Mechanical Engineering '22",
-      position: "2025 Vice President",
+      major: "Astronomy / Mechanical Engineering '22",
+      position: "2026 Vice President",
       email: "hsh0917n@yonsei.ac.kr",
       role: "Vice President"
     }
   },
   {
     ko: {
-      name: "전형준",
-      major: "기계공학/컴퓨터과학 21",
-      position: "2025 임원진",
-      email: "jeon_hj@yonsei.ac.kr",
-      role: "임원진"
-    },
-    en: {
-      name: "Hyungjoon Jeon",
-      major: "Mechanical Engineering / Computer Science '21",
-      position: "2025 Faculty",
-      email: "jeon_hj@yonsei.ac.kr",
-      role: "Faculty"
-    }
-  },
-  {
-    ko: {
-      name: "신동욱",
-      major: "기계공학 20",
-      position: "2025 임원진",
-      email: "",
-      role: "임원진"
-    },
-    en: {
-      name: "Dongwook Shin",
-      major: "Mechanical Engineering '20",
-      position: "2025 Faculty",
-      email: "",
-      role: "Faculty"
-    }
-  },
-  {
-    ko: {
       name: "박성현",
       major: "기계공학 21",
-      position: "2025 임원진",
+      position: "2026 임원진",
       email: "",
       role: "임원진"
     },
     en: {
       name: "Sunghyun Park",
       major: "Mechanical Engineering '21",
-      position: "2025 Faculty",
+      position: "2026 Faculty",
+      email: "",
+      role: "Faculty"
+    }
+  },
+  {
+    ko: {
+      name: "전승민",
+      major: "기계공학 21",
+      position: "2026 임원진",
+      email: "",
+      role: "임원진"
+    },
+    en: {
+      name: "Seungmin Jeon",
+      major: "Mechanical Engineering '21",
+      position: "2026 Faculty",
+      email: "",
+      role: "Faculty"
+    }
+  },
+  {
+    ko: {
+      name: "조성한",
+      major: "기계공학 20",
+      position: "2026 임원진",
+      email: "",
+      role: "임원진"
+    },
+    en: {
+      name: "Sunghan Cho",
+      major: "Mechanical Engineering '20",
+      position: "2026 Faculty",
+      email: "",
+      role: "Faculty"
+    }
+  },
+  {
+    ko: {
+      name: "추대성",
+      major: "기계공학 21",
+      position: "2026 임원진",
+      email: "",
+      role: "임원진"
+    },
+    en: {
+      name: "Daeseong Cho",
+      major: "Mechanical Engineering '21",
+      position: "2026 Faculty",
+      email: "",
+      role: "Faculty"
+    }
+  },
+  {
+    ko: {
+      name: "이승윤",
+      major: "기계공학 25",
+      position: "2026 임원진",
+      email: "",
+      role: "임원진"
+    },
+    en: {
+      name: "Seungyoon Lee",
+      major: "Mechanical Engineering '25",
+      position: "2026 Faculty",
       email: "",
       role: "Faculty"
     }
@@ -1310,14 +1342,14 @@ export const OFFICERS_DATA = [
     ko: {
       name: "신동훈",
       major: "기계공학 21",
-      position: "2025 임원진",
+      position: "2026 임원진",
       email: "",
       role: "임원진"
     },
     en: {
       name: "Donghun Shin",
       major: "Mechanical Engineering '21",
-      position: "2025 Faculty",
+      position: "2026 Faculty",
       email: "",
       role: "Faculty"
     }
@@ -1326,14 +1358,14 @@ export const OFFICERS_DATA = [
     ko: {
       name: "정희원",
       major: "기계공학 21",
-      position: "2025 임원진",
+      position: "2026 임원진",
       email: "",
       role: "임원진"
     },
     en: {
       name: "Hewon Jung",
       major: "Mechanical Engineering '21",
-      position: "2025 Faculty",
+      position: "2026 Faculty",
       email: "",
       role: "Faculty"
     }
@@ -1342,6 +1374,30 @@ export const OFFICERS_DATA = [
 
 // 명예 회원 데이터 (역대 회장단)
 export const HONORARY_MEMBERS_DATA = [
+  {
+    ko: {
+        name: "김민건",
+        affiliation: "Co-Founder of an Early Stage Startup",
+        role: "명예 회원"
+    },
+    en: {
+        name: "Mingun Kim",
+        affiliation: "Co-Founder of an Early Stage Startup",
+        role: "Honorary Member"
+    }
+  },
+  {
+    ko: {
+        name: "신동욱",
+        affiliation: "LG CNS",
+        role: "명예 회원"
+    },
+    en: {
+        name: "Dongwook Shin",
+        affiliation: "LG CNS",
+        role: "Honorary Member"
+    }
+  },  
   {
     ko: {
       name: "서기훈",

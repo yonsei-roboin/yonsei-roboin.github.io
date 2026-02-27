@@ -44,6 +44,7 @@ export const SELECTORS = {
   EVENTS_TRACK: ".event-slider-track",
   RESOURCES_CONTAINER: "#resources-container",
   OFFICERS_CONTAINER: "#officers-container",
+  ARCHIVE_PROJECTS_CONTAINER: "#archive-projects-container",
   HONORARY_CONTAINER: "#honorary-members-container",
   MAIN_SLIDER: "#main-events-slider",
   MAIN_SLIDER_TRACK: "#main-events-slider-track",

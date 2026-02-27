@@ -17,7 +17,8 @@ import {
   renderHighlights,
   renderOfficers,
   renderHonoraryMembers,
-  renderMainEventsSlider
+  renderMainEventsSlider,
+  renderArchiveProjects
 } from "./renderers.js";
 import {
   initAwardModals,
@@ -47,7 +48,8 @@ const handleLanguageToggle = () => {
     renderHighlights: (l) => renderHighlights(l, initAwardModals, initMediaModal),
     renderOfficers,
     renderHonoraryMembers,
-    renderMainEventsSlider: (l) => renderMainEventsSlider(l, initMainEventsSlider)
+    renderMainEventsSlider: (l) => renderMainEventsSlider(l, initMainEventsSlider),
+    renderArchiveProjects
   });
   
   // 모달 및 슬라이더 재초기화
@@ -162,7 +164,8 @@ const init = () => {
     renderHighlights: (l) => renderHighlights(l, initAwardModals, initMediaModal),
     renderOfficers,
     renderHonoraryMembers,
-    renderMainEventsSlider: (l) => renderMainEventsSlider(l, initMainEventsSlider)
+    renderMainEventsSlider: (l) => renderMainEventsSlider(l, initMainEventsSlider),
+    renderArchiveProjects
   });
   
   // 모달 초기화

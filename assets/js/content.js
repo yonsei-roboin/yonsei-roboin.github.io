@@ -22,28 +22,8 @@ export const CONTENT_DATA = {
     mainStatsMembersLabel: "25-2학기 기준 활동 회원",
     mainStatsProjects: "20+",
     mainStatsProjectsLabel: "년 이상 이어온 역사",
-    missionBadge: "Mission",
-    missionTitle: "로봇으로 세상을 연결합니다",
-    missionBody:
-      "학생 주도의 프로젝트, 세미나, 대회 참가를 통해 하드웨어와 소프트웨어를 모두 다루는 실전 로보틱스 역량을 키워갑니다.",
-    statusLabel: "현재 집중 분야",
-    statusProject: "25-2 활동 로드맵 & 프로젝트 팀",
-    statusTimeline: "2025학년도 2학기",
-    statusDescription:
-      "자율주행 서비스 로봇과 커뮤니티 협업 프로젝트를 중심으로 연구·시연을 준비하고 있습니다.",
     aboutEyebrow: "About Roboin",
     aboutTitle: "로봇을 만드는 사람들",
-    aboutDescription:
-      "로보인은 로봇을 사랑하는 학부생들이 모여 프로젝트와 세미나, 대회 활동을 통해 실전 로보틱스 경험을 쌓는 연세대학교 최초이자 유일의 로봇 학술 동아리입니다.",
-    aboutMissionTitle: "정체성",
-    aboutMissionBody:
-      "연세대학교 최초의 로봇 학술 동아리로, 로봇팔부터 자율주행까지 다양한 주제를 탐구하며 로보틱스를 일상 속으로 확장합니다.",
-    aboutValuesTitle: "멤버십",
-    aboutValuesBody:
-      "25-2학기 기준 63명의 회원이 활동 중이며, 전공·학년과 관계없이 로봇을 좋아하는 누구나 팀을 이루어 협업합니다.",
-    aboutSupportTitle: "문화",
-    aboutSupportBody:
-      "함께 공부하고 성장하는 문화를 만들며, 프로젝트 경험을 세미나로 공유하고 서로의 시도를 응원합니다.",
     aboutCurriculumTitle: "초보자도 따라오는 3단계 커리큘럼",
     aboutCurriculumBody:
       "전자·제어 기초부터 임베디드·알고리즘 심화까지 단계별 학습으로 누구나 로봇 프로젝트를 시작할 수 있습니다.",
@@ -85,60 +65,11 @@ export const CONTENT_DATA = {
       "재학생 | 휴학생 | 대학원생, 성별 | 전공 | 학번 상관없습니다.\n\n로봇에 관심이 있는 사람들과 어울리며, 로봇에 대해 배우고 직접 만들어보고 싶은 사람.\n\n아무것도 몰라도 괜찮습니다. 로봇에 대한 관심과 열정만 있다면 누구나 환영합니다!",
     recruitmentScheduleTitle: "진행 일정",
     recruitmentScheduleBody:
-      "25-2 모집이 마감되었습니다. 26-1 모집에도 많은 관심 부탁드립니다",
+      "- 지원서 제출 기한: 3월 7일(토) 18시까지\n- 면접 일정: 3월 8일(일) ~ 3월 10일(화)\n- 최종 합격자 발표: 3월 11일(수)\n- 개강총회는 필수참여로, 3월 12일(목)에 진행될 예정입니다!",
     recruitmentContactTitle: "문의",
     recruitmentContactBody:
       "궁금한 점은 공식 이메일 또는 인스타그램 DM으로 연락 주세요.",
-    awardsEyebrow: "Highlights",
-    awardsTitle: "수상 실적과 현장 스냅샷",
-    awardsDescription:
-      "국내외 로봇 대회 도전 경험과 활동 현장 사진으로 로보인의 저력을 확인하세요.",
-    awardsList1Badge: "Competition",
-    awardsList1Title: "국내 대학 로봇 경진대회 연속 수상",
-    awardsList1Body:
-      "자율주행·로봇팔 분야 프로젝트로 다수 대회에서 본선과 수상을 기록하며 실력을 입증했습니다.",
-    awardsList2Badge: "Project",
-    awardsList2Title: "휴머노이드 & 서비스 로봇 시연",
-    awardsList2Body:
-      "학기별 프로젝트 전시회에서 대내외 협력 기관을 초청해 제작 로봇의 퍼포먼스를 공개합니다.",
-    awardsList3Badge: "Seminar",
-    awardsList3Title: "산업·학계 심사단 초청 세션",
-    awardsList3Body:
-      "팀별 결과물을 심사받고 피드백을 공유해 다음 시즌 연구 주제를 정교하게 다듬습니다.",
-    eventsPhoto1Caption: "YouTube 채널을 통해 프로젝트 하이라이트 영상을 공개 중입니다.",
-    eventsPhoto2Caption: "제1공학관 A524 작업 공간에서 팀별로 로봇을 제작하고 시험 운행합니다.",
-    archivePreviewEyebrow: "Archive",
-    archivePreviewTitle: "우수 프로젝트 · 커리큘럼 · 커뮤니티",
-    archivePreviewDescription:
-      "로보인이 자랑하는 대표 프로그램과 구성원 스토리를 요약으로 살펴보고, 더 자세한 내용은 아카이브 페이지에서 확인하세요.",
-    archiveProjectsTitle: "우수 프로젝트",
-    archiveProject1Title: "자율주행 서비스 로봇",
-    archiveProject1Body: "SLAM·센서 융합 기반 실내 주행 로봇으로 25-2 시즌 핵심 프로젝트입니다.",
-    archiveProject2Title: "휴머노이드 모션 랩",
-    archiveProject2Body: "휴먼로봇 상호작용과 제어 실험으로 캠퍼스 시연회를 진행합니다.",
-    archiveProject3Title: "메이커 커뮤니티 협업",
-    archiveProject3Body: "지역 청소년 대상 메이커 교육과 공동 프로젝트를 운영합니다.",
-    archiveCurriculumTitle: "우수 커리큘럼",
-    archiveCurriculum1Title: "LEVEL 1",
-    archiveCurriculum1Body: "전자회로, MCU, 기본 제어를 실습하며 로봇 제작의 기초를 다집니다.",
-    archiveCurriculum2Title: "LEVEL 2",
-    archiveCurriculum2Body: "임베디드/ROS/컴퓨터비전 세션으로 프로젝트를 위한 기술 스택을 완성합니다.",
-    archiveCurriculum3Title: "LEVEL 3",
-    archiveCurriculum3Body: "팀별 자율 연구를 통해 대회 출전 혹은 자체 전시로 성과를 발표합니다.",
-    archiveHonoraryTitle: "명예 회원 스토리",
-    archiveHonoraryBody:
-      "해외 명문대·로봇 연구소·글로벌 기업으로 진출한 동문이 로보인의 명예 회원으로 참여합니다.",
-    archiveHonoraryItem1: "Georgia Tech Robotics 연구진으로 합류한 선배와의 정기 멘토링",
-    archiveHonoraryItem2: "UC Berkeley 로보틱스 대학원에서 연구 중인 동문 특강",
-    archiveHonoraryItem3: "국내 대기업 로봇팀에 입사한 졸업생의 커리어 AMA 세션",
-    archiveOfficersTitle: "현재 임원진",
-    archiveOfficerPresidentLabel: "회장",
-    archiveOfficerPresidentBody: "김민건 · 전략/운영 총괄",
-    archiveOfficerViceLabel: "부회장",
-    archiveOfficerViceBody: "모집 중 · 교육/커리큘럼 리드",
-    archiveOfficerOpsLabel: "프로젝트 리드",
-    archiveOfficerOpsBody: "팀장단 · 프로젝트 PM & 기술 멘토",
-    archivePreviewCTA: "아카이브 전체 보기",
+    recruitmentApplyCTA: "지원하기",
     archiveMainEyebrow: "Archive",
     archiveMainTitle: "로보인의 역사",
     archiveMainSubtitle:
@@ -147,33 +78,20 @@ export const CONTENT_DATA = {
     archiveProjectsComingSoon: "업로드 예정",
     archiveAwardsEyebrow: "Awards",
     archiveAwardsTitle: "로보인의 수상 및 대회 기록",
-    archiveAwardsDescription:
-      "대표 수상 실적을 우선 공개하고 있으며, 향후 지속적으로 업데이트트할 예정입니다.",
     archiveEventsEyebrow: "Events",
     archiveEventsTitle: "갤러리",
-    archiveEventsDescription:
-      "대표 사진 두 장을 먼저 공개하고 있으며, 향후 수십 개의 현장 이미지를 갤러리로 확장할 계획입니다.",
     archiveEventsPrev: "이전",
     archiveEventsNext: "다음",
     archiveProjectsDetailEyebrow: "Projects",
     archiveProjectsDetailTitle: "우수 프로젝트 포트폴리오",
-    archiveProjectsDetailDescription:
-      "캡스톤형 프로젝트와 대회용 프로젝트를 분류해 정리했습니다.",
-    archiveProjectsDetailBadge1: "Capstone",
-    archiveProjectsDetailItem1Title: "자율주행 서비스 로봇",
-    archiveProjectsDetailItem1Body:
-      "SLAM, 센서 융합, 모듈형 메카니즘을 활용해 캠퍼스 안내로봇을 제작합니다.",
-    archiveProjectsDetailBadge2: "Research",
-    archiveProjectsDetailItem2Title: "휴머노이드 모션 랩",
+    archiveProjectsDetailItem2Title: "프로젝트2",
     archiveProjectsDetailItem2Body:
-      "강화학습·제어기를 결합해 사람과 함께 일하는 휴머노이드 동작을 실험합니다.",
-    archiveProjectsDetailBadge3: "Community",
-    archiveProjectsDetailItem3Title: "메이커 커뮤니티 협업",
+      "프로젝트2 설명",
+    archiveProjectsDetailItem3Title: "프로젝트3",
     archiveProjectsDetailItem3Body:
-      "지역 청소년을 대상으로 로봇 제작 워크숍과 멘토링을 운영합니다.",
+      "프로젝트3 설명",
     archiveCurriculumDetailEyebrow: "Curriculum",
     archiveCurriculumDetailTitle: "체계적인 3단계 커리큘럼",
-    archiveCurriculumDetailDescription: "각 레벨별 학습 목표와 결과물을 살펴볼 수 있습니다.",
     archiveCurriculumDetailItem1Title: "LEVEL 1",
     archiveCurriculumDetailItem1Body:
       "기초적인 전자 회로 구성과 센서 데이터 처리를 통해 하드웨어 제어의 기틀을 마련합니다.",
@@ -203,7 +121,6 @@ export const CONTENT_DATA = {
     archiveCurriculumDetailLevel3Item3Body: "",
     archiveHonorarySectionEyebrow: "Community",
     archiveHonorarySectionTitle: "역대 회장 & 현재 임원진",
-    archiveHonorarySectionDescription: "졸업자 네트워크와 현재 운영진의 역할을 소개합니다.",
     archiveHonoraryCardTitle: "역대 회장",
     archiveHonoraryCardDescription: "로보틱스 분야 현업에 계신 선배님들의 지속적인 지원이 로보인에게 큰 힘이 되고 있습니다.",
     archiveOfficersSectionTitle: "현재 임원진",
@@ -222,7 +139,7 @@ export const CONTENT_DATA = {
     contactLeadValue: "회장 김민건",
     contactEmailLabel: "공식 이메일",
     contactEmailValue: "roboin2019@gmail.com",
-    contactLocationLabel: "작업 공간",
+    contactLocationLabel: "동아리방방",
     contactLocationBody: "서울특별시 서대문구 연세로 50 제1공학관 A524",
     socialTitle: "공식 채널",
     socialDescription: "로보인의 소식은 아래 채널에서도 확인할 수 있습니다.",
@@ -263,28 +180,8 @@ export const CONTENT_DATA = {
     mainStatsMembersLabel: "Active members (Fall 2025-2)",
     mainStatsProjects: "20+",
     mainStatsProjectsLabel: "Years of history",
-    missionBadge: "Mission",
-    missionTitle: "Connecting people through robots",
-    missionBody:
-      "Student-led projects, seminars, and competitions help us master both hardware and software across the robotics stack.",
-    statusLabel: "Current focus",
-    statusProject: "Fall 25-2 roadmap & project teams",
-    statusTimeline: "Fall 2025 semester",
-    statusDescription:
-      "We are preparing demos around the autonomous service robot and community collaboration projects.",
     aboutEyebrow: "About Roboin",
     aboutTitle: "A robotics society inside Yonsei College of Engineering",
-    aboutDescription:
-      "Roboin is Yonsei's first and only robotics academic club where undergraduates build real robots through projects, seminars, and competitions.",
-    aboutMissionTitle: "Identity",
-    aboutMissionBody:
-      "From robotic arms to autonomous driving, we explore diverse topics and bring robotics closer to everyday life.",
-    aboutValuesTitle: "Membership",
-    aboutValuesBody:
-      "63 members are active this semester, collaborating across majors and grades as long as they love robots.",
-    aboutSupportTitle: "Culture",
-    aboutSupportBody:
-      "We learn and grow together, sharing project takeaways through seminars and cheering on every experiment.",
     aboutCurriculumTitle: "Three-step curriculum for everyone",
     aboutCurriculumBody:
       "From electronics and control basics to embedded software and algorithms, members progress step by step.",
@@ -326,60 +223,11 @@ export const CONTENT_DATA = {
       "Current students | On leave | Graduate students, regardless of gender, major, or year.\n\nThose who want to interact with people interested in robots, learn about robots, and build robots.\n\nIt's okay if you don't know anything. Anyone with interest and passion for robotics is welcome!",
     recruitmentScheduleTitle: "Schedule",
     recruitmentScheduleBody:
-      "Fall 2025-2 recruitment has closed. We look forward to many applications for Spring 2026-1!",
+      "- Application deadline: Sat, March 7, 18:00\n- Interviews: Sun, March 8 – Tue, March 10\n- Final results: Wed, March 11\n- Kick-off meeting (mandatory): Thu, March 12",
     recruitmentContactTitle: "Inquiries",
     recruitmentContactBody:
       "For questions, please contact us via official email or Instagram DM.",
-    awardsEyebrow: "Highlights",
-    awardsTitle: "Awards & event snapshots",
-    awardsDescription:
-      "See how Roboin archives accomplishments through competitions and on-site activities.",
-    awardsList1Badge: "Competition",
-    awardsList1Title: "Consistent wins at university contests",
-    awardsList1Body:
-      "Autonomous driving and robotic arm teams routinely reach finals and podiums in domestic events.",
-    awardsList2Badge: "Project",
-    awardsList2Title: "Humanoid & service robot demos",
-    awardsList2Body:
-      "Each semester we host events where partners experience our robots live.",
-    awardsList3Badge: "Seminar",
-    awardsList3Title: "Industry-academia jury sessions",
-    awardsList3Body:
-      "External reviewers evaluate team outcomes, helping refine research topics for upcoming seasons.",
-    eventsPhoto1Caption: "Our YouTube channel premieres highlight reels from every build season.",
-    eventsPhoto2Caption: "Teams prototype and test robots inside Engineering Hall A524 club room.",
-    archivePreviewEyebrow: "Archive",
-    archivePreviewTitle: "Featured projects · curriculum · community",
-    archivePreviewDescription:
-      "Get a quick overview of our flagship programs and stories, then visit the archive page for full details.",
-    archiveProjectsTitle: "Featured projects",
-    archiveProject1Title: "Autonomous service robot",
-    archiveProject1Body: "Core project for Fall 25-2 focusing on SLAM and indoor navigation.",
-    archiveProject2Title: "Humanoid motion lab",
-    archiveProject2Body: "Human-robot interaction demos presented during campus events.",
-    archiveProject3Title: "Maker community collaboration",
-    archiveProject3Body: "Workshops with local students to build robots together.",
-    archiveCurriculumTitle: "Signature curriculum",
-    archiveCurriculum1Title: "LEVEL 1",
-    archiveCurriculum1Body: "Hands-on electronics, MCU, and control basics.",
-    archiveCurriculum2Title: "LEVEL 2",
-    archiveCurriculum2Body: "Embedded, ROS, and computer vision toolbox for projects.",
-    archiveCurriculum3Title: "LEVEL 3",
-    archiveCurriculum3Body: "Team research that culminates in competitions or events.",
-    archiveHonoraryTitle: "Honorary members",
-    archiveHonoraryBody:
-      "Alumni in top universities, labs, and companies stay involved as honorary members.",
-    archiveHonoraryItem1: "Georgia Tech robotics researchers host recurring mentoring calls.",
-    archiveHonoraryItem2: "UC Berkeley graduate students share their latest research insights.",
-    archiveHonoraryItem3: "Industry alumni run AMA sessions about careers in robotics teams.",
-    archiveOfficersTitle: "Current leadership",
-    archiveOfficerPresidentLabel: "President",
-    archiveOfficerPresidentBody: "Mingeon Kim · Strategy & partnerships",
-    archiveOfficerViceLabel: "Vice President",
-    archiveOfficerViceBody: "Open role · Curriculum & education lead",
-    archiveOfficerOpsLabel: "Project leads",
-    archiveOfficerOpsBody: "Team captains · Project PMs & technical mentors",
-    archivePreviewCTA: "View full archive",
+    recruitmentApplyCTA: "Apply now",
     archiveMainEyebrow: "Archive",
     archiveMainTitle: "Roboin's history",
     archiveMainSubtitle:
@@ -388,89 +236,20 @@ export const CONTENT_DATA = {
     archiveProjectsComingSoon: "Coming soon",
     archiveAwardsEyebrow: "Awards",
     archiveAwardsTitle: "Competition & award history",
-    archiveAwardsDescription:
-      "We publish representative wins first and keep updating the archive continuously.",
-    archiveAwardsAccordion1Title: "2024 Korea Autonomous Robotics Grand Prize",
-    archiveAwardsAccordion1Body:
-      "Topped the finals with a SLAM-powered indoor autonomous robot.",
-    archiveAwardsAccordion1Caption: "Team Roboin receiving the trophy on stage.",
-    archiveAwardsAccordion2Title: "2024 Makerthon Community Collaboration Award",
-    archiveAwardsAccordion2Body:
-      "Humanoid kits co-built with local teens won first place in social impact.",
-    archiveAwardsAccordion2Caption: "Explaining the project at the Makerthon booth.",
-    archiveAwardsAccordion3Title: "2023 Humanoid Performance Grand Award",
-    archiveAwardsAccordion3Body:
-      "Human-robot motion demos captured the judges’ choice for top design.",
-    archiveAwardsAccordion3Caption: "The humanoid greets the audience during the event.",
-    archiveAwardsAccordion4Title: "2023 Robot Control Algorithm Gold Prize",
-    archiveAwardsAccordion4Body:
-      "A reinforcement-learning controlled robotic arm earned the gold medal.",
-    archiveAwardsAccordion4Caption: "Presenting the control stack to the jury.",
-    archiveAwardsAccordion5Title: "2022 K-Robotics Creative Design Silver Prize",
-    archiveAwardsAccordion5Body:
-      "Recognized for a modular service robot concept and implementation.",
-    archiveAwardsAccordion5Caption: "Walking through the prototype internals with visitors.",
-    archiveAwardsAccordion6Title: "2022 Yonsei Engineering Capstone Excellence",
-    archiveAwardsAccordion6Body:
-      "Our autonomous cart project won the campus capstone competition.",
-    archiveAwardsAccordion6Caption: "The completed build on display at the fair.",
-    archiveAwardsAccordion7Title: "2021 Smart Factory Robot Challenge Merit",
-    archiveAwardsAccordion7Body:
-      "Implemented a process-automation simulator to clinch a merit award.",
-    archiveAwardsAccordion7Caption: "Inspecting the smart factory demo line.",
-    archiveAwardsAccordion8Title: "2021 Youth Maker Mentoring Citation",
-    archiveAwardsAccordion8Body:
-      "Honored by the local education office for sustained mentoring programs.",
-    archiveAwardsAccordion8Caption: "Group photo with mentees after the workshop.",
-    archiveAwardsAccordion9Title: "2020 National Robot Software Contest Grand Prize",
-    archiveAwardsAccordion9Body:
-      "Awarded for a SLAM-based software stack built in-house.",
-    archiveAwardsAccordion9Caption: "Receiving the certificate during the ceremony.",
-    archiveAwardsAccordion10Title: "2020 International Cobot Forum Demo Award",
-    archiveAwardsAccordion10Body:
-      "Our collaborative robot demo won the innovation-focused demo award.",
-    archiveAwardsAccordion10Caption: "Demonstrating the cobot live on the forum stage.",
-    archiveAwardsAccordion11Title: "2019 Autonomous Module Open Source Contest Excellence",
-    archiveAwardsAccordion11Body:
-      "Recognized for releasing an open-source autonomous driving module.",
-    archiveAwardsAccordion11Caption: "Presenting the repository and architecture to judges.",
     archiveEventsEyebrow: "Events",
     archiveEventsTitle: "Gallery",
-    archiveEventsDescription:
-      "Two representative photos are shown now; dozens more will roll out as the archive grows.",
-    archiveEventsCaption1: "Project highlight videos premiere on our YouTube channel.",
-    archiveEventsCaption2: "Engineering Hall A524 club room is where every build happens.",
-    archiveEventsCaption3: "New member welcome session where teams introduce themselves.",
-    archiveEventsCaption4: "Robot arm tuning workshop in action.",
-    archiveEventsCaption5: "Final checks before the humanoid demo.",
-    archiveEventsCaption6: "Strategy meeting right before competition day.",
-    archiveEventsCaption7: "Group photo with participants from the maker education program.",
-    archiveEventsCaption8: "Explaining our project during an industry meeting.",
-    archiveEventsCaption9: "Autonomous driving team preparing for the campus tour.",
-    archiveEventsCaption10: "Hands-on embedded seminar session.",
-    archiveEventsCaption11: "Community networking day snapshot.",
-    archiveEventsCaption12: "Year-end demo day display area.",
     archiveEventsPrev: "Prev", 
     archiveEventsNext: "Next",
     archiveProjectsDetailEyebrow: "Projects",
     archiveProjectsDetailTitle: "Featured project portfolio",
-    archiveProjectsDetailDescription:
-      "A quick look at capstone, research, and community-driven builds.",
-    archiveProjectsDetailBadge1: "Capstone",
-    archiveProjectsDetailItem1Title: "Autonomous service robot",
-    archiveProjectsDetailItem1Body:
-      "Campus guide robot featuring SLAM, sensor fusion, and modular mechanisms.",
-    archiveProjectsDetailBadge2: "Research",
     archiveProjectsDetailItem2Title: "Humanoid motion lab",
     archiveProjectsDetailItem2Body:
       "Combines reinforcement learning and control to test collaborative humanoid motions.",
-    archiveProjectsDetailBadge3: "Community",
     archiveProjectsDetailItem3Title: "Maker community collab",
     archiveProjectsDetailItem3Body:
       "Workshops and mentoring sessions for local students interested in building robots.",
     archiveCurriculumDetailEyebrow: "Curriculum",
     archiveCurriculumDetailTitle: "Structured three-level curriculum",
-    archiveCurriculumDetailDescription: "Each level includes clear goals and deliverables.",
     archiveCurriculumDetailItem1Title: "LEVEL 1",
     archiveCurriculumDetailItem1Body:
       "Build foundational hardware control skills through basic circuit design and sensor data processing.",
@@ -500,33 +279,12 @@ export const CONTENT_DATA = {
     archiveCurriculumDetailLevel3Item3Body: "",
     archiveHonorarySectionEyebrow: "Community",
     archiveHonorarySectionTitle: "Former Presidents & Leadership",
-    archiveHonorarySectionDescription:
-      "Meet the alumni mentors and the faculty steering the club today.",
     archiveHonoraryCardTitle: "Former Presidents",
     archiveHonoraryCardDescription: "Continuous support from alumni active in the robotics field is a great asset to Roboin.",
-    archiveHonoraryCardItem1Title: "Academic researchers",
-    archiveHonoraryCardItem1Body:
-      "Graduate students at Georgia Tech and UC Berkeley mentor current members remotely.",
-    archiveHonoraryCardItem2Title: "Industry professionals",
-    archiveHonoraryCardItem2Body:
-      "Alumni in robotics companies review projects and host career Q&A sessions.",
-    archiveHonoraryCardItem3Title: "Community ambassadors",
-    archiveHonoraryCardItem3Body:
-      "Graduates leading maker outreach help us expand social-impact initiatives.",
     archiveOfficersSectionTitle: "Current faculty",
     archiveOfficersSectionPresidentLabel: "President",
     archiveOfficersSectionViceLabel: "Vice President",
     archiveOfficersSectionOfficerLabel: "Faculty",
-    archiveOfficersSectionProjectLabel: "Project leads",
-    archiveOfficersSectionProjectBody: "Captains · Technical mentoring and competition prep",
-    archiveOfficersSectionCommunityLabel: "Community lead",
-    archiveOfficersSectionCommunityBody: "Keeps alumni & honorary members engaged",
-    archiveOfficersSectionEducationLabel: "Education lead",
-    archiveOfficersSectionEducationBody: "Designs study curriculum and onboards newcomers",
-    archiveOfficersSectionMediaLabel: "Media lead",
-    archiveOfficersSectionMediaBody: "Plans social content and documents events",
-    archiveOfficersSectionFinanceLabel: "Operations lead",
-    archiveOfficersSectionFinanceBody: "Manages budget, resources, and equipment support",
     mediaModalClose: "Close",
     modalClose: "Close",
     keywordsEyebrow: "Keywords",
@@ -574,7 +332,7 @@ export const AWARDS_DATA = [
       body: "Text",
       caption: "Roboin team at the competition venue."
     },
-    image: "assets/images/awards/011_2025 오토레이스 참가.jpg"
+    image: "assets/images/awards/013_2025 오토레이스 참가.jpg"
   },
   {
     ko: {
@@ -587,7 +345,7 @@ export const AWARDS_DATA = [
       body: "Text",
       caption: "Certificate photo."
     },
-    image: "assets/images/awards/010_GIST 탁구로봇 대상.png"
+    image: "assets/images/awards/012_GIST 탁구로봇 대상.png"
   },
   {
     ko: {
@@ -600,7 +358,7 @@ export const AWARDS_DATA = [
       body: "Text",
       caption: "Certificate photo."
     },
-    image: "assets/images/awards/009_2024 학생창업경진대회 대상.jpg"
+    image: "assets/images/awards/011_2024 학생창업경진대회 대상.jpg"
   },
   {
     ko: {
@@ -613,7 +371,20 @@ export const AWARDS_DATA = [
       body: "Text",
       caption: "Certificate photo."
     },
-    image: "assets/images/awards/008_ ICT스마트디바이스 대상.jpg"
+    image: "assets/images/awards/010_ ICT스마트디바이스 대상.jpg"
+  },
+  {
+    ko: {
+      title: "제 13회 전국학생설계경진대회 동상",
+      body: "텍스트",
+      caption: "상장 사진입니다."
+    },
+    en: {
+      title: "13th National Student Design Competition Bronze Medal",
+      body: "Text",
+      caption: "Certificate photo."
+    },
+    image: "assets/images/awards/009_전국학생설계경진대회 동상.jpg"
   },
   {
     ko: {
@@ -626,7 +397,7 @@ export const AWARDS_DATA = [
       body: "Text",
       caption: "Certificate photo."
     },
-    image: "assets/images/awards/007_메타버스 콘텐츠 우수상.jpg"
+    image: "assets/images/awards/008_메타버스 콘텐츠 우수상.jpg"
   },
   {
     ko: {
@@ -639,7 +410,7 @@ export const AWARDS_DATA = [
       body: "Text",
       caption: "Certificate photo."
     },
-    image: "assets/images/awards/006_2020 KU 메디컬 해커톤 우수.jpg"
+    image: "assets/images/awards/007_2020 KU 메디컬 해커톤 우수.jpg"
   },
   {
     ko: {
@@ -652,7 +423,20 @@ export const AWARDS_DATA = [
       body: "Text",
       caption: "Certificate photo."
     },
-    image: "assets/images/awards/005_ICRA 2019 RoboMaster AI Challenge.jpg"
+    image: "assets/images/awards/006_ICRA 2019 RoboMaster AI Challenge.jpg"
+  },
+  {
+    ko: {
+      title: "삼성전자 SOSCON 2019 로봇 오픈소스랩랩 2위",
+      body: "Text",
+      caption: "Certificate photo."
+    },
+    en: {
+      title: "Samsung Electronics SOSCON 2019 Robot Open Source Lab 2nd Prize",
+      body: "Text",
+      caption: "Certificate photo."
+    },
+    image: "assets/images/awards/005_오픈소스랩 입상확인서.jpg"
   },
   {
     ko: {
@@ -708,10 +492,52 @@ export const AWARDS_DATA = [
   }
 ];
 
+// 아카이브 우수 프로젝트 - 미디어 타입(video/image)과 경로를 여기서 관리합니다
+export const ARCHIVE_PROJECTS_DATA = [
+  {
+    ko: { title: "25-2 우수 프로젝트", body: "휴머노이드 팀(DEXTRA)" },
+    en: { title: "25-2 BEST project", body: "Humanoid team (DEXTRA)" },
+    mediaType: "video",
+    src: "assets/images/projects/25-2DEXTRA.mp4"
+  }
+];
+
 // 이벤트 및 활동 사진 - 여기에 새로운 이벤트 사진을 추가하세요
 // 같은 이벤트의 한국어와 영어 정보를 한 곳에서 관리할 수 있습니다
 // 이미지 경로는 assets/images/ 폴더에 사진을 추가한 후 경로를 지정하세요
 export const EVENTS_DATA = [
+  {
+    date: "2026-02-27",
+    ko: {
+      title: "태진기술 세미나",
+      description: "오늘 02월 27일(금) , (주)태진기술에서 세미나를 진행해 주셨습니다.\n로봇 설계에서 간과되기 쉬운 전력 설계의 중요성과 레귤레이터의 기본 원리, 설계 방법 및 실무 노하우까지 현업 연구소장님의 강연을 통해 직접 배울 수 있는 뜻깊은 시간이었습니다.\n뿐만 아니라 프로젝트 초기 단계에서 반드시 고려해야 할 전력 설계의 핵심을 이해하고, 현재 진행 중인 프로젝트에 대한 피드백도 받을 수 있는 유익한 세미나였습니다.\n이번 세미나는 태진기술과의 장기적인 협업을 위한 첫걸음으로, 앞으로 더욱 완성도 높은 프로젝트로 이어질 예정입니다.\n소중한 시간을 내어 강연해주신 태진기술 관계자분들께 감사드립니다!",
+      caption: "태진기술 세미나",
+      alt: "태진기술 세미나"
+    },
+    en: {
+      title: "Taejin Technology Seminar",
+      description: "On the Feb. 27th (Friday), TAEJIN Technology Co, Ltd. conducted a seminar.\nThe seminar was led by the head of the research center, who shared his knowledge and experience on power design in robot design, basic principles of regulators, design methods, and practical know-how.\nThis seminar was a meaningful time that could be learned directly through the lecture of the head of the research center, and it was also a valuable seminar that could receive feedback on the current projects.\nThis seminar is the first step for long-term collaboration with Taejin Technology, and we look forward to further completing the project.",
+      caption: "TAEJIN Technology seminar",
+      alt: "TAEJIN Technology seminar"
+    },
+    image: "assets/images/events/260227_회로설계 세미나.jpg"
+  },
+  {
+    date: "2026-02-23",
+    ko: {
+      title: "26년 2월 졸업식",
+      description: "로보인 선배님들의 졸업을 진심으로 축하드립니다\n로보인에서의 시간과 경험이 앞으로의 삶에 든든한 밑거름이 되기를 바랍니다\n새로운 출발을 진심으로 응원하겠습니다 🤖💙",
+      caption: "26년 2월 졸업식",
+      alt: "26년 2월 졸업식"
+    },
+    en: {
+      title: "26 Feb Graduation Ceremony",
+      description: "We sincerely congratulate our seniors who are graduating from Roboin.\nWe hope that the time and experience at Roboin will be a solid foundation for your future life.\nWe sincerely support your new start 🤖💙",
+      caption: "26 Feb Graduation Ceremony",
+      alt: "26 Feb Graduation Ceremony"
+    },
+    image: "assets/images/events/260223_졸업.jpg"
+  },
   {
     date: "2025-12-22",
     ko: {
@@ -1515,6 +1341,18 @@ export const HONORARY_MEMBERS_DATA = [
     en: {
       name: "Joohwan Seo",
       affiliation: "Ph.D. Student @ UC Berkeley",
+      role: "Honorary Member"
+    }
+  },
+  {
+    ko: {
+      name: "강민성",
+      affiliation: "Hyundai Motor Group",
+      role: "명예 회원"
+    },
+    en: {
+      name: "Minseong Kang",
+      affiliation: "Hyundai Motor Group",
       role: "Honorary Member"
     }
   }

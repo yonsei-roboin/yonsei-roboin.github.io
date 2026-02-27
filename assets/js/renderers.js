@@ -8,6 +8,7 @@ import {
   RESOURCES_CONTENT, 
   OFFICERS_DATA, 
   HONORARY_MEMBERS_DATA,
+  ARCHIVE_PROJECTS_DATA,
   CONTENT_DATA 
 } from "./content.js";
 import { CONFIG, SELECTORS } from "./config.js";
@@ -335,6 +336,34 @@ export const renderResources = (lang) => {
   });
 
   resourcesContainer.innerHTML = html;
+};
+
+/**
+ * 아카이브 우수 프로젝트 렌더링 (content.js의 ARCHIVE_PROJECTS_DATA 사용)
+ * @param {string} lang - 언어 코드
+ */
+export const renderArchiveProjects = (lang) => {
+  const container = document.querySelector(SELECTORS.ARCHIVE_PROJECTS_CONTAINER);
+  if (!container || !ARCHIVE_PROJECTS_DATA) return;
+
+  container.innerHTML = ARCHIVE_PROJECTS_DATA.map((project) => {
+    const content = project[lang] || project.ko;
+    const isVideo = project.mediaType === "video";
+    const mediaHtml = isVideo
+      ? `<div class="mt-4 rounded-2xl overflow-hidden border border-slate-200 bg-black">
+           <video class="w-full h-auto" src="${project.src}" controls playsinline></video>
+         </div>`
+      : `<div class="mt-4 rounded-2xl overflow-hidden border border-slate-200">
+           <img class="w-full h-auto" src="${project.src}" alt="${content.title}" loading="lazy" />
+         </div>`;
+    return `
+      <article class="activity-card">
+        <h3 class="activity-title">${content.title}</h3>
+        <p class="activity-body">${content.body}</p>
+        ${mediaHtml}
+      </article>
+    `;
+  }).join("");
 };
 
 /**

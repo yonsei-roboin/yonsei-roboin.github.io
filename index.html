@@ -373,13 +373,13 @@
           </div>
         </div>
         <div class="mt-8 text-center">
-          <a
-            href="https://forms.gle/ekHQWZbxBSpAB2JA9"
-            class="btn btn-primary"
+          <span
+            class="btn btn-primary btn-disabled"
             data-key="recruitmentApplyCTA"
-            target="_blank"
-            rel="noopener"
-          ></a>
+            role="button"
+            aria-disabled="true"
+            tabindex="-1"
+          ></span>
         </div>
       </section>
 
@@ -500,10 +500,17 @@
           data-media-close
           data-key="mediaModalClose"
         ></button>
-        <img
-          id="media-modal-img"
-          alt=""
-        />
+        <div class="media-modal-figure">
+          <img
+            id="media-modal-img"
+            alt=""
+          />
+          <div
+            id="media-modal-thumbs"
+            class="media-modal-thumbs hidden"
+            aria-label=""
+          ></div>
+        </div>
         <div class="media-modal-info">
           <h3 id="media-modal-title" class="media-modal-title"></h3>
           <p id="media-modal-date" class="media-modal-date"></p>

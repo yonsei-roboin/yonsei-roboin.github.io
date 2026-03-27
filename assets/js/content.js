@@ -18,8 +18,8 @@ export const CONTENT_DATA = {
       "연세대학교 공과대학 소속 로보인은 로봇에 관심 있는 학생들이 창의적인 아이디어로 프로젝트를 설계하고 함께 공부하며 성장하는 공간입니다.",
     mainCTA: "모집 안내 보기",
     mainSecondaryCTA: "활동 살펴보기",
-    mainStatsMembers: "63",
-    mainStatsMembersLabel: "25-2학기 기준 활동 회원",
+    mainStatsMembers: "82",
+    mainStatsMembersLabel: "26-1학기 기준 활동 회원",
     mainStatsProjects: "20+",
     mainStatsProjectsLabel: "년 이상 이어온 역사",
     aboutEyebrow: "About Roboin",
@@ -65,7 +65,7 @@ export const CONTENT_DATA = {
       "재학생 | 휴학생 | 대학원생, 성별 | 전공 | 학번 상관없습니다.\n\n로봇에 관심이 있는 사람들과 어울리며, 로봇에 대해 배우고 직접 만들어보고 싶은 사람.\n\n아무것도 몰라도 괜찮습니다. 로봇에 대한 관심과 열정만 있다면 누구나 환영합니다!",
     recruitmentScheduleTitle: "진행 일정",
     recruitmentScheduleBody:
-      "- 지원서 제출 기한: 3월 7일(토) 18시까지\n- 면접 일정: 3월 8일(일) ~ 3월 10일(화)\n- 최종 합격자 발표: 3월 11일(수)\n- 개강총회는 필수참여로, 3월 12일(목)에 진행될 예정입니다!",
+      "26-1 모집이 마감되었습니다. 많은 관심 가져주셔서 감사합니다",
     recruitmentContactTitle: "문의",
     recruitmentContactBody:
       "궁금한 점은 공식 이메일 또는 인스타그램 DM으로 연락 주세요.",
@@ -135,22 +135,22 @@ export const CONTENT_DATA = {
     contactTitle: "궁금한 점이 있으신가요",
     contactDescription:
       "협업 제안, 세미나 초청, 산학 프로젝트 등 모든 문의를 환영합니다. 가능한 빠르게 답변드리겠습니다.",
-    contactLeadLabel: "대표",
+    contactLeadLabel: "대표자",
     contactLeadValue: "회장 김민건",
     contactEmailLabel: "공식 이메일",
     contactEmailValue: "roboin2019@gmail.com",
-    contactLocationLabel: "동아리방방",
+    contactLocationLabel: "동아리방",
     contactLocationBody: "서울특별시 서대문구 연세로 50 제1공학관 A524",
     socialTitle: "공식 채널",
     socialDescription: "로보인의 소식은 아래 채널에서도 확인할 수 있습니다.",
     socialInstagramLabel: "Instagram",
-    socialInstagramBody: "@roboin_yonsei로 활동 현장을 가장 빠르게 전합니다.",
+    socialInstagramBody: "@roboin_yonsei로 활동 모습을 가장 빠르게 전합니다.",
     socialYoutubeLabel: "YouTube",
     socialYoutubeBody: "프로젝트 영상과 시연 영상을 모아둔 공식 채널입니다.",
     socialCafeLabel: "Naver Cafe",
     socialCafeBody: "프로젝트 내역과 활동 기록을 확인할 수 있습니다.",
     socialGithubLabel: "GitHub",
-    socialGithubBody: "로보인 팀이 개발하는 로봇 소프트웨어와 연구 코드를 살펴보세요.",
+    socialGithubBody: "로보인 팀이 개발하는 로봇 소프트웨어와 코드를 살펴보세요.",
     footerTagline: "Roboin · Yonsei University Robotics Circle",
     footerRights: "© 2025 Roboin. All rights reserved.",
     resourcesMainEyebrow: "Resources",
@@ -176,8 +176,8 @@ export const CONTENT_DATA = {
       "Based in the College of Engineering, Roboin gathers students who love robots to design bold ideas, run projects, and grow together.",
     mainCTA: "View recruitment guide",
     mainSecondaryCTA: "Explore our work",
-    mainStatsMembers: "63",
-    mainStatsMembersLabel: "Active members (Fall 2025-2)",
+    mainStatsMembers: "82",
+    mainStatsMembersLabel: "Active members (Spring 2026)",
     mainStatsProjects: "20+",
     mainStatsProjectsLabel: "Years of history",
     aboutEyebrow: "About Roboin",
@@ -223,7 +223,7 @@ export const CONTENT_DATA = {
       "Current students | On leave | Graduate students, regardless of gender, major, or year.\n\nThose who want to interact with people interested in robots, learn about robots, and build robots.\n\nIt's okay if you don't know anything. Anyone with interest and passion for robotics is welcome!",
     recruitmentScheduleTitle: "Schedule",
     recruitmentScheduleBody:
-      "- Application deadline: Sat, March 7, 18:00\n- Interviews: Sun, March 8 – Tue, March 10\n- Final results: Wed, March 11\n- Kick-off meeting (mandatory): Thu, March 12",
+        "Recruitment for the 26-1 semester has ended. Thank you for your interest.",
     recruitmentContactTitle: "Inquiries",
     recruitmentContactBody:
       "For questions, please contact us via official email or Instagram DM.",
@@ -504,8 +504,97 @@ export const ARCHIVE_PROJECTS_DATA = [
 
 // 이벤트 및 활동 사진 - 여기에 새로운 이벤트 사진을 추가하세요
 // 같은 이벤트의 한국어와 영어 정보를 한 곳에서 관리할 수 있습니다
-// 이미지 경로는 assets/images/ 폴더에 사진을 추가한 후 경로를 지정하세요
+// 이미지: image: "경로" 한 장, 또는 images: ["경로1", "경로2"] 여러 장 (모달에서 썸네일·화살표로 전환)
+// 이미지 파일은 assets/images/events/ 에 두고 경로를 지정하세요
 export const EVENTS_DATA = [
+  {
+    date: "2026-03-18",
+    ko: {
+      title: "미국 유학 세미나",
+      description: " -- 설명 추가 예정 --  ",
+      caption: "미국 유학 세미나",
+      alt: "미국 유학 세미나"
+    },
+    en: {
+      title: "US Study Abroad Seminar",
+      description: " -- 설명 추가 예정 --  ",
+      caption: "US Study Abroad Seminar",
+      alt: "US Study Abroad Seminar"
+    },
+    images: [
+        "assets/images/events/260318_미국유학 세미나(1).jpg", 
+        "assets/images/events/260318_미국유학 세미나(2).jpg",
+        "assets/images/events/260318_미국유학 세미나(3).jpg"
+    ]
+  },
+  {
+    date: "2026-03-17",
+    ko: {
+      title: "신입부원 세미나",
+      description: " -- 설명 추가 예정 --  ",
+      caption: "신입부원 세미나",
+      alt: "신입부원 세미나"
+    },
+    en: {
+      title: "New Member Seminar",
+      description: " -- 설명 추가 예정 --  ",
+      caption: "New Member Seminar",
+      alt: "New Member Seminar"
+    },
+    images: [
+        "assets/images/events/260317_신입부원 세미나(1).jpg", 
+        "assets/images/events/260317_신입부원 세미나(2).jpg",
+        "assets/images/events/260317_신입부원 세미나(3).jpg"
+    ]
+  },
+  {
+    date: "2026-03-12",
+    ko: {
+      title: "26-1 개강총회",
+      description: "지난 03월 12일(목), 🤖연세대학교 로봇 학술 동아리 로보인🤖 개강총회를 진행했습니다.\n이번 개강총회는 26-1학기 동안 로보인을 이끌어갈 임원진 소개와 더불어 각 팀의 향후 계획을 간략하게 소개하고, 이후 로보인 신입부원들을 환영하는 시간이었습니다.\n신입부원들의 적극적인 참여를 응원하겠습니다🔥",
+      caption: "26-1 개강총회",
+      alt: "26-1 개강총회"
+    },
+    en: {
+      title: "26-1 Opening Ceremony",
+      description: "On the 12th (Thursday), 🤖Yonsei University Robotics Academic Club Roboin🤖 held the opening ceremony. The opening ceremony introduced the executives who will lead Roboin for the 26-1 semester, and briefly introduced the future plans of each team, followed by a time to welcome new members of Roboin. We sincerely support the active participation of new members🔥",
+      caption: "26-1 Opening Ceremony",
+      alt: "26-1 Opening Ceremony"
+    },
+    image: "assets/images/events/260312_개총.jpg"
+  },
+  {
+    date: "2026-03-05",
+    ko: {
+      title: "26-1 동아리박람회",
+      description: "지난 03월 05(목) ~ 03월 06일(금), 🤖연세대학교 로봇 학술 동아리 로보인🤖이 동아리 박람회에 참여하였습니다. \n로보인 부스에서는 터틀봇 팀, 사족보행 팀, 휴머노이드 팀, 의수 팀, 인사로봇 팀의 방학 중 프로젝트를 전시하였습니다. 동아리 박람회 준비를 위해서 방학 동안 동방에 나와 준비하고, 부스 운영을 도와준 동박 TFT 팀에게 박수 부탁드립니다!!\n이번 학기도 로보인의 다양한 프로젝트 진행을 응원합니다🤖💙",
+      caption: "26-1 동아리박람회",
+      alt: "26-1 동아리박람회"
+    },
+    en: {
+      title: "26-1 Club Fair",
+      description: "On the 5th (Thursday) ~ 6th (Friday), 🤖Yonsei University Robotics Academic Club Roboin🤖 participated in the club fair. The Roboin booth showcased projects from the TurtleBot team, Quadruped Walking team, Humanoid team, Robotic Hand team, and Hello Robot team during the winter break. The club fair preparation required students to stay at the club during the winter break to prepare for the fair and help with booth operations. We sincerely thank the Club Fair TFT team for helping with the booth operations.",
+      caption: "26-1 Club Fair",
+      alt: "26-1 Club Fair"
+    },
+    images: ["assets/images/events/260305_동박(1).jpg", "assets/images/events/260305_동박(2).jpg"]
+  },
+  {
+    date: "2026-03-03",
+    ko: {
+      title: "KAI 취업 간담회",
+      description: "지난 03월 03일(화) ~ 03월 04일(수), 교내 취업박람회를 맞아 로보인 출신이자 기계공학과 11학번 졸업생이신 곽재윤 선배님께서 로보인 후배들을 위해 한국항공우주산업(KAI) 채용 간담회를 진행해주셨습니다.\n항공우주 산업 현업 이야기부터 취업 준비 과정과 세세한 조언까지 직접 들을 수 있었기에 정말 의미 있는 시간이었습니다.\n또한 로보인은 이번 간담회에 항공우주 동아리 SpaceY 학생들과 연세대학교 기계공학과 연구실 3곳의 연구원분들에게도 참여 기회를 공유하여 공과대학 내 다양한 로봇·항공우주 분야 학생들과 교류할 수 있도록 하였습니다.\n바쁜 일정 속에서도 시간을 내어주신 곽재윤 선배님께 진심으로 감사드립니다!",
+      caption: "KAI 취업 간담회",
+      alt: "KAI 취업 간담회"
+    },
+    en: {
+      title: "KAI Employment Consultation",
+      description: "On the 3rd (Tuesday) ~ 4th (Wednesday), in response to the university-wide job fair, Mr. Jae-yoon Kwak, a graduate of Yonsei University Mechanical Engineering(11), conducted a job fair for Roboin members. The fair included discussions on the actual stories of the aerospace industry, preparation for job hunting, and detailed advice on how to prepare for interviews. It was a meaningful time that could be learned directly through the lectures of Mr. Kwak, who has extensive industry experience.\nIn addition, Roboin shared the opportunity to participate in the fair with students from the aerospace club SpaceY and researchers from three research labs at Yonsei University's Department of Mechanical Engineering, allowing students from various robotics and aerospace fields within the College of Engineering to interact with each other. We sincerely thank Mr. Kwak for taking time out of his busy schedule to participate in the fair.",
+      caption: "KAI Employment Consultation",
+      alt: "KAI Employment Consultation"
+    },
+    image: "assets/images/events/260303_KAI 채용 설명회.jpg"
+  },
   {
     date: "2026-02-27",
     ko: {
@@ -744,7 +833,10 @@ export const EVENTS_DATA = [
       caption: "KAIST Professor Park Hae-won invited seminar",
       alt: "KAIST Professor Park Hae-won invited seminar"
     },
-    image: "assets/images/events/240429_박해원 교수님.jpg"
+    images: [
+        "assets/images/events/240429_박해원 교수님(1).jpg",
+        "assets/images/events/240429_박해원 교수님(2).jpg"
+    ]
   },
   {
     date: "2022-11-17",
@@ -1088,14 +1180,14 @@ export const OFFICERS_DATA = [
     ko: {
       name: "박성현",
       major: "기계공학 21",
-      position: "2026 임원진",
+      position: "2026 부회장",
       email: "",
-      role: "임원진"
+      role: "부회장"
     },
     en: {
       name: "Sunghyun Park",
       major: "Mechanical Engineering '21",
-      position: "2026 Faculty",
+      position: "2026 Vice President",
       email: "",
       role: "Faculty"
     }

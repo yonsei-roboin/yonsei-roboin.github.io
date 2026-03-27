@@ -40,6 +40,22 @@ export const shuffleArray = (array) => {
 };
 
 /**
+ * 이벤트 항목에서 표시할 이미지 URL 목록 (단일 image 또는 images 배열)
+ * @param {object} event - EVENTS_DATA 항목
+ * @returns {string[]}
+ */
+export const getEventImageUrls = (event) => {
+  if (!event) return [];
+  if (Array.isArray(event.images) && event.images.length > 0) {
+    return event.images.map((u) => String(u).trim()).filter(Boolean);
+  }
+  if (typeof event.image === "string" && event.image.trim()) {
+    return [event.image.trim()];
+  }
+  return [];
+};
+
+/**
  * 디바운스 함수
  * @param {Function} func - 실행할 함수
  * @param {number} wait - 대기 시간 (ms)

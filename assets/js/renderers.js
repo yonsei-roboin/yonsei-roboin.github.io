@@ -12,7 +12,7 @@ import {
   CONTENT_DATA 
 } from "./content.js";
 import { CONFIG, SELECTORS } from "./config.js";
-import { formatDate, shuffleArray, elementExists } from "./utils.js";
+import { formatDate, shuffleArray, elementExists, getEventImageUrls } from "./utils.js";
 
 /**
  * 수상 실적 렌더링
@@ -63,12 +63,14 @@ export const renderEvents = (lang, initMediaModal = null, initSliders = null) =>
   eventsTrack.innerHTML = EVENTS_DATA.map((event, index) => {
     const content = event[lang] || event.ko;
     const formattedDate = event.date ? formatDate(event.date, lang) : "";
+    const imageUrls = getEventImageUrls(event);
+    const primarySrc = imageUrls[0] || "";
     return `
       <figure
         class="event-card"
         data-slider-item
         data-media-trigger
-        data-media-src="${event.image}"
+        data-media-src="${primarySrc}"
         data-media-date="${event.date || ''}"
         data-media-event-index="${index}"
         data-media-caption-key=""
@@ -76,7 +78,7 @@ export const renderEvents = (lang, initMediaModal = null, initSliders = null) =>
         tabindex="0"
       >
         <img
-          src="${event.image}"
+          src="${primarySrc}"
           alt="${content.alt}"
           loading="lazy"
         />
@@ -182,18 +184,20 @@ const renderEventsHighlights = (lang, initialCount, moreCount, initMediaModal = 
   eventsContainer.innerHTML = topEvents.map((event, index) => {
     const content = event[lang] || event.ko;
     const formattedDate = event.date ? formatDate(event.date, lang) : "";
+    const imageUrls = getEventImageUrls(event);
+    const primarySrc = imageUrls[0] || "";
     return `
       <figure
         class="event-card block hover:opacity-90 transition-opacity cursor-pointer"
         data-media-trigger
-        data-media-src="${event.image}"
+        data-media-src="${primarySrc}"
         data-media-date="${event.date || ''}"
         data-media-event-index="${index}"
         role="button"
         tabindex="0"
       >
         <img
-          src="${event.image}"
+          src="${primarySrc}"
           alt="${content.alt || content.title || content.caption}"
           loading="lazy"
         />
@@ -213,18 +217,20 @@ const renderEventsHighlights = (lang, initialCount, moreCount, initMediaModal = 
       const actualIndex = index + initialCount;
       const content = event[lang] || event.ko;
       const formattedDate = event.date ? formatDate(event.date, lang) : "";
+      const imageUrls = getEventImageUrls(event);
+      const primarySrc = imageUrls[0] || "";
       return `
         <figure
           class="event-card block hover:opacity-90 transition-opacity cursor-pointer"
           data-media-trigger
-          data-media-src="${event.image}"
+          data-media-src="${primarySrc}"
           data-media-date="${event.date || ''}"
           data-media-event-index="${actualIndex}"
           role="button"
           tabindex="0"
         >
           <img
-            src="${event.image}"
+            src="${primarySrc}"
             alt="${content.alt || content.title || content.caption}"
             loading="lazy"
           />
@@ -476,13 +482,13 @@ export const renderOfficers = (lang) => {
   const officersContainer = document.querySelector(SELECTORS.OFFICERS_CONTAINER);
   if (!officersContainer || !OFFICERS_DATA) return;
 
-  const president = OFFICERS_DATA.find(o => o.ko.role === "회장");
-  const vicePresident = OFFICERS_DATA.find(o => o.ko.role === "부회장");
-  const officers = OFFICERS_DATA.filter(o => o.ko.role === "임원진");
+  const presidents = OFFICERS_DATA.filter((o) => o?.ko?.role === "회장");
+  const vicePresidents = OFFICERS_DATA.filter((o) => o?.ko?.role === "부회장");
+  const officers = OFFICERS_DATA.filter((o) => o?.ko?.role === "임원진");
 
   let html = "";
 
-  if (president) {
+  presidents.forEach((president) => {
     const content = president[lang] || president.ko;
     html += `
       <div>
@@ -493,9 +499,9 @@ export const renderOfficers = (lang) => {
         </p>
       </div>
     `;
-  }
+  });
 
-  if (vicePresident) {
+  vicePresidents.forEach((vicePresident) => {
     const content = vicePresident[lang] || vicePresident.ko;
     html += `
       <div>
@@ -506,7 +512,7 @@ export const renderOfficers = (lang) => {
         </p>
       </div>
     `;
-  }
+  });
 
   officers.forEach((officer) => {
     const content = officer[lang] || officer.ko;
@@ -562,13 +568,14 @@ export const renderMainEventsSlider = (lang, initMainEventsSlider = null) => {
     <div class="main-events-slider-track" id="main-events-slider-track">
       ${shuffledEvents.map((event, index) => {
         const content = event[lang] || event.ko;
+        const primarySrc = getEventImageUrls(event)[0] || "";
         return `
           <div 
             class="main-events-slider-item" 
             data-slide-index="${index}"
           >
             <img
-              src="${event.image}"
+              src="${primarySrc}"
               alt="${content.alt || content.title || content.caption || ''}"
               loading="lazy"
             />

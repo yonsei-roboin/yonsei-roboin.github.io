@@ -3,7 +3,7 @@
  */
 import { AWARDS_DATA, EVENTS_DATA, CONTENT_DATA } from "./content.js";
 import { CONFIG, SELECTORS } from "./config.js";
-import { formatDate, nl2br, elementExists } from "./utils.js";
+import { formatDate, nl2br, elementExists, getEventImageUrls } from "./utils.js";
 import { getCurrentLanguage } from "./language.js";
 
 /**
@@ -146,13 +146,31 @@ export const setupImageZoomClose = () => {
 };
 
 /**
+ * @param {HTMLElement} modal
+ * @param {string[]} urls
+ * @param {number} index
+ */
+const updateMediaModalGalleryIndex = (modal, urls, index) => {
+  const img = modal.querySelector("#media-modal-img");
+  const thumbs = modal.querySelector("#media-modal-thumbs");
+  if (img && urls[index]) img.src = urls[index];
+  modal.dataset.mediaGalleryIndex = String(index);
+  if (thumbs) {
+    thumbs.querySelectorAll(".media-modal-thumb").forEach((btn, i) => {
+      btn.classList.toggle("is-active", i === index);
+    });
+  }
+};
+
+/**
  * Media 모달 열기
  * @param {string} src - 이미지 경로
  * @param {string} title - 제목
  * @param {string} date - 날짜
  * @param {string} description - 설명
+ * @param {string[] | null} galleryUrls - 여러 장일 때 전체 URL (모달에서 썸네일·화살표로 전환)
  */
-const openMediaModal = (src, title, date, description) => {
+const openMediaModal = (src, title, date, description, galleryUrls = null) => {
   const modal = document.querySelector(SELECTORS.MEDIA_MODAL);
   if (!modal || !src) return;
 
@@ -160,14 +178,51 @@ const openMediaModal = (src, title, date, description) => {
   const titleEl = modal.querySelector("#media-modal-title");
   const dateEl = modal.querySelector("#media-modal-date");
   const descriptionEl = modal.querySelector("#media-modal-description");
+  const thumbs = modal.querySelector("#media-modal-thumbs");
 
-  if (img) img.src = src;
-  
+  const urls =
+    galleryUrls && galleryUrls.length > 1 ? galleryUrls : null;
+
+  if (urls) {
+    modal.dataset.mediaGallery = JSON.stringify(urls);
+    let idx = urls.indexOf(src);
+    if (idx < 0) idx = 0;
+    modal.dataset.mediaGalleryIndex = String(idx);
+    if (img) img.src = urls[idx];
+    if (thumbs) {
+      thumbs.classList.remove("hidden");
+      thumbs.innerHTML = urls
+        .map(
+          (url, i) => `
+        <button type="button" class="media-modal-thumb ${i === idx ? "is-active" : ""}" data-thumb-index="${i}" aria-label="${i + 1} / ${urls.length}">
+          <img src="${url}" alt="" loading="lazy" />
+        </button>
+      `
+        )
+        .join("");
+      thumbs.onclick = (e) => {
+        const btn = e.target.closest("[data-thumb-index]");
+        if (!btn) return;
+        const i = parseInt(btn.getAttribute("data-thumb-index"), 10);
+        updateMediaModalGalleryIndex(modal, urls, i);
+      };
+    }
+  } else {
+    delete modal.dataset.mediaGallery;
+    delete modal.dataset.mediaGalleryIndex;
+    if (img) img.src = src;
+    if (thumbs) {
+      thumbs.classList.add("hidden");
+      thumbs.innerHTML = "";
+      thumbs.onclick = null;
+    }
+  }
+
   if (titleEl) {
     titleEl.textContent = title || "";
     titleEl.style.display = title ? "block" : "none";
   }
-  
+
   if (dateEl) {
     if (date && date.trim() !== "") {
       dateEl.textContent = date;
@@ -177,7 +232,7 @@ const openMediaModal = (src, title, date, description) => {
       dateEl.style.display = "none";
     }
   }
-  
+
   if (descriptionEl) {
     if (description && description.trim() !== "") {
       descriptionEl.innerHTML = nl2br(description);
@@ -187,7 +242,7 @@ const openMediaModal = (src, title, date, description) => {
       descriptionEl.style.display = "none";
     }
   }
-  
+
   modal.classList.remove("hidden");
   modal.setAttribute("aria-hidden", "false");
 };
@@ -208,6 +263,14 @@ const closeMediaModal = () => {
   const descriptionEl = modal.querySelector("#media-modal-description");
   
   if (img) img.src = "";
+  delete modal.dataset.mediaGallery;
+  delete modal.dataset.mediaGalleryIndex;
+  const thumbs = modal.querySelector("#media-modal-thumbs");
+  if (thumbs) {
+    thumbs.classList.add("hidden");
+    thumbs.innerHTML = "";
+    thumbs.onclick = null;
+  }
   if (titleEl) {
     titleEl.textContent = "";
     titleEl.style.display = "none";
@@ -244,8 +307,18 @@ export const initMediaModal = () => {
       const content = event[lang] || event.ko;
       const dateString = event.date || "";
       const formattedDate = dateString ? formatDate(dateString, lang) : "";
-      
-      openMediaModal(src, content.title || "", formattedDate, content.description || "");
+      const imageUrls = getEventImageUrls(event);
+      const primary = imageUrls[0] || src;
+      const gallery =
+        imageUrls.length > 1 ? imageUrls : null;
+
+      openMediaModal(
+        primary,
+        content.title || "",
+        formattedDate,
+        content.description || "",
+        gallery
+      );
     } else {
       // 기존 방식 (다른 곳에서 사용할 수 있음)
       const captionKey = trigger.getAttribute("data-media-caption-key");
@@ -273,8 +346,34 @@ export const initMediaModal = () => {
     target.addEventListener("click", closeMediaModal);
   });
 
-  // ESC 키로 모달 닫기
+  // ESC 키로 모달 닫기, 갤러리 좌우 화살표
   document.addEventListener("keydown", (event) => {
+    if (
+      (event.key === "ArrowLeft" || event.key === "ArrowRight") &&
+      modal &&
+      !modal.classList.contains("hidden")
+    ) {
+      const raw = modal.dataset.mediaGallery;
+      if (raw) {
+        let urls;
+        try {
+          urls = JSON.parse(raw);
+        } catch {
+          urls = null;
+        }
+        if (urls && urls.length > 1) {
+          event.preventDefault();
+          let idx = parseInt(modal.dataset.mediaGalleryIndex || "0", 10);
+          if (event.key === "ArrowLeft") {
+            idx = (idx - 1 + urls.length) % urls.length;
+          } else {
+            idx = (idx + 1) % urls.length;
+          }
+          updateMediaModalGalleryIndex(modal, urls, idx);
+          return;
+        }
+      }
+    }
     if (event.key === "Escape") {
       if (modal && !modal.classList.contains("hidden")) {
         closeMediaModal();
